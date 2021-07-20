@@ -3,48 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
+/*
+ * PlayerShoot checks if user has pressed an ability key then
+ * finds the ability that user chose for that ability key then
+ * tells server to deal with it.
+ */
 public class PlayerShoot : NetworkBehaviour
 {
+    private KeyCode[] abilityKey = { KeyCode.Mouse0, KeyCode.Mouse1, KeyCode.LeftShift};
 
-    [Header("Firing")]
-    private KeyCode[] abilityKey = { KeyCode.Mouse0, KeyCode.Mouse1};
-    public GameObject projectilePrefab;
-    public Transform projectileMount;
+    private void Start()
+    {
+        // this will be refactored out into player ability selection scene
+        PlayerPrefs.SetInt("AbilityKey_0", 15);
+        PlayerPrefs.SetInt("AbilityKey_1", 90);
+        PlayerPrefs.SetInt("AbilityKey_2", 33);
+    }
 
     void Update()
     {
         if (!isLocalPlayer) return;
+        HandleAbilityKeyPress();
 
-        if (Input.GetKeyDown(abilityKey[0]))
+    }
+
+    private void HandleAbilityKeyPress()
+    {
+        for (int i = 0; i < abilityKey.Length; i++)
         {
-            CmdAbilityOne();
-        }
-        if (Input.GetKeyDown(abilityKey[1]))
-        {
-            CmdAbilityTwo();
+            if (Input.GetKeyDown(abilityKey[i]))
+                CmdAbility(PlayerPrefs.GetInt("AbilityKey_" + i.ToString()));
         }
     }
 
-    // this is called on the server
     [Command]
-    void CmdAbilityOne()
+    private void CmdAbility(int abilityKey)
     {
-        GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
-        NetworkServer.Spawn(projectile);
-        //RpcOnFire();
+        Ability myabil = gameObject.GetComponent<Ability>();
+        myabil.UseAbility(abilityKey);
+
     }
-    void CmdAbilityTwo()
-    {
-        GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
-        NetworkServer.Spawn(projectile);
-        //RpcOnFire();
-    }
-    /*
-    // this is called on the tank that fired for all observers
-    [ClientRpc]
-    void RpcOnFire()
-    {
-        animator.SetTrigger("Shoot");
-    }
-    */
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7273302353346970356}
   - component: {fileID: -5944372832297702004}
   - component: {fileID: -3254720452168792153}
+  - component: {fileID: 7150336968563105357}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -179,7 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  abilityKey: 13010000
   projectilePrefab: {fileID: 8107929617084464505, guid: f8b41a835a26f974c9cfbc844a16b90c,
     type: 3}
   projectileMount: {fileID: 572542813118440152}
@@ -197,6 +197,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &7150336968563105357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627503779041035408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5830492ba2058438d5391e6b9a470e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  projectilePrefab: {fileID: 8107929617084464505, guid: f8b41a835a26f974c9cfbc844a16b90c,
+    type: 3}
+  projectileMount: {fileID: 572542813118440152}
+  playerObject: {fileID: 1627503779041035408}
 --- !u!1 &6967872487230955548
 GameObject:
   m_ObjectHideFlags: 0
