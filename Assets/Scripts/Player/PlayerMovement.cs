@@ -29,6 +29,7 @@ public class PlayerMovement : NetworkBehaviour
 
     private void FixedUpdate()
     {
+        if (!isLocalPlayer) { return; }
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
         Vector2 lookDir = mousePos - body.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
