@@ -5,9 +5,14 @@ using Mirror;
 
 public class Ability : NetworkBehaviour
 {
-    public GameObject projectilePrefab;
-    public Transform projectileMount;
-    public GameObject playerObject;
+
+
+    protected int abilityID { get; set; }
+
+    public Ability()
+    {
+        abilityID = -1;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +25,13 @@ public class Ability : NetworkBehaviour
     {
         
     }
-
-   public void UseAbility(int abilityKey)
+    public int GetAbilityID()
+    {
+        return abilityID;
+    }
+    public virtual void UseAbility()
     {
 
-        Debug.Log(abilityKey);
-        GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
-        NetworkServer.Spawn(projectile);
     }
 
 }

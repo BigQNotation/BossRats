@@ -11,6 +11,7 @@ using Mirror;
 public class PlayerShoot : NetworkBehaviour
 {
     private KeyCode[] abilityKey = { KeyCode.Mouse0, KeyCode.Mouse1, KeyCode.LeftShift};
+    private const int MAX_POSSIBLE_ABILITY_COUNT = 9999;
 
     private void Start()
     {
@@ -23,24 +24,48 @@ public class PlayerShoot : NetworkBehaviour
     void Update()
     {
         if (!isLocalPlayer) return;
-        HandleAbilityKeyPress();
-
+        Ability[] allAbilities = { gameObject.GetComponent<AbilityShoot>() };
+        CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()));
     }
 
-    private void HandleAbilityKeyPress()
+    private int DetectAbilityKeyCodePress()
     {
+    /*note if user has more than one 
+    * abilityKey KeyCode pressed down
+    * only one of their indices will
+    * be returned.
+    */
         for (int i = 0; i < abilityKey.Length; i++)
         {
             if (Input.GetKeyDown(abilityKey[i]))
-                CmdAbility(PlayerPrefs.GetInt("AbilityKey_" + i.ToString()));
+                return i;  
         }
+        return -1;
+    }
+
+    private int FindMatchingAbilityID(int abilityKeyCodeIndex)
+    {
+        if (abilityKeyCodeIndex != -1)
+            return PlayerPrefs.GetInt("AbilityKey_" + abilityKeyCodeIndex.ToString());
+        else
+            return -1; 
     }
 
     [Command]
-    private void CmdAbility(int abilityKey)
+    private void CmdUseAbility(Ability[] abil, int abilID)
     {
-        Ability myabil = gameObject.GetComponent<Ability>();
-        myabil.UseAbility(abilityKey);
+        if (abilID != -1)
+        {
+            for (int i = 0; i < abil.Length; i++)
+            {
+                if (abilID == abil[i].GetAbilityID())
+                {
+                    Debug.Log("got" + abil[i].GetAbilityID());
+                    abil[i].UseAbility();
+                }
+            }
+        }
 
     }
 }
+
