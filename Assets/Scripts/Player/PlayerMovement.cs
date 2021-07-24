@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-
-
 public class PlayerMovement : NetworkBehaviour
 {
     public float runSpeed = 20.0f;

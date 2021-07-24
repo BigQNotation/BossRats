@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Ability
+    - AbilityShoot
     - NetworkRoomManagerExt
     - NetworkRoomPlayerExt
     - PlayerCamera
@@ -55,7 +56,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 602}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -94,27 +95,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 12354}
+      Script: {instanceID: 11552}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12360}
     - Class: 114
-      Script: {instanceID: 13046}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13818}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 14040}
+      Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 14382}
+      Script: {instanceID: 14046}
     - Class: 114
-      Script: {instanceID: 14666}
+      Script: {instanceID: 14388}
     - Class: 114
-      Script: {instanceID: 14948}
+      Script: {instanceID: 14672}
+    - Class: 114
+      Script: {instanceID: 14954}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -203,6 +206,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: RandomColor
+  - hash:
+      serializedVersion: 2
+      Hash: 843fbc5b83143dd35b848c8ec8051212
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AbilityShoot
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -691,7 +700,7 @@ ScriptsOnlyBuild:
     className: CellGUI
   - hash:
       serializedVersion: 2
-      Hash: 843fbc5b83143dd35b848c8ec8051212
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ability

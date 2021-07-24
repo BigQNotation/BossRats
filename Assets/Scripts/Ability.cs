@@ -5,25 +5,31 @@ using Mirror;
 
 public class Ability : NetworkBehaviour
 {
-
-
     protected int abilityID { get; set; }
+    protected float cooldownCap { get; set; }
+    public float cooldownRemainder { get; protected set; }
 
     public Ability()
     {
         abilityID = -1;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        ResetCooldown();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    protected void DecrementCooldown()
+    {
+        cooldownRemainder = Mathf.Max(cooldownRemainder - Time.deltaTime, 0f);
+    }
+    public void ResetCooldown()
+    {
+        cooldownRemainder = cooldownCap;
     }
     public int GetAbilityID()
     {
@@ -33,5 +39,11 @@ public class Ability : NetworkBehaviour
     {
 
     }
-
+    public bool AbilityReady()
+    {
+        if (cooldownRemainder <= 0)
+            return true;
+        else
+            return false;
+    }
 }
