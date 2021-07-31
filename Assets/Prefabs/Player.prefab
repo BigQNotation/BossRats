@@ -256,6 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  playerObject: {fileID: 1627503779041035408}
 --- !u!114 &-1542812786921320855
 MonoBehaviour:
   m_ObjectHideFlags: 0

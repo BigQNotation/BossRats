@@ -15,6 +15,9 @@ public class AbilitySpeedboost : Ability
     private float abilityDurationTimer = 0f;
     private bool  abilityActive = false;
 
+    public GameObject playerObject;
+
+
     public AbilitySpeedboost()
     {
         this.abilityID = ID;
@@ -34,8 +37,8 @@ public class AbilitySpeedboost : Ability
 
     public override void UseAbility()
     {
-        runSpeedVelocityNormal = gameObject.GetComponent<PlayerMovement>().runSpeed;
-        gameObject.GetComponent<PlayerMovement>().runSpeed = runSpeedVelocityFast;
+        runSpeedVelocityNormal = playerObject.GetComponent<PlayerMovement>().runSpeed;
+        playerObject.GetComponent<PlayerMovement>().runSpeed = runSpeedVelocityFast;
         abilityActive = true;
     }
 
@@ -48,7 +51,7 @@ public class AbilitySpeedboost : Ability
             {
                 abilityActive = false;
                 abilityDurationTimer = 0f;
-                gameObject.GetComponent<PlayerMovement>().runSpeed = runSpeedVelocityNormal;
+                playerObject.GetComponent<PlayerMovement>().runSpeed = runSpeedVelocityNormal;
                 
             }
         }

@@ -24,8 +24,7 @@ public class PlayerShoot : NetworkBehaviour
     void Update()
     {
         if (!isLocalPlayer) return;
-        Ability[] allAbilities = { gameObject.GetComponent<AbilityShoot>(), gameObject.GetComponent<AbilitySpeedboost>() };
-        //Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
+        Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
         CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()));
     }
 
@@ -39,7 +38,10 @@ public class PlayerShoot : NetworkBehaviour
         for (int i = 0; i < abilityKey.Length; i++)
         {
             if (Input.GetKeyDown(abilityKey[i]))
-                return i;  
+            {
+                return i;
+            }
+                
         }
         return -1;
     }
@@ -65,6 +67,10 @@ public class PlayerShoot : NetworkBehaviour
                     {
                         abil[i].UseAbility();
                         abil[i].ResetCooldown();
+                    }
+                    else
+                    {
+                        Debug.Log("ability not ready");
                     }
                 }
             }
