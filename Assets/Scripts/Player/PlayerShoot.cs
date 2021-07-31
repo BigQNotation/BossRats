@@ -25,6 +25,7 @@ public class PlayerShoot : NetworkBehaviour
     {
         if (!isLocalPlayer) return;
         Ability[] allAbilities = { gameObject.GetComponent<AbilityShoot>(), gameObject.GetComponent<AbilitySpeedboost>() };
+        //Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
         CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()));
     }
 

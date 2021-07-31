@@ -50,3 +50,6 @@ TagManager:
   - name: Map
     uniqueID: 689449879
     locked: 0
+  - name: UI
+    uniqueID: 1542193005
+    locked: 0

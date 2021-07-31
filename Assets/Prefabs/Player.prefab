@@ -14,11 +14,13 @@ GameObject:
   - component: {fileID: 2991375522403372272}
   - component: {fileID: 5864903933774407956}
   - component: {fileID: 7273302353346970356}
+  - component: {fileID: 4424873818724525330}
   - component: {fileID: -5944372832297702004}
   - component: {fileID: -3254720452168792153}
   - component: {fileID: 7150336968563105357}
   - component: {fileID: 3592152456653770928}
   - component: {fileID: -7727640292873439921}
+  - component: {fileID: -1542812786921320855}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -168,6 +170,18 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4424873818724525330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627503779041035408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d776a249f1fc6684eba134e447777487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-5944372832297702004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,9 +256,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  projectilePrefab: {fileID: 0}
-  projectileMount: {fileID: 0}
-  playerObject: {fileID: 0}
+--- !u!114 &-1542812786921320855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627503779041035408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ffb959828704f418dda3b37fee5618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &6967872487230955548
 GameObject:
   m_ObjectHideFlags: 0
