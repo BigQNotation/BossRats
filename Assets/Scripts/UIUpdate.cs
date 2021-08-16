@@ -24,7 +24,7 @@ public class UIUpdate : NetworkBehaviour
 
         abilityOne.GetComponent<Text>().text = gameObject.GetComponent<AbilityManager>().GetAbilityList()[0].cooldownRemainder.ToString();
         abilityTwo.GetComponent<Text>().text = gameObject.GetComponent<AbilityManager>().GetAbilityList()[1].cooldownRemainder.ToString();
-        //abilityThree.GetComponent<Text>().text = gameObject.GetComponent<AbilityManager>().GetAbilityList()[0].cooldownRemainder.ToString();
+        abilityThree.GetComponent<Text>().text = gameObject.GetComponent<AbilityManager>().GetAbilityList()[2].cooldownRemainder.ToString();
 
 
     }

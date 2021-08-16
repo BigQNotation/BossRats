@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 3592152456653770928}
   - component: {fileID: -7727640292873439921}
   - component: {fileID: -1542812786921320855}
+  - component: {fileID: 6186226090230197078}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -224,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cooldownRemainder: 0
 --- !u!114 &3592152456653770928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cooldownRemainder: 0
   projectilePrefab: {fileID: 8107929617084464505, guid: f8b41a835a26f974c9cfbc844a16b90c,
     type: 3}
   projectileMount: {fileID: 572542813118440152}
@@ -256,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cooldownRemainder: 0
   playerObject: {fileID: 1627503779041035408}
 --- !u!114 &-1542812786921320855
 MonoBehaviour:
@@ -271,6 +275,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &6186226090230197078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627503779041035408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007d8d1990f806843be943611e0bfd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cooldownRemainder: 0
+  playerObject: {fileID: 1627503779041035408}
 --- !u!1 &6967872487230955548
 GameObject:
   m_ObjectHideFlags: 0

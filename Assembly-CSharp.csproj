@@ -58,14 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
+    <Compile Include="Assets\Scripts\Abilities\AbilityBlink.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilityShoot.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\Player\ShootProjectile.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />
   </ItemGroup>
