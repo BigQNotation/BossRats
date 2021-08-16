@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilityShoot.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilitySpeedboost.cs" />
@@ -78,6 +79,7 @@
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll" />
     <None Include="Assets\Mirror\Version.txt" />
     <None Include="Assets\Mirror\Readme.txt" />
+    <None Include="Assets\ParrelSync\VERSION.txt" />
     <None Include="Assets\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
     <None Include="Assets\Mirror\Notice.txt" />
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
@@ -731,6 +733,10 @@
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
       <Project>{0B06B907-A46A-8559-0F8F-4BEE35DE18FF}</Project>
       <Name>Mirror.CompilerSymbols</Name>
+    </ProjectReference>
+    <ProjectReference Include="ParrelSync.csproj">
+      <Project>{50C6A88A-67A3-62C6-1402-C03D336693F1}</Project>
+      <Name>ParrelSync</Name>
     </ProjectReference>
     <ProjectReference Include="where-allocations.csproj">
       <Project>{92EAB2AF-79EE-C9F2-D43C-E9B5E67F2701}</Project>
