@@ -35,7 +35,7 @@ public class AbilitySpeedboost : Ability
         TryEndSpeedboost();
     }
 
-    public override void UseAbility()
+    public override void UseAbility(float clientXMousePos, float clientyMousePos)
     {
         runSpeedVelocityNormal = playerObject.GetComponent<PlayerMovement>().runSpeed;
         playerObject.GetComponent<PlayerMovement>().runSpeed = runSpeedVelocityFast;

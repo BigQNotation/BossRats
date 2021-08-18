@@ -41,6 +41,10 @@ public class Ability : NetworkBehaviour
     {
 
     }
+    public virtual void UseAbility(float clientXMousePos, float clientyMousePos)
+    {
+
+    }
     public bool AbilityReady()
     {
         if (cooldownRemainder <= 0)

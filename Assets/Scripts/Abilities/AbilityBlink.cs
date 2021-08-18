@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class AbilityBlink : Ability
 {
     private const int ID = 33;
     private const float COOLDOWN = 10f;
 
+    [SyncVar]
     public GameObject playerObject;
 
     public AbilityBlink()
@@ -27,12 +29,12 @@ public class AbilityBlink : Ability
         DecrementCooldown();
     }
 
-    public override void UseAbility()
+    public override void UseAbility(float clientXMousePos, float clientYMousePos)
     {
-        float xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-        float yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
-        playerObject.transform.position = new Vector2(xPos, yPos);
-            
+        
+        playerObject.GetComponent<NetworkTransform>().ServerTeleport(new Vector2(clientXMousePos, clientYMousePos));
+        //playerObject.transform.position = new Vector2(xPos, yPos);
+
     }
 
 }

@@ -28,7 +28,7 @@ public class AbilityShoot : Ability
         DecrementCooldown();
     }
  
-    public override void UseAbility()
+    public override void UseAbility(float clientXMousePos, float clientyMousePos)
     {
         GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
         NetworkServer.Spawn(projectile);

@@ -25,7 +25,15 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
     {
         if (!isLocalPlayer) return;
         Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
-        CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()));
+        CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
+    }
+
+
+    public float [] GetUserMouseCoordinates()
+    {
+        float xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+        float yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+        return (new float [2] { xPos, yPos});
     }
 
     private int DetectAbilityKeyCodePress()
@@ -55,7 +63,7 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
     }
 
     [Command]
-    private void CmdUseAbility(Ability[] abil, int abilID)
+    private void CmdUseAbility(Ability[] abil, int abilID, float [] userMouseInputs)
     {
         if (abilID != -1)
         {
@@ -65,7 +73,7 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
                 {
                     if (abil[i].AbilityReady())
                     {
-                        abil[i].UseAbility();
+                        abil[i].UseAbility(userMouseInputs[0], userMouseInputs[1]);
                         abil[i].ResetCooldown();
                     }
                     else
