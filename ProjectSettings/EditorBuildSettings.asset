@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomScene.unity
     guid: eac51adeefb72b24c8dd9833930e72d1
+  - enabled: 1
+    path: Assets/Scenes/AbilitySelectScene.unity
+    guid: ff72310a1a6649d428d20caa13214300
   m_configObjects: {}

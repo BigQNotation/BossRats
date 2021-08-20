@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 920, y: 492}
   m_MaxSize: {x: 16005, y: 14042}
   vertical: 0
-  controlID: 156
+  controlID: 79
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 645, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 112
+  controlID: 80
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,20 +396,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Abilities
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Abilities
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\larso\Documents\Unity\Bosses\Bosses
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 025a0000
-    m_LastClickedID: 23042
-    m_ExpandedIDs: 00000000d0590000d2590000d4590000d6590000d8590000da590000dc59000000ca9a3b
+    scrollPos: {x: 0, y: 390}
+    m_SelectedIDs: 005a0000
+    m_LastClickedID: 23040
+    m_ExpandedIDs: 00000000d0590000d2590000d4590000d6590000d8590000da590000dc590000fa59000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f459000000000000f0590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -560,23 +560,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f2340000
+      m_SelectedIDs: 485f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6af3ffffb2f9ffffd8f9ffffdcf9ffff56fbffff
+      m_ExpandedIDs: e2d2ffffb8daffffbadaffffcedafffff0daffffbedbffff78deffffa8deffff3ee3ffff5ee3ffff40e4ffff9ce5ffffbae5ffffd2e5ffffeae5fffffee5ffff3ae6ffff4ee6ffff66e6ffff7ee6ffffb4e6fffff4e6ffff10e7ffff54e7ffff9ce7ffff74e9ffffa2ebffffb8ebffffccebffffe4ebfffffcebffff14ecffff2cecffff44ecffff5eecffff76ecffff40edffff54edffff78edffff8cedffff56fbffffd66c0000f06e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Canvas
+        m_OriginalName: Canvas
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 28400
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.096337, y: 0.69236237, z: -1.4841946}
+    m_Target: {x: 80, y: 15, z: 0}
     speed: 2
-    m_Value: {x: -1.096337, y: 0.69236237, z: -1.4841946}
+    m_Value: {x: 80, y: 15, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -674,9 +674,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.8483696
+    m_Target: 81.394104
     speed: 2
-    m_Value: 5.8483696
+    m_Value: 81.394104
   m_Ortho:
     m_Target: 1
     speed: 2

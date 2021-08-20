@@ -25,45 +25,10 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
     {
         if (!isLocalPlayer) return;
         Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
-        CmdUseAbility(allAbilities, FindMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
+        CmdUseAbility(allAbilities, GetMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
     }
-
-
-    public float [] GetUserMouseCoordinates()
-    {
-        float xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-        float yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
-        return (new float [2] { xPos, yPos});
-    }
-
-    private int DetectAbilityKeyCodePress()
-    {
-    /*note if user has more than one 
-    * abilityKey KeyCode pressed down
-    * only one of their indices will
-    * be returned.
-    */
-        for (int i = 0; i < abilityKey.Length; i++)
-        {
-            if (Input.GetKeyDown(abilityKey[i]))
-            {
-                return i;
-            }
-                
-        }
-        return -1;
-    }
-
-    private int FindMatchingAbilityID(int abilityKeyCodeIndex)
-    {
-        if (abilityKeyCodeIndex != -1)
-            return PlayerPrefs.GetInt("AbilityKey_" + abilityKeyCodeIndex.ToString());
-        else
-            return -1; 
-    }
-
     [Command]
-    private void CmdUseAbility(Ability[] abil, int abilID, float [] userMouseInputs)
+    private void CmdUseAbility(Ability[] abil, int abilID, float[] userMouseInputs)
     {
         if (abilID != -1)
         {
@@ -85,5 +50,36 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
         }
 
     }
+    private int GetMatchingAbilityID(int abilityKeyCodeIndex)
+    {
+        if (abilityKeyCodeIndex != -1)
+            return PlayerPrefs.GetInt("AbilityKey_" + abilityKeyCodeIndex.ToString());
+        else
+            return -1;
+    }
+    private int DetectAbilityKeyCodePress()
+    {
+        /*note if user has more than one 
+        * abilityKey KeyCode pressed down
+        * only one of their indices will
+        * be returned.
+        */
+        for (int i = 0; i < abilityKey.Length; i++)
+        {
+            if (Input.GetKeyDown(abilityKey[i]))
+            {
+                return i;
+            }
+
+        }
+        return -1;
+    }
+    public float [] GetUserMouseCoordinates()
+    {
+        float xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+        float yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+        return (new float [2] { xPos, yPos});
+    }
+ 
 }
 
