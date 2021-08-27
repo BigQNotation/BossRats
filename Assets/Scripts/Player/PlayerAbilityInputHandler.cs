@@ -16,16 +16,18 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
     private void Start()
     {
         // this will be refactored out into player ability selection scene
-        PlayerPrefs.SetInt("AbilityKey_0", 15);
-        PlayerPrefs.SetInt("AbilityKey_1", 90);
-        PlayerPrefs.SetInt("AbilityKey_2", 33);
+        //PlayerPrefs.SetInt("AbilityKey_0", 15);
+        //PlayerPrefs.SetInt("AbilityKey_1", 90);
+        //PlayerPrefs.SetInt("AbilityKey_2", 33);
     }
 
     void Update()
     {
         if (!isLocalPlayer) return;
         Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
-        CmdUseAbility(allAbilities, GetMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
+        if (NetworkClient.ready)
+            CmdUseAbility(allAbilities, GetMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
+
     }
     [Command]
     private void CmdUseAbility(Ability[] abil, int abilID, float[] userMouseInputs)

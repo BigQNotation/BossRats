@@ -21,6 +21,7 @@ public class SceneController : MonoBehaviour
         GameObject roomManager = GameObject.Find("RoomManager");
         roomManager.GetComponent<NetworkManagerHUD>().showGUI = false;
         SceneManager.LoadScene("AbilitySelectScene");
+        
     }
     public void LoadOfflineScene()
     {

@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Abilities\AbilityShoot.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
+    <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
