@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\ShootProjectile.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\Scripts\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -744,6 +745,14 @@
     <ProjectReference Include="where-allocations.csproj">
       <Project>{92EAB2AF-79EE-C9F2-D43C-E9B5E67F2701}</Project>
       <Name>where-allocations</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{8FC8D50D-EE81-831A-03A7-D778D9AA7BF5}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{79AD8CD0-57F7-F1D9-94F8-AEEC50E0002D}</Project>
+      <Name>NavMeshComponents</Name>
     </ProjectReference>
     <ProjectReference Include="Telepathy.csproj">
       <Project>{CCBD31CF-3F2C-BC99-C897-D7DBAAE84212}</Project>
