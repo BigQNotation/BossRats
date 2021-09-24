@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BossAbility.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilityBlink.cs" />
@@ -63,6 +64,9 @@
     <Compile Include="Assets\Scripts\Abilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossShootPellet.cs" />
+    <Compile Include="Assets\Scripts\Boss\ShootPellet.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
