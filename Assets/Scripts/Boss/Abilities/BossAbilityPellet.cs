@@ -31,14 +31,7 @@ public class BossAbilityPellet : BossAbility
         if (!isServer)
             return;
 
-        DecrementCooldown();
 
-        if (AbilityReady())
-        {
-
-            UseAbility();
-            ResetCooldown();
-        }
     }
 
 

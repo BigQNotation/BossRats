@@ -31,14 +31,7 @@ public class BossAbilityPelletBurst : BossAbility
         if (!isServer)
             return;
 
-        DecrementCooldown();
 
-        if (AbilityReady())
-        {
-
-            UseAbility();
-            ResetCooldown();
-        }
     }
 
 
@@ -61,9 +54,6 @@ public class BossAbilityPelletBurst : BossAbility
         projectile6.GetComponent<PelletMovement>().velocity = (new Vector2(-7.071f, 7.071f));
         projectile7.GetComponent<PelletMovement>().velocity = (new Vector2(7.071f, -7.071f));
         projectile8.GetComponent<PelletMovement>().velocity = (new Vector2(-7.071f, -7.071f));
-
-
-
 
         NetworkServer.Spawn(projectile1);
         NetworkServer.Spawn(projectile2);

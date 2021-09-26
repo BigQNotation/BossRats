@@ -17200,8 +17200,8 @@ GameObject:
   - component: {fileID: 1189007614}
   - component: {fileID: 1189007622}
   - component: {fileID: 1189007620}
-  - component: {fileID: 1189007621}
   - component: {fileID: 1189007623}
+  - component: {fileID: 1189007621}
   - component: {fileID: 1189007624}
   - component: {fileID: 1189007625}
   m_Layer: 0

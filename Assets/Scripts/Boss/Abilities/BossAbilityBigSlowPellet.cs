@@ -29,13 +29,6 @@ public class BossAbilityBigSlowPellet : BossAbility
         if (!isServer)
             return;
 
-        DecrementCooldown();
-
-        if (AbilityReady())
-        {
-            UseAbility();
-            ResetCooldown();
-        }
     }
     public override void UseAbility()
     {

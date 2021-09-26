@@ -18,7 +18,6 @@ public class BossAbilityConfigGenerator : NetworkBehaviour
             throw new System.Exception("Error: Number of abilities requested is invalid. Number must be between 1 and the total implemented.");
 
         int[] randomIndexArray = GetRandomUniqueIntArray(numberOfAbilities, allAbilitiesList.Length);
-        Debug.Log(randomIndexArray.Length);
         randomAbilityList = new BossAbility[numberOfAbilities];
         for (int i = 0; i < randomIndexArray.Length; i++)
         {
@@ -45,7 +44,7 @@ public class BossAbilityConfigGenerator : NetworkBehaviour
     }
     private void SetAllAbilityList()
     {
-        BossAbility[] abilityList = { gameObject.GetComponent<BossAbilityPellet>(), gameObject.GetComponent<BossAbilityPelletBurst>() };
+        BossAbility[] abilityList = { gameObject.GetComponent<BossAbilityPellet>(), gameObject.GetComponent<BossAbilityPelletBurst>(), gameObject.GetComponent<BossAbilityBigSlowPellet>() };
         allAbilitiesList = abilityList;
     }
     void Start()
