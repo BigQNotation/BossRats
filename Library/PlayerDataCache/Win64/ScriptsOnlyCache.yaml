@@ -7,8 +7,15 @@ ScriptsOnlyBuild:
     - AbilitySelectUI
     - AbilityShoot
     - AbilitySpeedboost
+    - BossAbility
+    - BossAbilityBigSlowPellet
+    - BossAbilityConfigGenerator
+    - BossAbilityHandler
+    - BossAbilityPellet
+    - BossAbilityPelletBurst
     - NetworkRoomManagerExt
     - NetworkRoomPlayerExt
+    - PelletMovement
     - PlayerAbilityInputHandler
     - PlayerCamera
     - PlayerMovement
@@ -30,6 +37,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -67,21 +76,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12710}
+      Script: {instanceID: 12734}
     - Class: 114
-      Script: {instanceID: 13416}
+      Script: {instanceID: 13444}
     - Class: 114
-      Script: {instanceID: 14342}
+      Script: {instanceID: 14370}
     - Class: 114
-      Script: {instanceID: 15104}
+      Script: {instanceID: 15136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -118,27 +127,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 602}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 14342}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 14730}
+      Script: {instanceID: 12912}
     - Class: 114
-      Script: {instanceID: 14776}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 15104}
+      Script: {instanceID: 14370}
+    - Class: 114
+      Script: {instanceID: 14472}
+    - Class: 114
+      Script: {instanceID: 14546}
+    - Class: 114
+      Script: {instanceID: 14760}
+    - Class: 114
+      Script: {instanceID: 14806}
+    - Class: 114
+      Script: {instanceID: 14976}
+    - Class: 114
+      Script: {instanceID: 15136}
+    - Class: 114
+      Script: {instanceID: 24782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -195,51 +218,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11482}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11586}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11880}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 12380}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 12566}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13416}
+      Script: {instanceID: 13444}
     - Class: 114
-      Script: {instanceID: 13552}
+      Script: {instanceID: 13580}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13614}
     - Class: 114
-      Script: {instanceID: 13588}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 13870}
+      Script: {instanceID: 13898}
     - Class: 114
-      Script: {instanceID: 14098}
+      Script: {instanceID: 14126}
     - Class: 114
-      Script: {instanceID: 14342}
+      Script: {instanceID: 14370}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 14472}
     - Class: 114
-      Script: {instanceID: 14730}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 15020}
+      Script: {instanceID: 14760}
     - Class: 114
-      Script: {instanceID: 15104}
+      Script: {instanceID: 15052}
+    - Class: 114
+      Script: {instanceID: 15136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -342,6 +367,12 @@ ScriptsOnlyBuild:
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
     className: NavMeshModifier
+  - hash:
+      serializedVersion: 2
+      Hash: 1bbd2508c5f903e5b0c811f7f3ebf007
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityPelletBurst
   - hash:
       serializedVersion: 2
       Hash: c8c672fee8a258266e51b55a210b8083
@@ -498,6 +529,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Chat
     className: ChatWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 7bbfb7e27c53126f5ddda889642adbce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityPellet
   - hash:
       serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
@@ -734,6 +771,12 @@ ScriptsOnlyBuild:
     className: LatencySimulation
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityConfigGenerator
+  - hash:
+      serializedVersion: 2
       Hash: 1d12411bfa32d734c4dad798554fe0fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -780,6 +823,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityHandler
   - hash:
       serializedVersion: 2
       Hash: 702330b33d6f348f76db0c974f6e02c3
@@ -1124,6 +1173,12 @@ ScriptsOnlyBuild:
     className: GUIConsole
   - hash:
       serializedVersion: 2
+      Hash: 186d11da107810f55f738c73ad5851d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PelletMovement
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
@@ -1218,6 +1273,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: af948d13158153c38b14bc073283ea8f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbility
   - hash:
       serializedVersion: 2
       Hash: 48cd7033422a2bb9991e4ac303006d37
@@ -1332,6 +1393,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 7bbfb7e27c53126f5ddda889642adbce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityBigSlowPellet
   platform: 19
   scenePathNames:
   - Assets/Scenes/OfflineScene.unity
