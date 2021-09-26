@@ -17202,6 +17202,7 @@ GameObject:
   - component: {fileID: 1189007620}
   - component: {fileID: 1189007621}
   - component: {fileID: 1189007623}
+  - component: {fileID: 1189007624}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -17380,6 +17381,7 @@ MonoBehaviour:
   cooldownTimer: 0
   projectilePrefab: {fileID: 412420879002471191, guid: 10b23b4644edcbf41b99aee6c231baaf,
     type: 3}
+  force: 10
 --- !u!114 &1189007622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17407,6 +17409,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19771b36e52bfe14c86ca38fcc59688c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+--- !u!114 &1189007624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189007613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0b22b0562a8744ca5621d5ad786c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cooldownTimer: 0
+  projectilePrefab: {fileID: 412420879002471191, guid: 10b23b4644edcbf41b99aee6c231baaf,
+    type: 3}
+  velocity: {x: 0, y: 0}
 --- !u!1 &1190637171
 GameObject:
   m_ObjectHideFlags: 0

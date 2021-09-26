@@ -45,7 +45,7 @@ public class BossAbilityConfigGenerator : NetworkBehaviour
     }
     private void SetAllAbilityList()
     {
-        BossAbility[] abilityList = { gameObject.GetComponent<BossAbilityPellet>() };
+        BossAbility[] abilityList = { gameObject.GetComponent<BossAbilityPellet>(), gameObject.GetComponent<BossAbilityPelletBurst>() };
         allAbilitiesList = abilityList;
     }
     void Start()

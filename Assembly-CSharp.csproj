@@ -63,11 +63,12 @@
     <Compile Include="Assets\Scripts\Abilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\AbilityBehavior\PelletMovement.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPellet.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPelletBurst.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbility.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
-    <Compile Include="Assets\Scripts\Boss\BossAbilityPellet.cs" />
-    <Compile Include="Assets\Scripts\Boss\ShootPellet.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
