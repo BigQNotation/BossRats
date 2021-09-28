@@ -63,13 +63,14 @@
     <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityBigSlowPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPelletBurst.cs" />
+    <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationDamageOut.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbility.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAccumulationStrategy.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossChargeStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
-    <Compile Include="Assets\Scripts\Boss\Strategies\AccumulationDamageOut.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\Ability.cs" />

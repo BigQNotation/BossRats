@@ -6,6 +6,7 @@ using Mirror;
 public class BossAbilityHandler : NetworkBehaviour
 {
     private BossAbility[] abilityList;
+    
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class BossAbilityHandler : NetworkBehaviour
 
             if (abilityList[i].AbilityReady())
             {
+
                 abilityList[i].UseAbility();
                 abilityList[i].ResetCooldown();
             }
