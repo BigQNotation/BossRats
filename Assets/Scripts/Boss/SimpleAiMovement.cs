@@ -32,6 +32,8 @@ public class SimpleAiMovement : NetworkBehaviour
         UpdateDestination();    
     }
 
+
+
     void UpdateDestination()
     {
         Vector3 add = new Vector3(.001f, 0);

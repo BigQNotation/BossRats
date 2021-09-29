@@ -36,8 +36,7 @@ public class BossAbilityHandler : NetworkBehaviour
             abilityList[i].DecrementCooldown();
 
             if (abilityList[i].AbilityReady())
-            {
-
+            {          
                 abilityList[i].UseAbility();
                 abilityList[i].ResetCooldown();
             }

@@ -10,10 +10,10 @@ using System.Linq;
 
 public class BossChargeStrategy : MonoBehaviour
 {
-    private float TIMEWINDOW; // must be set in inherited class
-    private int THRESHOLD;    // must be set in inherited class
-    private int currentCharge = 0;
-    List<ChargeTimer> chargeTimers = new List<ChargeTimer>();
+    protected float TIMEWINDOW; // must be set in inherited class
+    protected int THRESHOLD;    // must be set in inherited class
+    protected int currentCharge = 0;
+    protected List<ChargeTimer> chargeTimers = new List<ChargeTimer>();
 
     public bool CheckThresholdState()
     {
@@ -30,16 +30,17 @@ public class BossChargeStrategy : MonoBehaviour
 
     void Start()
     {
-
+        
 
     }
     void Update()
     {
-        UpdateChargeTimers();
-        RemoveExpiredCharges();
+       
+        
+
     }
 
-    private class ChargeTimer
+    protected class ChargeTimer
     {
         public int charge;
         public float timeRemaining;
@@ -59,7 +60,7 @@ public class BossChargeStrategy : MonoBehaviour
         }
 
     }
-    private void RemoveExpiredCharges()
+    protected void RemoveExpiredCharges()
     {
         foreach (ChargeTimer timer in chargeTimers)
         {
@@ -68,11 +69,14 @@ public class BossChargeStrategy : MonoBehaviour
         }
         chargeTimers.RemoveAll(charge => charge.CheckTimeUp());
     }
-    private void UpdateChargeTimers()
+    protected void UpdateChargeTimers()
     {
+        
         foreach (ChargeTimer timer in chargeTimers)
         {
-            timer.timeRemaining -= Time.deltaTime; 
+            
+            timer.timeRemaining -= Time.deltaTime;
+            Debug.Log("this timer has " + timer.timeRemaining + " remaining");
         }
     }
 }
