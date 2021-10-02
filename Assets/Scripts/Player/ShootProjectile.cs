@@ -18,6 +18,9 @@ public class ShootProjectile : NetworkBehaviour
     // position, because both the server and the client simulate it.
     void Start()
     {
+        if (isServer)
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
         rigidBody.AddForce(transform.up * force);
 
     }

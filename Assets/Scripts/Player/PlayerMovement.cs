@@ -15,6 +15,9 @@ public class PlayerMovement : NetworkBehaviour
 
     void Start()
     {
+        if (isLocalPlayer)
+            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
         body = GetComponent<Rigidbody2D>();
         cam = Camera.main;
     }

@@ -94,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8107929617084464505}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   syncInterval: 0.1
   destroyAfter: 50
   rigidBody: {fileID: -7837743649766484076}
-  force: 1000
+  force: 500
 --- !u!61 &-734890218751041954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 0
+  syncInterval: 0
+  clientAuthority: 1
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
