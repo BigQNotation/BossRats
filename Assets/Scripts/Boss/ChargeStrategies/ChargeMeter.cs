@@ -2,32 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
 public class ChargeMeter : BossChargeStrategy
 {
-    [SerializeField]
-    GameObject chargeMeterUI;
-
 
     // Start is called before the first frame update
     void Start()
     {
         this.TIMEWINDOW = 15;
         this.THRESHOLD = 5;
-        chargeMeterUI.SetActive(true);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetChargeMeterUI();
+        //SetChargeMeterUI();
         UpdateChargeTimers();
         RemoveExpiredCharges();    
     }
 
+    public int GetCharge()
+    {
+        return currentCharge;
+    }
     private void SetChargeMeterUI()
     {
-        chargeMeterUI.GetComponent<Text>().text = currentCharge.ToString();
+        if (isServer)
+        {
+            GameObject.Find("ChargeMeterUI").GetComponent<ChargeMeterUI>().chargeText = gameObject.GetComponent<ChargeMeter>().GetCharge().ToString();
+        }
+        
     }
-
 }

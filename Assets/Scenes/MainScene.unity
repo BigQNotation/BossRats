@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &249720210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17356,6 +17356,7 @@ GameObject:
   - component: {fileID: 1189007626}
   - component: {fileID: 1189007629}
   - component: {fileID: 1189007630}
+  - component: {fileID: 1189007631}
   m_Layer: 8
   m_Name: Boss
   m_TagString: Untagged
@@ -17650,6 +17651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7ad2a6961ceda4b81a58a65520c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!114 &1189007630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17662,7 +17665,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676592b13e64c8943a66f01bfbf7e752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeMeterUI: {fileID: 249720209}
+  syncMode: 0
+  syncInterval: 0.1
+--- !u!114 &1189007631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189007613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b4e5de23ac79b4e8da2591fc7a640c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  chargeText: 3
+  chargeUI: {fileID: 249720209}
 --- !u!1 &1190637171
 GameObject:
   m_ObjectHideFlags: 0

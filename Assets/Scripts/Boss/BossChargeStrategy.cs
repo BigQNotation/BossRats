@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using Mirror;
 // charge strategy is a time window influenced by player actions metric.
 // charge strategy has a threshold value in the time window;
 // above and below the threshold each are different states.
 // 
 
-public class BossChargeStrategy : MonoBehaviour
+public class BossChargeStrategy : NetworkBehaviour
 {
     protected float TIMEWINDOW; // must be set in inherited class
     protected int THRESHOLD;    // must be set in inherited class
