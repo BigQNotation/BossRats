@@ -76,7 +76,7 @@ public class BossChargeStrategy : NetworkBehaviour
         {
             
             timer.timeRemaining -= Time.deltaTime;
-            Debug.Log("this timer has " + timer.timeRemaining + " remaining");
+            //Debug.Log("this timer has " + timer.timeRemaining + " remaining");
         }
     }
 }

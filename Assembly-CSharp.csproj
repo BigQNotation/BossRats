@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ChargeMeterUI.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
@@ -70,8 +69,11 @@
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAccumulationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossChargeStrategy.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeter.cs" />
+    <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeterUI.cs" />
+    <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationSpeed.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
