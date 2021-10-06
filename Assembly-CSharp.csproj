@@ -70,10 +70,12 @@
     <Compile Include="Assets\Scripts\Boss\BossAccumulationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossChargeStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossMetricStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeter.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeterUI.cs" />
     <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationSpeed.cs" />
+    <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricAbilityUsage.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
@@ -84,6 +86,9 @@
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRecords.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
     <Compile Include="Assets\Scripts\Player\ShootProjectile.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />

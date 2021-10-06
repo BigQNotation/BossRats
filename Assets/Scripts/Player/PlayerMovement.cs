@@ -6,7 +6,7 @@ using Mirror;
 public class PlayerMovement : NetworkBehaviour
 {
     [SyncVar]
-    public float runSpeed = 20.0f;
+    public float runSpeed = 6f;
     Rigidbody2D body;
     float horizontal;
     float vertical;

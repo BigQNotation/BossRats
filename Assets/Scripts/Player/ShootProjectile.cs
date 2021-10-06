@@ -7,7 +7,7 @@ public class ShootProjectile : NetworkBehaviour
 {
     public float destroyAfter = 50;
     public Rigidbody2D rigidBody;
-    public float force = 1000f;
+    public float force = 500f;
 
     public override void OnStartServer()
     {
