@@ -29,7 +29,7 @@ public class MetricAbilityUsage : BossMetricStrategy
         {
             UpdateMetricFromPlayerRecords(players[i]);
             ResetMetricFromPlayerRecords(players[i]);
-            Debug.Log("metric now: " + metric);
+            
         }
 
         
