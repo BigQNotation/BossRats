@@ -18,7 +18,7 @@ public class ChargeMeter : BossChargeStrategy
     // Update is called once per frame
     void Update()
     {
-        //SetChargeMeterUI();
+        EnableChargeMeterUI();
         UpdateChargeTimers();
         RemoveExpiredCharges();    
     }
@@ -27,12 +27,9 @@ public class ChargeMeter : BossChargeStrategy
     {
         return currentCharge;
     }
-    private void SetChargeMeterUI()
+    private void EnableChargeMeterUI()
     {
-        if (isServer)
-        {
-            GameObject.Find("ChargeMeterUI").GetComponent<ChargeMeterUI>().chargeText = gameObject.GetComponent<ChargeMeter>().GetCharge().ToString();
-        }
-        
+        gameObject.GetComponent<ChargeMeterUI>().enabled = true;
     }
+
 }
