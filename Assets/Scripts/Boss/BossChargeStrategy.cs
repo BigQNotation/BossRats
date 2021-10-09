@@ -10,6 +10,9 @@ using Mirror;
 
 public class BossChargeStrategy : NetworkBehaviour
 {
+    [SyncVar]
+    public bool isActiveStrategy = false;
+
     protected float TIMEWINDOW; // must be set in inherited class
     protected int THRESHOLD;    // must be set in inherited class
     protected int currentCharge = 0;

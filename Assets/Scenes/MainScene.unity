@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &249720210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17613,11 +17613,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189007613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c98314be2bd1e4248b3c7c1f195bc3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17630,6 +17633,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c045439efd0b964ab03e0cb2f86241e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17657,6 +17663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17664,13 +17671,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189007613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 676592b13e64c8943a66f01bfbf7e752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17694,11 +17702,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189007613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2faaba620386d144bab1fa1ccbaac02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17706,13 +17717,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189007613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb2de634a29e56946b2589ea2c638741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  isActiveStrategy: 0
 --- !u!114 &1189007634
 MonoBehaviour:
   m_ObjectHideFlags: 0

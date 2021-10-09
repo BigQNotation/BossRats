@@ -23,9 +23,14 @@ public class ChargeMeterUI : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        ShowUI();
         UpdateChargeUI();
     }
 
+    private void ShowUI()
+    {
+        chargeUI.SetActive(true);
+    }
     private void UpdateChargeUI()
     {
         if (isServer)

@@ -5,6 +5,10 @@ using Mirror;
 
 public abstract class BossMetricStrategy : NetworkBehaviour
 {
+
+    [SyncVar]
+    public bool isActiveStrategy = false;
+
     protected float metric;
 
     // Start is called before the first frame update

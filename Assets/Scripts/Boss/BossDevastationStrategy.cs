@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-
-public abstract class BossDevastationStrategy : MonoBehaviour
+public abstract class BossDevastationStrategy : NetworkBehaviour
 {
+    [SyncVar]
+    public bool isActiveStrategy = false;
 
     protected float cooldownMax;
     protected float cooldownRemainder;

@@ -23,6 +23,8 @@ public class MetricAbilityUsage : BossMetricStrategy
     // Update is called once per frame
     void Update()
     {
+        if (!isActiveStrategy)
+            return;
         // testing purposes, move to BossStrategyHandler
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < players.Length; i++)

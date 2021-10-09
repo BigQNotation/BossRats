@@ -7,17 +7,26 @@ public class DevastationSpeed : BossDevastationStrategy
 {
 
     private float movementSpeedMod = 3;
-    
+    private bool devastationStartedAlready = false;
 
     void Start()
     {
 
         cooldownMax = 15;
-        UseDevastation();
+        
         
     }
     void Update()
     {
+        if (!isActiveStrategy)
+            return;
+        if (!devastationStartedAlready)
+        {
+            UseDevastation();
+            devastationStartedAlready = true;
+        }
+
+
         UpdateDevastationTimer();
         if (IsDevastationTimerEnd() && readyToReset)
             EndDevastation();

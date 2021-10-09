@@ -16,7 +16,8 @@ public class AccumulationDamageOut : BossAccumulationStrategy
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isActiveStrategy)
+            return;
     }
 
     public override void UseStrategy()

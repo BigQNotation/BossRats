@@ -7,6 +7,7 @@ public class BossStrategyHandler : NetworkBehaviour
 {
     BossStrategyConfigGenerator.GeneratedStrategy strategySet;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,9 @@ public class BossStrategyHandler : NetworkBehaviour
         if (isServer)
         {
             CreateStrategy();
-            ServerEnableActiveStrategies();
+            EnableActiveStrategies();
         }
-        if (isLocalPlayer)
-        {
-            ClientEnableActiveStrategies();
-        }
+  
 
     }
     private void CreateStrategy()
@@ -35,19 +33,15 @@ public class BossStrategyHandler : NetworkBehaviour
         GameObject.Find("Boss").GetComponent<BossStrategyConfigGenerator>().GenerateRandomStrategyList();
         strategySet = GameObject.Find("Boss").GetComponent<BossStrategyConfigGenerator>().GetRandomStrategyList();
     }
-    private void ServerEnableActiveStrategies()
+    private void EnableActiveStrategies()
     {
         if (strategySet == null)
             return;
-        
-        strategySet.accumulationStrategy.enabled = true;
-        strategySet.chargeStrategy.enabled = true;
-        strategySet.devastationStrategy.enabled = true;
-        strategySet.metricStrategy.enabled = true;
+        strategySet.accumulationStrategy.isActiveStrategy = true;
+        strategySet.chargeStrategy.isActiveStrategy = true;
+        strategySet.devastationStrategy.isActiveStrategy = true;
+        strategySet.metricStrategy.isActiveStrategy = true;
     }
-    private void ClientEnableActiveStrategies()
-    {
 
-    }
 
 }

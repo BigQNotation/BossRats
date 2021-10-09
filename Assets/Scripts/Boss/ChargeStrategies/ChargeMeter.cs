@@ -18,6 +18,8 @@ public class ChargeMeter : BossChargeStrategy
     // Update is called once per frame
     void Update()
     {
+        if (!isActiveStrategy)
+            return;
         EnableChargeMeterUI();
         UpdateChargeTimers();
         RemoveExpiredCharges();    
