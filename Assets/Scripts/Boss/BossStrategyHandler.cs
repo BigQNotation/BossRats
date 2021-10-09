@@ -7,24 +7,27 @@ public class BossStrategyHandler : NetworkBehaviour
 {
     BossStrategyConfigGenerator.GeneratedStrategy strategySet;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (isServer)
-        {
-            CreateStrategy();
-            EnableActiveStrategies();
-        }
-  
+        if (!isServer)
+            return;
+        
+        // Called only once
+        CreateStrategy();
+        EnableActiveStrategies();
 
+        // Called every update
+        if (strategySet == null)
+            return;        
+        AddBossCharge(GetPlayerMetric());
+        TryUseAccumulationStrategy();
+        TryUseDevastationStrategy();
     }
+
     private void CreateStrategy()
     {
         if (strategySet != null)
@@ -42,6 +45,27 @@ public class BossStrategyHandler : NetworkBehaviour
         strategySet.devastationStrategy.isActiveStrategy = true;
         strategySet.metricStrategy.isActiveStrategy = true;
     }
-
-
+    private int GetPlayerMetric()
+    {
+        return (int)strategySet.metricStrategy.GetMetric();
+    }
+    private void AddBossCharge(int charge)
+    {
+        strategySet.chargeStrategy.AddCharge(charge);
+        strategySet.metricStrategy.ResetMetric();
+    }
+    private void TryUseAccumulationStrategy()
+    {
+        if (strategySet.chargeStrategy.isAboveThresholdState())
+        {
+            strategySet.accumulationStrategy.UseStrategy();
+        }
+    }
+    private void TryUseDevastationStrategy()
+    {
+        if (!strategySet.chargeStrategy.isAboveThresholdState())
+        {
+            strategySet.devastationStrategy.UseDevastation();
+        }
+    }
 }

@@ -17,15 +17,19 @@ ScriptsOnlyBuild:
     - BossAccumulationStrategy
     - BossChargeStrategy
     - BossModifications
+    - BossStrategyConfigGenerator
+    - BossStrategyHandler
     - ChargeMeter
     - ChargeMeterUI
     - DevastationSpeed
+    - MetricAbilityUsage
     - NetworkRoomManagerExt
     - NetworkRoomPlayerExt
     - PelletMovement
     - PlayerAbilityInputHandler
     - PlayerCamera
     - PlayerMovement
+    - RecordAbilitiesUsed
     - SceneController
     - ShootProjectile
     - SimpleAiMovement
@@ -87,17 +91,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11884}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 12720}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 14376}
     - Class: 114
-      Script: {instanceID: 15134}
+      Script: {instanceID: 15148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -148,41 +152,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11922}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11942}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12344}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 14466}
+      Script: {instanceID: 13238}
     - Class: 114
-      Script: {instanceID: 14540}
+      Script: {instanceID: 13600}
     - Class: 114
-      Script: {instanceID: 14754}
+      Script: {instanceID: 14376}
     - Class: 114
-      Script: {instanceID: 14800}
+      Script: {instanceID: 14478}
     - Class: 114
-      Script: {instanceID: 14970}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 14976}
+      Script: {instanceID: 14766}
     - Class: 114
-      Script: {instanceID: 14996}
+      Script: {instanceID: 14812}
     - Class: 114
-      Script: {instanceID: 15134}
+      Script: {instanceID: 14982}
+    - Class: 114
+      Script: {instanceID: 14988}
+    - Class: 114
+      Script: {instanceID: 15008}
+    - Class: 114
+      Script: {instanceID: 15148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -251,41 +261,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11884}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12390}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12952}
     - Class: 114
-      Script: {instanceID: 13104}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13446}
     - Class: 114
-      Script: {instanceID: 13572}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13610}
+      Script: {instanceID: 13620}
     - Class: 114
-      Script: {instanceID: 13622}
+      Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13892}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 14120}
+      Script: {instanceID: 13910}
     - Class: 114
-      Script: {instanceID: 14364}
+      Script: {instanceID: 14132}
     - Class: 114
-      Script: {instanceID: 14466}
+      Script: {instanceID: 14376}
     - Class: 114
-      Script: {instanceID: 14540}
+      Script: {instanceID: 14478}
     - Class: 114
-      Script: {instanceID: 14754}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 15050}
+      Script: {instanceID: 14766}
     - Class: 114
-      Script: {instanceID: 15134}
+      Script: {instanceID: 15062}
+    - Class: 114
+      Script: {instanceID: 15148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -492,7 +504,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+      Hash: 126e1d4f40021ac577690c28b36be822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChargeMeter
@@ -552,7 +564,7 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 126e1d4f40021ac577690c28b36be822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DevastationSpeed
@@ -666,6 +678,12 @@ ScriptsOnlyBuild:
     className: PlayerGUI
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossStrategyHandler
+  - hash:
+      serializedVersion: 2
       Hash: 192ca9716d03752ea1d90a78bc2daac9
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Additive
@@ -688,6 +706,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: MultiplexTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 126e1d4f40021ac577690c28b36be822
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MetricAbilityUsage
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -831,6 +855,12 @@ ScriptsOnlyBuild:
       Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: BossStrategyConfigGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 126e1d4f40021ac577690c28b36be822
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: BossChargeStrategy
   - hash:
       serializedVersion: 2
@@ -972,7 +1002,7 @@ ScriptsOnlyBuild:
     className: ChatNetworkManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 126e1d4f40021ac577690c28b36be822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossAccumulationStrategy
@@ -1102,6 +1132,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShootProjectile
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RecordAbilitiesUsed
   - hash:
       serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
@@ -1338,7 +1374,7 @@ ScriptsOnlyBuild:
     className: BossAbility
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 126e1d4f40021ac577690c28b36be822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AccumulationDamageOut
@@ -1390,6 +1426,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RecordDistanceTraveled
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

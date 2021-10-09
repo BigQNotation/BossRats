@@ -9,7 +9,7 @@ public abstract class BossDevastationStrategy : NetworkBehaviour
     public bool isActiveStrategy = false;
 
     protected float cooldownMax;
-    protected float cooldownRemainder;
+    protected float cooldownRemainder = 0;
     protected bool readyToReset = false;
 
     void Start()

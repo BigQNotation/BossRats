@@ -7,7 +7,6 @@ public class DevastationSpeed : BossDevastationStrategy
 {
 
     private float movementSpeedMod = 3;
-    private bool devastationStartedAlready = false;
 
     void Start()
     {
@@ -20,12 +19,6 @@ public class DevastationSpeed : BossDevastationStrategy
     {
         if (!isActiveStrategy)
             return;
-        if (!devastationStartedAlready)
-        {
-            UseDevastation();
-            devastationStartedAlready = true;
-        }
-
 
         UpdateDevastationTimer();
         if (IsDevastationTimerEnd() && readyToReset)
@@ -34,6 +27,8 @@ public class DevastationSpeed : BossDevastationStrategy
 
     public override void UseDevastation()
     {
+        if (readyToReset) // only allow UseDevastion while it isn't already in progress
+            return;
         StartDevastationTimer();
         readyToReset = true;
         IncreaseBossMovementSpeed();

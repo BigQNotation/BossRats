@@ -11,7 +11,7 @@ public class ChargeMeter : BossChargeStrategy
     void Start()
     {
         this.TIMEWINDOW = 15;
-        this.THRESHOLD = 5;
+        this.THRESHOLD = 3;
 
     }
 

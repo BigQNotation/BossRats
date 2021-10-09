@@ -18,11 +18,17 @@ public class AccumulationDamageOut : BossAccumulationStrategy
     {
         if (!isActiveStrategy)
             return;
+        UpdateTimeToNextAccumulation();
     }
 
     public override void UseStrategy()
     {
-        gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE;
+        if (IsAccumulationIntervalReady())
+        {
+            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE;
+            ResetTimeToNextAccumulation();
+        }
+            
     }
     public override void ResetStrategy()
     {

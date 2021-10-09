@@ -37,7 +37,6 @@ public class BossAbilityHandler : NetworkBehaviour
 
             if (abilityList[i].AbilityReady())
             {
-                gameObject.GetComponent<ChargeMeter>().AddCharge(11);
                 abilityList[i].UseAbility();
                 abilityList[i].ResetCooldown();
             }

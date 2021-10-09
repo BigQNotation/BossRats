@@ -18,7 +18,7 @@ public class BossChargeStrategy : NetworkBehaviour
     protected int currentCharge = 0;
     protected List<ChargeTimer> chargeTimers = new List<ChargeTimer>();
 
-    public bool CheckThresholdState()
+    public bool isAboveThresholdState()
     {
         if (currentCharge >= THRESHOLD)
             return true;
