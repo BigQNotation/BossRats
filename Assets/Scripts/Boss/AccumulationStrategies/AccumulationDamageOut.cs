@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AccumulationDamageOut : BossAccumulationStrategy
 {
-    int STATES = 3;
+    int STATES = 5;
     int DAMAGEINCREASE = 20;
 
     // Start is called before the first frame update
@@ -19,13 +19,17 @@ public class AccumulationDamageOut : BossAccumulationStrategy
         if (!isActiveStrategy)
             return;
         UpdateTimeToNextAccumulation();
+        UpdateTimeToNextDecumulation();
+        TryDecumulate();
     }
 
     public override void UseStrategy()
     {
         if (IsAccumulationIntervalReady())
-        {
-            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE;
+        {           
+            gameObject.GetComponent<BossModifications>().damageIncreasePercent -= DAMAGEINCREASE * GetCurrentState();
+            IncreaseState();
+            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE * GetCurrentState();
             ResetTimeToNextAccumulation();
         }
             
@@ -33,6 +37,16 @@ public class AccumulationDamageOut : BossAccumulationStrategy
     public override void ResetStrategy()
     {
         gameObject.GetComponent<BossModifications>().damageIncreasePercent -= (GetCurrentState() * DAMAGEINCREASE);
+    }
+    protected override void TryDecumulate()
+    {
+        if (IsDecumulationIntervalReady())
+        {     
+            gameObject.GetComponent<BossModifications>().damageIncreasePercent -= DAMAGEINCREASE * GetCurrentState();
+            DecreaseState();
+            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE * GetCurrentState();
+            ResetTimeToNextDecumulation();
+        }
     }
 
 }

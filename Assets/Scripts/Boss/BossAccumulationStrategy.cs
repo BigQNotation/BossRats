@@ -12,7 +12,8 @@ public class BossAccumulationStrategy : NetworkBehaviour
     private int currentState = 0;
     private float accumulationTime = 3f;
     private float timeToNextAccumulation = 0;
-
+    private float decumulationTime = 15f;
+    private float timeToNextDecumulation = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,25 +30,23 @@ public class BossAccumulationStrategy : NetworkBehaviour
         stateCount = states;
     }
 
-    public void IncreaseState()
+    protected void IncreaseState()
     {
         if (currentState < stateCount)
             currentState++;
     }
-    public void ResetState()
+    protected void DecreaseState()
+    {
+        if (currentState > 0)
+            currentState--;
+    }
+    protected void ResetState()
     {
         currentState = 0;
     }
-    public int GetCurrentState()
+    protected int GetCurrentState()
     {
         return currentState;
-    }
-    public bool CheckMaxState()
-    {
-        if (currentState == stateCount)
-            return true;
-        else
-            return false;
     }
     public bool IsAccumulationIntervalReady()
     {
@@ -55,7 +54,12 @@ public class BossAccumulationStrategy : NetworkBehaviour
             return true;
         return false;
     }
-
+    public bool IsDecumulationIntervalReady()
+    {
+        if (timeToNextDecumulation <= 0)
+            return true;
+        return false;
+    }
     public virtual void UseStrategy()
     {
 
@@ -73,5 +77,17 @@ public class BossAccumulationStrategy : NetworkBehaviour
     protected void ResetTimeToNextAccumulation()
     {
         timeToNextAccumulation = accumulationTime;
+    }
+    protected void UpdateTimeToNextDecumulation()
+    {
+        timeToNextDecumulation -= Time.deltaTime;
+    }
+    protected void ResetTimeToNextDecumulation()
+    {
+        timeToNextDecumulation = decumulationTime;
+    }
+    protected virtual void TryDecumulate()
+    {
+
     }
 }
