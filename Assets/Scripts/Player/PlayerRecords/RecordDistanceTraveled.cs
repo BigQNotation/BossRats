@@ -2,17 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecordDistanceTraveled : MonoBehaviour
+public class RecordDistanceTraveled : PlayerRecords
 {
-    // Start is called before the first frame update
-    void Start()
+    float distancePerUnitMetric = 20f; // balancing point
+    float distanceTravelled = 0;
+    Vector2 lastPosition;
+
+    public override void UpdateRecordedMetric()
     {
-        
+        recordedMetric++;
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        lastPosition = transform.position;
+    }
+
     void Update()
     {
-        
+        UpdateDistanceTravelled();
+        TryUpdateRecordedMetric();
+    }
+
+    private void UpdateDistanceTravelled()
+    {
+        distanceTravelled += Vector2.Distance(transform.position, lastPosition);
+        lastPosition = transform.position;
+    }
+    private void TryUpdateRecordedMetric()
+    {
+        if (distanceTravelled >= distancePerUnitMetric)
+        {
+            distanceTravelled -= distancePerUnitMetric;
+            UpdateRecordedMetric();
+        }
     }
 }

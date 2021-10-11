@@ -32,7 +32,7 @@ public abstract class BossMetricStrategy : NetworkBehaviour
         metric = 0;
     }
     // Fetch metric data then reset player record metric to 0
-    protected abstract void UpdateMetricFromPlayerRecords(GameObject playerObject);
-    protected abstract void ResetMetricFromPlayerRecords(GameObject playerObject);
+    public abstract void UpdateMetricFromPlayerRecords(GameObject playerObject);
+    public abstract void ResetMetricFromPlayerRecords(GameObject playerObject);
 
 }

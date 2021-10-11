@@ -14,10 +14,10 @@ public class BossStrategyConfigGenerator : NetworkBehaviour
 
     public void GenerateRandomStrategyList()
     {
-        generatedStrategy.accumulationStrategy = allAccumulationStrats[Random.Range(0, allAccumulationStrats.Length - 1)];
-        generatedStrategy.chargeStrategy = allChargeStrats[Random.Range(0, allChargeStrats.Length - 1)];
-        generatedStrategy.devastationStrategy = allDevastationStrats[Random.Range(0, allDevastationStrats.Length - 1)];
-        generatedStrategy.metricStrategy = allMetricStrats[Random.Range(0, allMetricStrats.Length - 1)];
+        generatedStrategy.accumulationStrategy = allAccumulationStrats[Random.Range(0, allAccumulationStrats.Length)];
+        generatedStrategy.chargeStrategy = allChargeStrats[Random.Range(0, allChargeStrats.Length)];
+        generatedStrategy.devastationStrategy = allDevastationStrats[Random.Range(0, allDevastationStrats.Length)];
+        generatedStrategy.metricStrategy = allMetricStrats[Random.Range(0, allMetricStrats.Length)];
 
         Debug.Log("accum strat: " + generatedStrategy.accumulationStrategy.ToString());
         Debug.Log("charge strat: " + generatedStrategy.chargeStrategy.ToString());
@@ -61,7 +61,7 @@ public class BossStrategyConfigGenerator : NetworkBehaviour
         BossDevastationStrategy[] devastationList = { gameObject.GetComponent<DevastationSpeed>() };
         allDevastationStrats = devastationList;
 
-        BossMetricStrategy[] metricList = { gameObject.GetComponent<MetricAbilityUsage>() };
+        BossMetricStrategy[] metricList = { gameObject.GetComponent<MetricAbilityUsage>(), gameObject.GetComponent<MetricDistanceTraveled>() };
         allMetricStrats = metricList;
     }
 

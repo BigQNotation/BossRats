@@ -22,12 +22,22 @@ public class BossStrategyHandler : NetworkBehaviour
 
         // Called every update
         if (strategySet == null)
-            return;        
+            return;
+        UpdatePlayerMetric();
         AddBossCharge(GetPlayerMetric());
         TryUseAccumulationStrategy();
         TryUseDevastationStrategy();
     }
+    private void UpdatePlayerMetric()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < players.Length; i++)
+        {
+            strategySet.metricStrategy.UpdateMetricFromPlayerRecords(players[i]);
+            strategySet.metricStrategy.ResetMetricFromPlayerRecords(players[i]);
 
+        }
+    }
     private void CreateStrategy()
     {
         if (strategySet != null)

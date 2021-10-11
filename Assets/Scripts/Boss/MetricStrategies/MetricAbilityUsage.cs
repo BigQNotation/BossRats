@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MetricAbilityUsage : BossMetricStrategy
 {
-    protected override void ResetMetricFromPlayerRecords(GameObject playerObject)
+    public override void ResetMetricFromPlayerRecords(GameObject playerObject)
     {
         playerObject.GetComponent<RecordAbilitiesUsed>().ResetRecordedMetric();
     }
 
-    protected override void UpdateMetricFromPlayerRecords(GameObject playerObject)
+    public override void UpdateMetricFromPlayerRecords(GameObject playerObject)
     {
         metric += playerObject.GetComponent<RecordAbilitiesUsed>().GetRecordedMetric();
     }
@@ -25,16 +25,6 @@ public class MetricAbilityUsage : BossMetricStrategy
     {
         if (!isActiveStrategy)
             return;
-        // testing purposes, move to BossStrategyHandler
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < players.Length; i++)
-        {
-            UpdateMetricFromPlayerRecords(players[i]);
-            ResetMetricFromPlayerRecords(players[i]);
-            
-        }
-
-        
-        
+           
     }
 }
