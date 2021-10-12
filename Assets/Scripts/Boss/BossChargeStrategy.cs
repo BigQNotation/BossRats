@@ -8,7 +8,7 @@ using Mirror;
 // above and below the threshold each are different states.
 // 
 
-public class BossChargeStrategy : NetworkBehaviour
+public abstract class BossChargeStrategy : NetworkBehaviour
 {
     [SyncVar]
     public bool isActiveStrategy = false;

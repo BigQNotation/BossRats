@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class BossAccumulationStrategy : NetworkBehaviour
+public abstract class BossAccumulationStrategy : NetworkBehaviour
 {
     [SyncVar]
     public bool isActiveStrategy = false;
@@ -60,14 +60,8 @@ public class BossAccumulationStrategy : NetworkBehaviour
             return true;
         return false;
     }
-    public virtual void UseStrategy()
-    {
-
-    }
-    public virtual void ResetStrategy()
-    {
-
-    }
+    public abstract void UseStrategy();
+    public abstract void ResetStrategy();
 
  
     protected void UpdateTimeToNextAccumulation()
@@ -86,8 +80,5 @@ public class BossAccumulationStrategy : NetworkBehaviour
     {
         timeToNextDecumulation = decumulationTime;
     }
-    protected virtual void TryDecumulate()
-    {
-
-    }
+    protected abstract void TryDecumulate();
 }
