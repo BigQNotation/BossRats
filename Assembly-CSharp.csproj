@@ -93,9 +93,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerRecords.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player\ShootProjectile.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\UI\BossHealthUI.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
