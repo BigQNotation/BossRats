@@ -337,7 +337,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   currentPlayerHealth: 100
-  maxPlayerHealth: 100
+  playerName: Player
 --- !u!1 &6967872487230955548
 GameObject:
   m_ObjectHideFlags: 0

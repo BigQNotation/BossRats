@@ -17713,9 +17713,11 @@ GameObject:
   - component: {fileID: 1189007634}
   - component: {fileID: 1189007635}
   - component: {fileID: 1189007627}
+  - component: {fileID: 1189007629}
+  - component: {fileID: 1189007637}
   m_Layer: 8
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18002,6 +18004,32 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   damageIncreasePercent: 0
+--- !u!61 &1189007629
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189007613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!114 &1189007630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18106,6 +18134,18 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   isActiveStrategy: 0
+--- !u!114 &1189007637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189007613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd68d13a58bbc0458233e263947f20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1190637171
 GameObject:
   m_ObjectHideFlags: 0

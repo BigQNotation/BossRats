@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAccumulationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossChargeStrategy.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossMetricStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
@@ -85,7 +86,9 @@
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityBlink.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityShoot.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityShoot\AbilityShoot.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityShoot\AbilityShootCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityShoot\AbilityShootMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
@@ -94,7 +97,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\Player\ShootProjectile.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\UI\BossHealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerHealthUI.cs" />

@@ -27,24 +27,24 @@ public class AccumulationDamageOut : BossAccumulationStrategy
     {
         if (IsAccumulationIntervalReady())
         {           
-            gameObject.GetComponent<BossModifications>().damageIncreasePercent -= DAMAGEINCREASE * GetCurrentState();
+            gameObject.GetComponent<BossModifications>().damageDealtModPercent -= DAMAGEINCREASE * GetCurrentState();
             IncreaseState();
-            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE * GetCurrentState();
+            gameObject.GetComponent<BossModifications>().damageDealtModPercent += DAMAGEINCREASE * GetCurrentState();
             ResetTimeToNextAccumulation();
         }
             
     }
     public override void ResetStrategy()
     {
-        gameObject.GetComponent<BossModifications>().damageIncreasePercent -= (GetCurrentState() * DAMAGEINCREASE);
+        gameObject.GetComponent<BossModifications>().damageDealtModPercent -= (GetCurrentState() * DAMAGEINCREASE);
     }
     protected override void TryDecumulate()
     {
         if (IsDecumulationIntervalReady())
         {     
-            gameObject.GetComponent<BossModifications>().damageIncreasePercent -= DAMAGEINCREASE * GetCurrentState();
+            gameObject.GetComponent<BossModifications>().damageDealtModPercent -= DAMAGEINCREASE * GetCurrentState();
             DecreaseState();
-            gameObject.GetComponent<BossModifications>().damageIncreasePercent += DAMAGEINCREASE * GetCurrentState();
+            gameObject.GetComponent<BossModifications>().damageDealtModPercent += DAMAGEINCREASE * GetCurrentState();
             ResetTimeToNextDecumulation();
         }
     }
