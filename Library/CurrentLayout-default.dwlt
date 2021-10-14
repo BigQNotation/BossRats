@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 392}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 392}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 678, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 55
+  controlID: 117
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,8 +137,8 @@ MonoBehaviour:
     y: 0
     width: 1430
     height: 947
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 56
 --- !u!114 &7
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -239,14 +239,14 @@ MonoBehaviour:
     y: 578
     width: 1430
     height: 369
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -335,7 +335,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -395,20 +395,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: b6800000
       m_LastClickedID: 0
-      m_ExpandedIDs: aa3bffff343cffff423cffffd43dffff1a3effff283effff363effff443effff523effff663effff763effff863effff703fffffa23fffff2e4affffca4cffff4652fffffa8cffff1892ffff3e95ffff6e9affff109dfffff4aaffff76afffff3ab0ffffb2b2ffff44b4ffff9eb5ffffc2b6ffffccb7ffff5ab9ffff4cbfffffcebfffff16f0ffff40f1ffff4cf1ffff56fbfffff4ffffff64600000ee600000e47800001c7a0000567b0000907c00005086000088870000c0880000209400002c9400007c940000
+      m_ExpandedIDs: 78c5ffff44c6ffff9ec9ffffbecaffffeccbffffb4cfffff36d8fffff8e0ffff52e6fffff4e6ffff56fbffff32500000685000001e5100000c5600001a780000507800005279000088790000c6800000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BossHealthCanvas
-        m_OriginalName: BossHealthCanvas
+        m_Name: PlayerHealthText(Clone)
+        m_OriginalName: PlayerHealthText(Clone)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 31942
+        m_UserData: -10238
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.4330316, y: 0.5498591, z: 48.27223}
+    m_Target: {x: -4.4240146, y: 0.98783, z: -1.8892508}
     speed: 2
-    m_Value: {x: -4.4330316, y: 0.5498591, z: 48.27223}
+    m_Value: {x: -4.4240146, y: 0.98783, z: -1.8892508}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -509,9 +509,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.6622853
+    m_Target: 6.5116153
     speed: 2
-    m_Value: 4.6622853
+    m_Value: 6.5116153
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -627,20 +627,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs/UI
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs/UI
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\larso\Documents\Unity\Bosses\Bosses
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 083e0000
-    m_LastClickedID: 15880
-    m_ExpandedIDs: 00000000fc3d0000fe3d0000003e0000023e0000043e0000063e0000083e0000183e000000ca9a3b
+    m_SelectedIDs: 223e0000
+    m_LastClickedID: 15906
+    m_ExpandedIDs: 00000000063e0000083e00000a3e00000c3e00000e3e0000103e0000123e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,7 +668,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc3d0000fe3d0000003e0000023e0000043e0000063e0000083e0000
+    m_ExpandedIDs: 00000000063e0000083e00000a3e00000c3e00000e3e0000103e0000123e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

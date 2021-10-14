@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class PlayerHealthUI : MonoBehaviour
 {
@@ -13,67 +13,87 @@ public class PlayerHealthUI : MonoBehaviour
     GameObject playerNameText;
 
     GameObject[] players;
+    int updatedUIAtPlayerCount = 0;
 
-    private bool UISetUp = false;
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
-        //players = GameObject.FindGameObjectsWithTag("Player");
-        
-
-        // runs first update
         UpdatePlayerList();
-        SetUpHealthAndPlayerNameUI();
-
-        // runs every update
-        UpdateHealthUI();
+        TryCreateUI();
+        UpdateUIPlayerHealth();
     }
     private void UpdatePlayerList()
     {
-        int i = 0;
-        if (players != null)
-        {
-            i = players.Length;
-        }
-        
-     
         players = GameObject.FindGameObjectsWithTag("Player");
-        
-        if (i > players.Length)
-            UISetUp = false;
     }
-    private void SetUpHealthAndPlayerNameUI()
+    private void TryCreateUI()
     {
-        if (UISetUp || players.Length == 0)
+        // Avoid late player connections not being added
+        if (updatedUIAtPlayerCount == players.Length)
             return;
+        updatedUIAtPlayerCount = players.Length;
 
-        Debug.Log("player count: " + players.Length);
+        ClearPreviousUI();
+        CreateUI();
+        SetUIPlayerNames();
+    }
+    private void ClearPreviousUI()
+    {
+        int i = 0;
+        GameObject[] allChildren = new GameObject[playerHealthUICanvas.transform.childCount];
+
+        foreach (Transform child in playerHealthUICanvas.transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+
+        foreach (GameObject child in allChildren)
+        {
+            DestroyImmediate(child.gameObject);
+        }
+    }
+    private void CreateUI()
+    {
         float heightOffset = 0;
         for (int i = 0; i < players.Length; i++)
         {
+            GameObject healthTextObject = Instantiate(playerHealthText, playerHealthUICanvas.transform);
+            healthTextObject.transform.position += (new Vector3(0, heightOffset));
+            heightOffset += 0.5f;
+
             GameObject nameTextObject = Instantiate(playerNameText, playerHealthUICanvas.transform);
             nameTextObject.transform.position += (new Vector3(0, heightOffset));
             heightOffset += 0.5f;
 
-            GameObject healthTextObject = Instantiate(playerHealthText, playerHealthUICanvas.transform);
-            healthTextObject.transform.position += (new Vector3(0, heightOffset));
-            heightOffset += 0.5f;
-            
+
         }
-
-        UISetUp = true;
     }
-    private string GetPlayerName()
+    private void SetUIPlayerNames()
     {
-        return "Player";
+        GameObject[] nameTextObjects = GameObject.FindGameObjectsWithTag("PlayerNameText");
+        for (int i = 0; i < nameTextObjects.Length; i++)
+        {
+            nameTextObjects[i].GetComponent<Text>().text = GetPlayerName(i);
+        }
     }
-    private void UpdateHealthUI()
+    private string GetPlayerName(int playersIndex)
     {
-
+        return players[playersIndex].GetComponent<PlayerStats>().GetPlayerName();
     }
+    private void UpdateUIPlayerHealth()
+    {
+        GameObject[] healthTextObjects = GameObject.FindGameObjectsWithTag("PlayerHealthText");
+        for (int i = 0; i < healthTextObjects.Length; i++)
+        {
+            healthTextObjects[i].GetComponent<Text>().text = GetPlayerHealth(i); 
+        }
+    }
+    private string GetPlayerHealth(int playersIndex)
+    {
+        return players[playersIndex].GetComponent<PlayerStats>().GetCurrentPlayerHealth().ToString();
+    }   
 }

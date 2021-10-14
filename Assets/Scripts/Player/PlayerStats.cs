@@ -5,9 +5,13 @@ using Mirror;
 
 public class PlayerStats : NetworkBehaviour
 {
-    [SyncVar]
+    [SyncVar][SerializeField]
     private int currentPlayerHealth = 100;
     private int maxPlayerHealth = 100;
+
+    [SyncVar]
+    [SerializeField]
+    private string playerName = "Player";
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +31,9 @@ public class PlayerStats : NetworkBehaviour
     public int GetMaxPlayerHealth()
     {
         return maxPlayerHealth;
+    }
+    public string GetPlayerName()
+    {
+        return playerName;
     }
 }
