@@ -36,4 +36,8 @@ public class PlayerStats : NetworkBehaviour
     {
         return playerName;
     }
+    public void DecrementPlayerHealth(int healthDec)
+    {
+        currentPlayerHealth -= healthDec;
+    }
 }

@@ -61,7 +61,8 @@
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AbilityBehavior\PelletMovement.cs" />
-    <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityBigSlowPellet.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPellet.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPelletBurst.cs" />
     <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationDamageOut.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilitySpeedboost.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilityInputHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
