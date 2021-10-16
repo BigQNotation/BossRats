@@ -56,15 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BossStats.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
-    <Compile Include="Assets\Scripts\Boss\Abilities\AbilityBehavior\PelletMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletCollision.cs" />
-    <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPellet.cs" />
-    <Compile Include="Assets\Scripts\Boss\Abilities\BossAbilityPelletBurst.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletMovement.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\Pellet\BossAbilityPellet.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\Pellet\BossAbilityPelletCollision.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\Pellet\BossAbilityPelletMovement.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\PelletBurst\BossAbilityPelletBurst.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\PelletBurst\BossAbilityPelletBurstCollision.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\PelletBurst\BossAbilityPelletBurstMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationDamageOut.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbility.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossMetricStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossStats.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStrategyConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStrategyHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeter.cs" />

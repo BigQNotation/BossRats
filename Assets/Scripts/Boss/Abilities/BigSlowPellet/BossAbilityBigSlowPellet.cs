@@ -55,7 +55,7 @@ public class BossAbilityBigSlowPellet : BossAbility
     private void CreateBigSlowPellet(Vector2 directionToPlayer)
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
-        projectile.GetComponent<PelletMovement>().velocity = directionToPlayer * force;
+        projectile.GetComponent<BossAbilityBigSlowPelletMovement>().velocity = directionToPlayer * force;
         NetworkServer.Spawn(projectile);
     }
 }
