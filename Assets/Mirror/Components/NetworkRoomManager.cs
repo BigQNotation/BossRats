@@ -355,7 +355,7 @@ namespace Mirror
         /// <param name="newSceneName"></param>
         public override void ServerChangeScene(string newSceneName)
         {
-            if (newSceneName == RoomScene)
+            if (newSceneName == RoomScene /*&& !IsSceneActive(GameplayScene)*/)
             {
                 foreach (NetworkRoomPlayer roomPlayer in roomSlots)
                 {
@@ -693,7 +693,18 @@ namespace Mirror
             if (IsSceneActive(RoomScene))
                 GUI.Box(new Rect(10f, 180f, 520f, 150f), "PLAYERS");
         }
+        public void ChangeScene()
+        {
+            if (!showRoomGUI)
+                return;
 
+            if (NetworkServer.active && IsSceneActive(GameplayScene))
+            {
+                ServerChangeScene(RoomScene);
+            }
+            if (IsSceneActive(RoomScene))
+                GUI.Box(new Rect(10f, 180f, 520f, 150f), "PLAYERS");
+        }
 #endregion
     }
 }

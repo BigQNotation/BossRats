@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricAbilityUsage.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricDistanceTraveled.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
+    <Compile Include="Assets\Scripts\GameOverSceneHandler.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\Ability.cs" />
@@ -764,10 +765,6 @@
     <ProjectReference Include="Mirror.Components.csproj">
       <Project>{B6229A0B-3372-1604-6C30-ABB7D6C48F19}</Project>
       <Name>Mirror.Components</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{E0764F7D-2552-825B-A776-5F5FCCB953A8}</Project>
-      <Name>Mirror.Examples</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
       <Project>{0B06B907-A46A-8559-0F8F-4BEE35DE18FF}</Project>
