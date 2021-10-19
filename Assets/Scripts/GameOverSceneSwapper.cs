@@ -39,8 +39,9 @@ public class GameOverSceneSwapper : NetworkBehaviour
     {
         if (sceneAlreadySwapped)
             return;
-        ((NetworkRoomManagerNew)NetworkManager.singleton).ChangeScene();
 
+        GameOverUIHandler.isGameOverScene = true;
+        ((NetworkRoomManagerNew)NetworkManager.singleton).ChangeScene();
         sceneAlreadySwapped = true;
     }
 }
