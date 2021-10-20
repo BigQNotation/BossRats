@@ -5,8 +5,8 @@ using Mirror;
 
 public class PlayerStats : NetworkBehaviour
 {
-    [SyncVar][SerializeField]
-    private int currentPlayerHealth = 100;
+    [SyncVar]
+    private int currentPlayerHealth = 30;
     private int maxPlayerHealth = 100;
 
     [SyncVar]

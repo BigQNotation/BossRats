@@ -186,7 +186,20 @@ public class NetworkRoomManagerNew : NetworkRoomManager
 
     public override void OnGUI()
     {
-        base.OnGUI();
+        if (!showRoomGUI)
+            return;
+
+        if (NetworkServer.active && IsSceneActive(GameplayScene))
+        {
+            GUILayout.BeginArea(new Rect(Screen.width - 150f, 10f, 140f, 30f));
+            if (GUILayout.Button("Return to Room"))
+                ServerChangeScene(RoomScene);
+            GUILayout.EndArea();
+        }
+
+        if (IsSceneActive(RoomScene) && GameOverUIHandler.isGameOverScene)
+            GUI.Box(new Rect(10f, 180f, 520f, 150f), "PLAYERS");
+
         if (allPlayersReady && showStartButton && GUI.Button(new Rect(150, 300, 120, 20), "START GAME"))
         {
             // set to false to hide it in the game scene

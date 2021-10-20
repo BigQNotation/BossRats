@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUIHandler : NetworkBehaviour
 {
+    /* NOTE that if isGameOverScene 
+     * is used for logical comparisons 
+     * outside of GameOverUIHandler,
+     * the logic should be opposite
+     * due to isGameOverScene being flipped
+     * during its toggle into the game
+     * over scene.
+     */
     public static bool isGameOverScene = false;
     [SerializeField] GameObject gameOverCanvas;
 

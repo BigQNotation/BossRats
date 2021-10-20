@@ -100,7 +100,8 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
 
     public override void OnGUI()
     {
-        base.OnGUI();
+        if (GameOverUIHandler.isGameOverScene)
+            base.OnGUI();
     }
 
     #endregion
