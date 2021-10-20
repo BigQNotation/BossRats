@@ -418,6 +418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1837947680554002216, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837947680554002216, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -429,12 +434,17 @@ PrefabInstance:
     - target: {fileID: 1837947680554002216, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleGameOverInterface
+      value: BackToLobbyToggleInterfaceOff
       objectReference: {fileID: 0}
     - target: {fileID: 1837947680554002216, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837947680554002216, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1837947680554002218, guid: 97bbbcfdc2d5a3140bd0dc6c75c1d7d8,
         type: 3}
