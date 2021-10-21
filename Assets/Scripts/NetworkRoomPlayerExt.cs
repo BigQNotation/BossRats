@@ -100,7 +100,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
 
     public override void OnGUI()
     {
-        if (!GameOverUIHandler.isGameOverScene)
+        if (!GameOverUIHandler.isGameOverScene && !AbilitySelectInterfaceHandler.isAbilitySelectInterfaceOpen)
             base.OnGUI();
     }
 

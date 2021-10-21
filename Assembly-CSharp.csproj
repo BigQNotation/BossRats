@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectInterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverUi\GameOverUIHandler.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\BossHealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\PlayerHealthUI.cs" />

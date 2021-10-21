@@ -200,7 +200,7 @@ public class NetworkRoomManagerNew : NetworkRoomManager
             GUILayout.EndArea();
         }
 
-        if (IsSceneActive(RoomScene) && !GameOverUIHandler.isGameOverScene)
+        if (IsSceneActive(RoomScene) && !GameOverUIHandler.isGameOverScene && !AbilitySelectInterfaceHandler.isAbilitySelectInterfaceOpen)
             GUI.Box(new Rect(10f, 180f, 520f, 150f), "PLAYERS");
 
         if (allPlayersReady && showStartButton && GUI.Button(new Rect(150, 300, 120, 20), "START GAME"))
