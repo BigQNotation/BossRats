@@ -97,7 +97,7 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
     #endregion
 
     #region Optional UI
-
+    
     public override void OnGUI()
     {
         if (!GameOverUIHandler.isGameOverScene && !AbilitySelectInterfaceHandler.isAbilitySelectInterfaceOpen)

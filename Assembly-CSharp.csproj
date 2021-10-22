@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerNew.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
+    <Compile Include="Assets\Scripts\NetworkRoomPlayerNew.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityBlink.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAbilities\AbilityShoot\AbilityShoot.cs" />

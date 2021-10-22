@@ -40,8 +40,14 @@ public class GameOverSceneSwapper : NetworkBehaviour
         if (sceneAlreadySwapped)
             return;
 
-        GameOverUIHandler.isGameOverScene = true;
+        RpcSetIsGameOverScene();
         ((NetworkRoomManagerNew)NetworkManager.singleton).ChangeScene();
         sceneAlreadySwapped = true;
+    }
+
+    [ClientRpc]
+    private void RpcSetIsGameOverScene()
+    {
+        GameOverUIHandler.isGameOverScene = true;
     }
 }
