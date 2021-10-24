@@ -11,20 +11,18 @@ public class SimpleAiMovement : NetworkBehaviour
     bool swapper = true;
     [SerializeField] GameObject playerLoadHandler;
 
-    private float targetTimerCurrent = 3;
+    private float targetTimerCurrent = 1;
     private float targetTimerMax = 1;
-    private int playerSwapperIndex = 0; // refactor out into aggro handler class
 
-    void Start()
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
         FindPlayer();
-
     }
-    void Update()
+    private void Update()
     {
         if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
@@ -32,7 +30,7 @@ public class SimpleAiMovement : NetworkBehaviour
         TryUpdateTarget();
         UpdateDestination();    
     }
-    void UpdateDestination()
+    private void UpdateDestination()
     {
         Vector3 add = new Vector3(.001f, 0);
         if (swapper)
@@ -46,22 +44,12 @@ public class SimpleAiMovement : NetworkBehaviour
             agent.SetDestination(target.position - add);
         }
     }
-    void FindPlayer()
+    private void FindPlayer()
     {
         if (!isServer)
             return;
 
         target = gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
-        /*
-        GameObject[] gamers =  GameObject.FindGameObjectsWithTag("Player");
-        target = gamers[playerSwapperIndex].GetComponent<Transform>();
-
-        if (playerSwapperIndex == 0)
-            playerSwapperIndex = 1;
-        else
-            playerSwapperIndex = 0;
-        */
-
     }
     private void UpdateTargetTimer()
     {
@@ -76,7 +64,6 @@ public class SimpleAiMovement : NetworkBehaviour
             return;
 
         FindPlayer();
-
         targetTimerCurrent = targetTimerMax;
     }
 }

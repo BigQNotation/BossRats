@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,8 +112,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 678, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
   controlID: 55
 --- !u!114 &6
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 253
     height: 579
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 1177
     height: 579
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 490
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
       y: 21
       width: 1175
       height: 537
-    m_Scale: {x: 0.49722224, y: 0.49722221}
+    m_Scale: {x: 0.51666665, y: 0.51666665}
     m_Translation: {x: 587.5, y: 268.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -354,12 +354,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1181.5642
-      y: -540
-      width: 2363.1284
-      height: 1080
+      x: -1137.0968
+      y: -519.6774
+      width: 2274.1936
+      height: 1039.3549
     m_MinimalGUI: 1
-  m_defaultScale: 0.49722221
+  m_defaultScale: 0.51666665
   m_LastWindowPixelSize: {x: 1175, y: 558}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -395,9 +395,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 36650000
+      m_SelectedIDs: 14390000
       m_LastClickedID: 0
-      m_ExpandedIDs: e0e1ffff7ae8fffff2e9ffff0eebffff56fbffff1c660000
+      m_ExpandedIDs: 56fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -627,20 +627,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Boss
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Boss
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\larso\Documents\Unity\Bosses\Bosses
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 823e0000
-    m_LastClickedID: 16002
-    m_ExpandedIDs: 00000000603e0000623e0000643e0000663e0000683e00006a3e00006c3e0000843e0000983e000000ca9a3b
+    scrollPos: {x: 0, y: 29}
+    m_SelectedIDs: 863e0000
+    m_LastClickedID: 16006
+    m_ExpandedIDs: 00000000643e0000663e0000683e00006a3e00006c3e00006e3e0000703e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,7 +668,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000603e0000623e0000643e0000663e0000683e00006a3e00006c3e0000
+    m_ExpandedIDs: 00000000643e0000663e0000683e00006a3e00006c3e00006e3e0000703e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,8 +693,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 36650000
-    m_LastClickedInstanceID: 25910
+    m_SelectedInstanceIDs: 14390000
+    m_LastClickedInstanceID: 14612
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f459000000000000f0590000
     m_RenameOverlay:

@@ -24,6 +24,7 @@ public class BossAggroHandler : NetworkBehaviour
             }
         }
     }
+
     private void Start()
     {
         playerWithAggro = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -42,7 +43,6 @@ public class BossAggroHandler : NetworkBehaviour
         UpdatePlayerWithAggro();
 
     }
-
     private GameObject[] GetInitAllPlayers()
     {
         return GameObject.FindGameObjectsWithTag("Player");
