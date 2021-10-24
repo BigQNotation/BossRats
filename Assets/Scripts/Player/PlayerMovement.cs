@@ -12,6 +12,7 @@ public class PlayerMovement : NetworkBehaviour
     float vertical;
     public Camera cam;
     Vector2 mousePos;
+    GameObject playerLoadHandler;
 
     void Start()
     {
@@ -20,10 +21,16 @@ public class PlayerMovement : NetworkBehaviour
 
         body = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+
+        playerLoadHandler = GameObject.Find("PlayerLoadHandler");
+        if (playerLoadHandler == null)
+            Debug.Log("ERROR: Could not find PlayerLoadHandler");
+
     }
     void Update()
     {
-        if (!isLocalPlayer) { return; }
+        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
+            return;
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);

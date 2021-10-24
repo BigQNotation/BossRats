@@ -6,7 +6,7 @@ using Mirror;
 public class BossAbilityHandler : NetworkBehaviour
 {
     private BossAbility[] abilityList;
-    
+    [SerializeField] GameObject playerLoadHandler;
 
     void Start()
     {
@@ -31,6 +31,9 @@ public class BossAbilityHandler : NetworkBehaviour
     }
     private void UseAbilities()
     {
+        if (!playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
+            return;
+
         for (int i = 0; i < abilityList.Length; i++)
         {
             abilityList[i].DecrementCooldown();

@@ -6,6 +6,7 @@ using Mirror;
 public class BossStrategyHandler : NetworkBehaviour
 {
     BossStrategyConfigGenerator.GeneratedStrategy strategySet;
+    [SerializeField] GameObject playerLoadHandler;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class BossStrategyHandler : NetworkBehaviour
     }
     void Update()
     {
-        if (!isServer)
+        if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
         
         // Called only once

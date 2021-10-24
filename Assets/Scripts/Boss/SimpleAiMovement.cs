@@ -9,10 +9,9 @@ public class SimpleAiMovement : NetworkBehaviour
     NavMeshAgent agent;
     //[SerializeField] Transform target;
     Transform target;
-
     bool swapper = true;
+    [SerializeField] GameObject playerLoadHandler;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -22,18 +21,13 @@ public class SimpleAiMovement : NetworkBehaviour
         FindPlayer();
 
     }
-    
-    // Update is called once per frame
     void Update()
     {
-        if (!isServer)
+        if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
 
         UpdateDestination();    
     }
-
-
-
     void UpdateDestination()
     {
         Vector3 add = new Vector3(.001f, 0);
