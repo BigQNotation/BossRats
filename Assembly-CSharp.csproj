@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAccumulationStrategy.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossAggroHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossChargeStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />

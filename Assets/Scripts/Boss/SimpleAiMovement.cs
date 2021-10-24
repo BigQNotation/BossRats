@@ -7,10 +7,13 @@ using Mirror;
 public class SimpleAiMovement : NetworkBehaviour
 {
     NavMeshAgent agent;
-    //[SerializeField] Transform target;
     Transform target;
     bool swapper = true;
     [SerializeField] GameObject playerLoadHandler;
+
+    private float targetTimerCurrent = 3;
+    private float targetTimerMax = 1;
+    private int playerSwapperIndex = 0; // refactor out into aggro handler class
 
     void Start()
     {
@@ -25,7 +28,8 @@ public class SimpleAiMovement : NetworkBehaviour
     {
         if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
-
+        UpdateTargetTimer();
+        TryUpdateTarget();
         UpdateDestination();    
     }
     void UpdateDestination()
@@ -47,8 +51,32 @@ public class SimpleAiMovement : NetworkBehaviour
         if (!isServer)
             return;
 
+        target = gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
+        /*
         GameObject[] gamers =  GameObject.FindGameObjectsWithTag("Player");
-        target = gamers[0].GetComponent<Transform>();
+        target = gamers[playerSwapperIndex].GetComponent<Transform>();
 
+        if (playerSwapperIndex == 0)
+            playerSwapperIndex = 1;
+        else
+            playerSwapperIndex = 0;
+        */
+
+    }
+    private void UpdateTargetTimer()
+    {
+        if (targetTimerCurrent > 0)
+        {
+            targetTimerCurrent -= Time.deltaTime;
+        }
+    }
+    private void TryUpdateTarget()
+    {
+        if (targetTimerCurrent > 0)
+            return;
+
+        FindPlayer();
+
+        targetTimerCurrent = targetTimerMax;
     }
 }
