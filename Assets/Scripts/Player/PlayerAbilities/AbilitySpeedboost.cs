@@ -11,11 +11,11 @@ public class AbilitySpeedboost : Ability
     private const float COOLDOWN = 10f;
 
     private float runSpeedVelocityFast = 15f;
-    [SerializeField] float runSpeedVelocityNormal;
+    private float runSpeedVelocityNormal;
 
     private float abilityDuration = 3f;
     private float abilityDurationTimer = 0f;
-    [SerializeField] bool  abilityActive = false;
+    private bool  abilityActive = false;
 
     public AbilitySpeedboost()
     {

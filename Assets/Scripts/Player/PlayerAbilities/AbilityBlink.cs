@@ -16,25 +16,23 @@ public class AbilityBlink : Ability
         this.abilityID = ID;
         this.cooldownCap = COOLDOWN;
     }
+    public override void UseAbility(float clientXMousePos, float clientYMousePos)
+    {
+        if (hasAuthority)
+            CmdTeleport(clientXMousePos, clientYMousePos);
+    }
 
-    // Start is called before the first frame update
-    void Start()
+    [Command]
+    private void CmdTeleport(float clientXMousePos, float clientYMousePos)
+    {
+        playerObject.GetComponent<NetworkTransform>().ServerTeleport(new Vector2(clientXMousePos, clientYMousePos));
+    }
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         DecrementCooldown();
     }
-
-    public override void UseAbility(float clientXMousePos, float clientYMousePos)
-    {
-        
-        playerObject.GetComponent<NetworkTransform>().ServerTeleport(new Vector2(clientXMousePos, clientYMousePos));
-        //playerObject.transform.position = new Vector2(xPos, yPos);
-
-    }
-
 }
