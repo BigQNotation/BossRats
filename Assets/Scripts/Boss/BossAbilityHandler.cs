@@ -8,7 +8,7 @@ public class BossAbilityHandler : NetworkBehaviour
     private BossAbility[] abilityList;
     [SerializeField] GameObject playerLoadHandler;
 
-    void Start()
+    private void Start()
     {
         if (!isServer)
             return;
@@ -16,35 +16,35 @@ public class BossAbilityHandler : NetworkBehaviour
         GetAbilityConfiguration();
         Debug.Log("Ability selected: " + abilityList[0]);
     }
-    void Update()
+    private void Update()
     {
-        if (!isServer)
+        if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
-
-        UseAbilities();
-
+        UpdateAbilityCooldowns();
+        TryUseAbilities();
     }
     private void GetAbilityConfiguration()
     {
-        gameObject.GetComponent<BossAbilityConfigGenerator>().GenerateRandomAbilityList(1);
+        gameObject.GetComponent<BossAbilityConfigGenerator>().GenerateRandomAbilityList(3);
         abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetRandomAbilityList();
     }
-    private void UseAbilities()
+    private void UpdateAbilityCooldowns()
     {
-        if (!playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
-            return;
-
+        for (int i = 0; i < abilityList.Length; i++)
+            abilityList[i].DecrementCooldown();
+    }
+    private void TryUseAbilities()
+    {
         for (int i = 0; i < abilityList.Length; i++)
         {
-            abilityList[i].DecrementCooldown();
-
             if (abilityList[i].AbilityReady())
-            {
-                abilityList[i].UseAbility();
-                abilityList[i].ResetCooldown();
-            }
+                UseAbility(abilityList[i]);
         }
-
+    }
+    private void UseAbility(BossAbility ability)
+    {
+        ability.UseAbility();
+        ability.ResetCooldown();
     }
 
 }
