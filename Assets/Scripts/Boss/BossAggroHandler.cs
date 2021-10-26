@@ -23,6 +23,7 @@ public class BossAggroHandler : NetworkBehaviour
                 aggroList[i] += aggroAmount;
             }
         }
+        
     }
 
     private void Start()

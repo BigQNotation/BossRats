@@ -4,34 +4,51 @@ ScriptsOnlyBuild:
     - Ability
     - AbilityBlink
     - AbilityManager
+    - AbilitySelectInterfaceHandler
     - AbilitySelectUI
     - AbilityShoot
+    - AbilityShootCollision
+    - AbilityShootMovement
     - AbilitySpeedboost
     - AccumulationDamageOut
     - BossAbility
     - BossAbilityBigSlowPellet
+    - BossAbilityBigSlowPelletCollision
+    - BossAbilityBigSlowPelletMovement
     - BossAbilityConfigGenerator
     - BossAbilityHandler
     - BossAbilityPellet
     - BossAbilityPelletBurst
-    - BossAccumulationStrategy
-    - BossChargeStrategy
+    - BossAbilityPelletBurstCollision
+    - BossAbilityPelletBurstMovement
+    - BossAbilityPelletCollision
+    - BossAbilityPelletMovement
+    - BossAggroHandler
+    - BossDamageHandler
+    - BossHealthUI
     - BossModifications
+    - BossStats
     - BossStrategyConfigGenerator
     - BossStrategyHandler
     - ChargeMeter
     - ChargeMeterUI
     - DevastationSpeed
+    - GameOverSceneSwapper
+    - GameOverUIHandler
     - MetricAbilityUsage
-    - NetworkRoomManagerExt
+    - MetricDistanceTraveled
+    - NetworkRoomManagerNew
     - NetworkRoomPlayerExt
-    - PelletMovement
     - PlayerAbilityInputHandler
     - PlayerCamera
+    - PlayerDamageHandler
+    - PlayerHealthUI
+    - PlayerLoadHandler
     - PlayerMovement
+    - PlayerStats
     - RecordAbilitiesUsed
+    - RecordDistanceTraveled
     - SceneController
-    - ShootProjectile
     - SimpleAiMovement
     - UIUpdate
     Mirror.Components.dll:
@@ -87,21 +104,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11728}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11888}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 12728}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13446}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 15148}
+      Script: {instanceID: 15186}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,6 +148,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -138,61 +157,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 602}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11728}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11922}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12422}
+      Script: {instanceID: 12292}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12350}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12974}
+      Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13128}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13238}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 12920}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 14478}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 14552}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 14766}
+      Script: {instanceID: 13144}
     - Class: 114
-      Script: {instanceID: 14812}
+      Script: {instanceID: 13256}
     - Class: 114
-      Script: {instanceID: 14982}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 14988}
+      Script: {instanceID: 13936}
     - Class: 114
-      Script: {instanceID: 15008}
+      Script: {instanceID: 14150}
     - Class: 114
-      Script: {instanceID: 15148}
+      Script: {instanceID: 14214}
+    - Class: 114
+      Script: {instanceID: 14406}
+    - Class: 114
+      Script: {instanceID: 14480}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 14536}
+    - Class: 114
+      Script: {instanceID: 14612}
+    - Class: 114
+      Script: {instanceID: 14802}
+    - Class: 114
+      Script: {instanceID: 14850}
+    - Class: 114
+      Script: {instanceID: 15020}
+    - Class: 114
+      Script: {instanceID: 15026}
+    - Class: 114
+      Script: {instanceID: 15046}
+    - Class: 114
+      Script: {instanceID: 15186}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,55 +290,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11356}
     - Class: 114
       Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11728}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11888}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 12292}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13446}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13582}
+      Script: {instanceID: 12986}
     - Class: 114
-      Script: {instanceID: 13618}
+      Script: {instanceID: 13130}
     - Class: 114
-      Script: {instanceID: 13620}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 13632}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 13902}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 13910}
+      Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 14132}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 13924}
     - Class: 114
-      Script: {instanceID: 14478}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14552}
+      Script: {instanceID: 13934}
     - Class: 114
-      Script: {instanceID: 14766}
+      Script: {instanceID: 13936}
     - Class: 114
-      Script: {instanceID: 15062}
+      Script: {instanceID: 14160}
     - Class: 114
-      Script: {instanceID: 15148}
+      Script: {instanceID: 14406}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 14536}
+    - Class: 114
+      Script: {instanceID: 14628}
+    - Class: 114
+      Script: {instanceID: 14802}
+    - Class: 114
+      Script: {instanceID: 15100}
+    - Class: 114
+      Script: {instanceID: 15114}
+    - Class: 114
+      Script: {instanceID: 15186}
+    - Class: 114
+      Script: {instanceID: 15216}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -323,15 +382,57 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11322}
+    - Class: 114
+      Script: {instanceID: 11324}
+    - Class: 114
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11888}
+    - Class: 114
+      Script: {instanceID: 12594}
+    - Class: 114
+      Script: {instanceID: 12738}
+    - Class: 114
+      Script: {instanceID: 13164}
+    - Class: 114
+      Script: {instanceID: 13464}
+    - Class: 114
+      Script: {instanceID: 13756}
+    - Class: 114
+      Script: {instanceID: 14406}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 15186}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -340,6 +441,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: aa88ae22474df55295327e4ee99e5a24
@@ -366,7 +473,13 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 67262553933aa3a91ae8bf9c8c86c993
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerDamageHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 524e97463e5362b15ffb5af69aa036dc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AbilitySpeedboost
@@ -492,12 +605,6 @@ ScriptsOnlyBuild:
     className: PhysicsCollision
   - hash:
       serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
-  - hash:
-      serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -618,6 +725,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossDamageHandler
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -672,16 +785,28 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 186d11da107810f55f738c73ad5851d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityPelletBurstMovement
+  - hash:
+      serializedVersion: 2
       Hash: fc67f14ea89c506f4f65b0b93f858139
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleMatch
     className: PlayerGUI
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossStrategyHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 4dc03f1e1dbc37e73cb0644e9975c60f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealthUI
   - hash:
       serializedVersion: 2
       Hash: 192ca9716d03752ea1d90a78bc2daac9
@@ -706,6 +831,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: MultiplexTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityBigSlowPelletCollision
   - hash:
       serializedVersion: 2
       Hash: 126e1d4f40021ac577690c28b36be822
@@ -810,7 +941,7 @@ ScriptsOnlyBuild:
     className: Tank
   - hash:
       serializedVersion: 2
-      Hash: 1d4df7cf7ad4f3ae613880f68e19a4a0
+      Hash: e101bfeb090c020e382f5c82d96eaeff
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossModifications
@@ -820,6 +951,12 @@ ScriptsOnlyBuild:
     assemblyName: NavMeshComponents.dll
     namespaceName: UnityEngine.AI
     className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 186d11da107810f55f738c73ad5851d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityBigSlowPelletMovement
   - hash:
       serializedVersion: 2
       Hash: 9b01b1d80bd3ecf4eaca45e1a22d444e
@@ -852,16 +989,16 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
+      Hash: 186d11da107810f55f738c73ad5851d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityPelletMovement
+  - hash:
+      serializedVersion: 2
       Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossStrategyConfigGenerator
-  - hash:
-      serializedVersion: 2
-      Hash: 126e1d4f40021ac577690c28b36be822
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossChargeStrategy
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -882,6 +1019,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossStats
+  - hash:
+      serializedVersion: 2
       Hash: f84b810c764d5a270da7c7591f2be2f1
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleMatch
@@ -900,10 +1043,16 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossAbilityHandler
+  - hash:
+      serializedVersion: 2
+      Hash: c2bf3ece55a8f308cbf2d17d5e172602
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverUIHandler
   - hash:
       serializedVersion: 2
       Hash: 702330b33d6f348f76db0c974f6e02c3
@@ -984,6 +1133,12 @@ ScriptsOnlyBuild:
     className: RandomColor
   - hash:
       serializedVersion: 2
+      Hash: 539c523c0e97022b90c7aa194fe9a558
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverSceneSwapper
+  - hash:
+      serializedVersion: 2
       Hash: 67262553933aa3a91ae8bf9c8c86c993
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1000,12 +1155,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Chat
     className: ChatNetworkManager
-  - hash:
-      serializedVersion: 2
-      Hash: 126e1d4f40021ac577690c28b36be822
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossAccumulationStrategy
   - hash:
       serializedVersion: 2
       Hash: 26d5c4d3aa5e668e2a134fd27c936004
@@ -1048,6 +1197,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
     className: NetworkSceneChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 13c81a71ca5553a8823397cf6bbfe50b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AbilitySelectInterfaceHandler
   - hash:
       serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
@@ -1131,13 +1286,25 @@ ScriptsOnlyBuild:
       Hash: ae81f3a7f123678ae0639fa4b7ebe342
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ShootProjectile
+    className: AbilityShootMovement
   - hash:
       serializedVersion: 2
       Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RecordAbilitiesUsed
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AbilityShootCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAbilityPelletCollision
   - hash:
       serializedVersion: 2
       Hash: f3a8ccc18ad656ac8993b34a1b30984f
@@ -1179,6 +1346,12 @@ ScriptsOnlyBuild:
       Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: PlayerLoadHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: PlayerAbilityInputHandler
   - hash:
       serializedVersion: 2
@@ -1192,6 +1365,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleMatch
     className: MatchNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 126e1d4f40021ac577690c28b36be822
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MetricDistanceTraveled
   - hash:
       serializedVersion: 2
       Hash: cf95add559be53ae8bfdfcea86c5a18f
@@ -1254,6 +1433,12 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
+      Hash: 721c0af4a19a5cac19242aa7fcf49196
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossHealthUI
+  - hash:
+      serializedVersion: 2
       Hash: fa657c3ec40e8c152d1d7938b1a10cd9
     assemblyName: Mirror.dll
     namespaceName: Mirror
@@ -1266,16 +1451,28 @@ ScriptsOnlyBuild:
     className: GUIConsole
   - hash:
       serializedVersion: 2
-      Hash: 186d11da107810f55f738c73ad5851d5
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PelletMovement
+    className: BossAbilityPelletBurstCollision
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
     className: PhysicsSimulator
+  - hash:
+      serializedVersion: 2
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAggroHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 9b5a106d716e10dbf0635b1180cc5e67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerStats
   - hash:
       serializedVersion: 2
       Hash: 681b5f9be6f57e5a7b20908e503986d3
@@ -1326,7 +1523,13 @@ ScriptsOnlyBuild:
     className: MultiSceneNetManager
   - hash:
       serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+      Hash: f3a8ccc18ad656ac8993b34a1b30984f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkRoomPlayerNew
+  - hash:
+      serializedVersion: 2
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimpleAiMovement
@@ -1428,7 +1631,7 @@ ScriptsOnlyBuild:
     className: PlayerCamera
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RecordDistanceTraveled
@@ -1468,6 +1671,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 1d12411bfa32d734c4dad798554fe0fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkRoomManagerNew
   - hash:
       serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1

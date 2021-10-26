@@ -17,23 +17,19 @@ public class AbilityShoot : Ability
         this.abilityID = ID;
         this.cooldownCap = COOLDOWN;
     }
+    public override void UseAbility(float clientXMousePos, float clientyMousePos)
+    {
+        GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
+    }
 
     void Start()
     {
         
     }
-
     void Update()
     {
         DecrementCooldown();
-    }
- 
-    public override void UseAbility(float clientXMousePos, float clientyMousePos)
-    {
-        GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
-        NetworkServer.Spawn(projectile);
-    }
-    
+    }   
 }
 
 

@@ -25,18 +25,37 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
             Debug.Log("ERROR: Could not find PlayerLoadHandler");
         
     }
-
-    void Update()
+    private void Update()
     {
-        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded()) 
+        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
         Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
-        if (NetworkClient.ready)
-            CmdUseAbility(allAbilities, GetMatchingAbilityID(DetectAbilityKeyCodePress()), GetUserMouseCoordinates());
-
+        if (NetworkClient.ready && DetectAbilityKeyCodePress() != -1)
+            {
+                Ability abil = GetAbilityToUse(allAbilities, GetMatchingAbilityID(DetectAbilityKeyCodePress()));
+                if (abil != null)
+                    TryUseAbility(abil, GetUserMouseCoordinates() );
+            }
+            
     }
-    [Command]
-    private void CmdUseAbility(Ability[] abil, int abilID, float[] userMouseInputs)
+    [ClientCallback]
+    private void TryUseAbility(Ability abil, float[] userMouseInputs)
+    {
+        
+        if (CanUseAbility(abil))
+        {
+            CmdTryUseAbility(abil, userMouseInputs);
+            ClientUseAbility(abil, userMouseInputs);
+        }
+    }
+    private bool CanUseAbility(Ability abilToUse)
+    {
+        if (abilToUse.AbilityReady())
+            return true;
+        return false;
+        
+    }
+    private Ability GetAbilityToUse(Ability[] abil, int abilID)
     {
         if (abilID != -1)
         {
@@ -44,21 +63,40 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
             {
                 if (abilID == abil[i].GetAbilityID())
                 {
-                    if (abil[i].AbilityReady())
-                    {
-                        abil[i].UseAbility(userMouseInputs[0], userMouseInputs[1]);
-                        abil[i].ResetCooldown();
-                        gameObject.GetComponent<RecordAbilitiesUsed>().UpdateRecordedMetric();
-                        GameObject.Find("Boss").GetComponent<BossAggroHandler>().AddPlayerAggro(gameObject, 1);
-                    }
-                    else
-                    {
-                        Debug.Log("ability not ready");
-                    }
+                        return abil[i];
+                   
                 }
             }
         }
-
+        return null;
+    }
+    [Command] private void CmdTryUseAbility(Ability abil, float[] userMouseInputs)
+    {
+        if (CanUseAbility(abil))
+        {
+            RpcAllClientsUseAbility(abil, userMouseInputs);
+            ServerUseAbility(abil, userMouseInputs);
+        }
+    }
+    [ClientRpc(includeOwner = false)] private void RpcAllClientsUseAbility(Ability abil , float[] userMouseInputs)
+    {
+        ClientUseAbility(abil , userMouseInputs);
+    }
+    private void ServerUseAbility(Ability abil, float[] userMouseInputs)
+    {
+        if (isServer)
+        {
+            abil.ResetCooldown();
+            gameObject.GetComponent<RecordAbilitiesUsed>().UpdateRecordedMetric();
+            GameObject.Find("Boss").GetComponent<BossAggroHandler>().AddPlayerAggro(gameObject, 1);
+        }
+    }
+    private void ClientUseAbility(Ability abil, float[] userMouseInputs)
+    {
+        if (isClient)
+        {
+            abil.UseAbility(userMouseInputs[0], userMouseInputs[1]);
+        }
     }
     private int GetMatchingAbilityID(int abilityKeyCodeIndex)
     {
@@ -84,7 +122,7 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
         }
         return -1;
     }
-    public float [] GetUserMouseCoordinates()
+    private float [] GetUserMouseCoordinates()
     {
         float xPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
         float yPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;

@@ -14,23 +14,15 @@ public class AbilityShootMovement : NetworkBehaviour
         Invoke(nameof(DestroySelf), destroyAfter);
     }
 
-    // set velocity for server and client. this way we don't have to sync the
-    // position, because both the server and the client simulate it.
     void Start()
     {
-        if (isServer)
-            gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-
+        gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         rigidBody.AddForce(transform.up * force);
-
     }
 
-    // destroy for everyone on the server
     [Server]
     void DestroySelf()
     {
         NetworkServer.Destroy(gameObject);
     }
-
-
 }
