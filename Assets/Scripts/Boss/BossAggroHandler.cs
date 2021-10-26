@@ -35,10 +35,18 @@ public class BossAggroHandler : NetworkBehaviour
         if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
 
+        // Start of game list initializing
         if (playerList == null)
             playerList = GetInitAllPlayers();
 
         if (aggroList == null)
+            aggroList = GetInitAllAggro();
+        
+        // New amount of players game list initializing
+        if (playerList.Length != GameObject.FindGameObjectsWithTag("Player").Length)
+            playerList = GetInitAllPlayers();
+
+        if (aggroList.Length != GameObject.FindGameObjectsWithTag("Player").Length)
             aggroList = GetInitAllAggro();
 
         UpdatePlayerWithAggro();

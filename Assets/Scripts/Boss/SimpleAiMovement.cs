@@ -32,6 +32,9 @@ public class SimpleAiMovement : NetworkBehaviour
     }
     private void UpdateDestination()
     {
+        if (target == null) 
+            return; // targetting a DC'd player before aggro is updated
+
         Vector3 add = new Vector3(.001f, 0);
         if (swapper)
         {
