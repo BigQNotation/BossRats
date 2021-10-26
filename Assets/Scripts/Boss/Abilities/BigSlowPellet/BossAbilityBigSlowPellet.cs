@@ -41,9 +41,7 @@ public class BossAbilityBigSlowPellet : BossAbility
     }
     private Transform FindPlayer()
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        Transform targetPlayer = players[0].GetComponent<Transform>();
-        return targetPlayer;
+        return gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
     }
     private Vector2 GetVectorToPlayer(Transform target)
     {

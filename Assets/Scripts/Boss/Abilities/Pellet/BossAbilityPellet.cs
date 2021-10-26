@@ -18,29 +18,37 @@ public class BossAbilityPellet : BossAbility
         this.abilityID = ID;
         this.COOLDOWN = cooldown;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public override void UseAbility()
     {
         if (!isServer)
             return;
 
-
+        Transform targetPlayer = FindPlayer();
+        Vector2 directionToPlayer = GetVectorToPlayer(targetPlayer);
+        CreateBigSlowPellet(directionToPlayer);
     }
 
+    private void Start()
+    {
+        if (!isServer)
+            return;
+        this.cooldownTimer = this.COOLDOWN;
+    }
+    private Transform FindPlayer()
+    {
+        return gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
+    }
+    private Vector2 GetVectorToPlayer(Transform target)
+    {
+        float x = target.position.x - gameObject.transform.position.x;
+        float y = target.position.y - gameObject.transform.position.y;
 
-    public override void UseAbility()
+        return new Vector2(x, y).normalized;
+    }
+    private void CreateBigSlowPellet(Vector2 directionToPlayer)
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
-        projectile.GetComponent<BossAbilityPelletMovement>().velocity = transform.up * force;
+        projectile.GetComponent<BossAbilityPelletMovement>().velocity = directionToPlayer * force;
         NetworkServer.Spawn(projectile);
-
     }
-
 }
