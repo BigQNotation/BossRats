@@ -25,7 +25,7 @@ public class BossAbilityPellet : BossAbility
 
         Transform targetPlayer = FindPlayer();
         Vector2 directionToPlayer = GetVectorToPlayer(targetPlayer);
-        CreateBigSlowPellet(directionToPlayer);
+        CreatePellet(directionToPlayer);
     }
 
     private void Start()
@@ -45,7 +45,7 @@ public class BossAbilityPellet : BossAbility
 
         return new Vector2(x, y).normalized;
     }
-    private void CreateBigSlowPellet(Vector2 directionToPlayer)
+    private void CreatePellet(Vector2 directionToPlayer)
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
         projectile.GetComponent<BossAbilityPelletMovement>().velocity = directionToPlayer * force;

@@ -1,3 +1,4 @@
 BossAbilityPellet 1
 BossAbilityPelletBurst 2
 BossAbilityBigSlowPellet 3
+BossAbilityRapidPellets 4
