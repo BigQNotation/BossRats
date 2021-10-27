@@ -31,5 +31,3 @@ public class AbilityShoot : Ability
         DecrementCooldown();
     }   
 }
-
-

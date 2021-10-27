@@ -6,7 +6,7 @@ using Mirror;
 public class BossAggroHandler : NetworkBehaviour
 {
     [SerializeField] GameObject playerLoadHandler;
-    private Transform playerWithAggro;
+    [SyncVar] private Transform playerWithAggro;
     private GameObject[] playerList;
     private int[] aggroList;
 

@@ -45,6 +45,17 @@ public class BossAbilityHandler : NetworkBehaviour
     {
         ability.UseAbility();
         ability.ResetCooldown();
-    }
 
+        if (ability.GetAbilityID() == 3)
+            RpcClientUseAbility(ability);
+    }
+    [ClientRpc(includeOwner = false)] private void RpcClientUseAbility(BossAbility ability)
+    {
+        if (!isServer)
+        {
+            ability.UseAbility();
+            ability.ResetCooldown();
+        }
+
+    }
 }

@@ -7,10 +7,9 @@ public class BossAbilityBigSlowPellet : BossAbility
 {
 
     public GameObject projectilePrefab;
-    public float force = 3f;
 
     private const int ID = 3;
-    private const float cooldown = 10f;
+    private const float cooldown = 3f;
     
 
     public BossAbilityBigSlowPellet()
@@ -20,21 +19,13 @@ public class BossAbilityBigSlowPellet : BossAbility
     }
     private void Start()
     {
-        if (!isServer)
-            return;
         this.cooldownTimer = this.COOLDOWN;
     }
     void Update()
     {
-        if (!isServer)
-            return;
-
     }
     public override void UseAbility()
     {
-        if (!isServer)
-            return;
-
         Transform targetPlayer = FindPlayer();
         Vector2 directionToPlayer = GetVectorToPlayer(targetPlayer);
         CreateBigSlowPellet(directionToPlayer);
@@ -53,7 +44,6 @@ public class BossAbilityBigSlowPellet : BossAbility
     private void CreateBigSlowPellet(Vector2 directionToPlayer)
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
-        projectile.GetComponent<BossAbilityBigSlowPelletMovement>().velocity = directionToPlayer * force;
-        NetworkServer.Spawn(projectile);
+        projectile.GetComponent<BossAbilityBigSlowPelletMovement>().AddForce(directionToPlayer);
     }
 }

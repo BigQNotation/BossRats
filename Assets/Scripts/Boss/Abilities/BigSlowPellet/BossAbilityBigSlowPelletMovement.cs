@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BossAbilityBigSlowPelletMovement : MonoBehaviour
 {
-    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    public Rigidbody2D rigidBody;
+    public float force = 500f;
 
-    void Update()
+    void Start()
     {
-        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+        gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    }  
 
-        transform.position = newPosition;
+    public void AddForce(Vector2 vector)
+    { 
+        rigidBody.AddForce(vector * force);
+        
     }
 }

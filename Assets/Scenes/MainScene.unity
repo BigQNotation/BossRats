@@ -17738,7 +17738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 1
+  clientAuthority: 0
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
@@ -17963,7 +17963,6 @@ MonoBehaviour:
   cooldownTimer: 0
   projectilePrefab: {fileID: 1530447351405011530, guid: efd392f83baeb5d429eea0a6dec2a97c,
     type: 3}
-  force: 3
 --- !u!114 &1189007626
 MonoBehaviour:
   m_ObjectHideFlags: 0
