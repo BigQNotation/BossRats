@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossAbilityBigSlowPelletMovement : MonoBehaviour
 {
     public Rigidbody2D rigidBody;
-    public float force = 500f;
+    private readonly float force = 100f;
 
     void Start()
     {

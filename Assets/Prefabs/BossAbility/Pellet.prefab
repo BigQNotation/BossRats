@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4036310513419405991}
   - component: {fileID: -3800576539819311107}
   - component: {fileID: 1764754625451458970}
+  - component: {fileID: 7446251350999513813}
   m_Layer: 8
   m_Name: Pellet
   m_TagString: Projectile
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33f2a961748e2f428974e26cbc8e224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
+  rigidBody: {fileID: 7446251350999513813}
 --- !u!61 &1764754625451458970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0013583899, y: 0.0030562878}
@@ -206,3 +207,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17419124, y: 0.034959316}
   m_EdgeRadius: 0
+--- !u!50 &7446251350999513813
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412420879002471191}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

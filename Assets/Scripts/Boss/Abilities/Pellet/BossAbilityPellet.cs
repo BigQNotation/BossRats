@@ -11,8 +11,6 @@ public class BossAbilityPellet : BossAbility
     private const int ID = 1;
     private const float cooldown = 5f;
 
-    public float force = 10f;
-
     public BossAbilityPellet()
     {
         this.abilityID = ID;
@@ -20,9 +18,6 @@ public class BossAbilityPellet : BossAbility
     }
     public override void UseAbility()
     {
-        if (!isServer)
-            return;
-
         Transform targetPlayer = FindPlayer();
         Vector2 directionToPlayer = GetVectorToPlayer(targetPlayer);
         CreatePellet(directionToPlayer);
@@ -30,8 +25,6 @@ public class BossAbilityPellet : BossAbility
 
     private void Start()
     {
-        if (!isServer)
-            return;
         this.cooldownTimer = this.COOLDOWN;
     }
     private Transform FindPlayer()
@@ -48,7 +41,6 @@ public class BossAbilityPellet : BossAbility
     private void CreatePellet(Vector2 directionToPlayer)
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
-        projectile.GetComponent<BossAbilityPelletMovement>().velocity = directionToPlayer * force;
-        NetworkServer.Spawn(projectile);
+        projectile.GetComponent<BossAbilityPelletMovement>().AddForce(directionToPlayer);
     }
 }
