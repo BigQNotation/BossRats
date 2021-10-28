@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BossAbilityRapidPelletsMovement : MonoBehaviour
 {
-    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    public Rigidbody2D rigidBody;
+    private readonly float force = 200f;
 
-    void Update()
+    public void AddForce(Vector2 vector)
     {
-        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+        rigidBody.AddForce(vector * force);
 
-        transform.position = newPosition;
+    }
+    private void Start()
+    {
+        gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 }

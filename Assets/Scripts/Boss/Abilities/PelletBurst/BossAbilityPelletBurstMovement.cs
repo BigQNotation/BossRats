@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class BossAbilityPelletBurstMovement : MonoBehaviour
 {
-    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    public Rigidbody2D rigidBody;
+    private readonly float force = 200f;
 
-    void Start()
+    public void AddForce(Vector2 vector)
     {
+        rigidBody.AddForce(vector * force);
 
     }
-
-    void Update()
+    private void Start()
     {
-        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
-
-        transform.position = newPosition;
+        gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
+
+
+
 }

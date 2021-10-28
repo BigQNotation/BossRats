@@ -10,7 +10,7 @@ public class BossAbilityRapidPellets : BossAbility
     private const int ID = 4;
     private const float cooldown = 10f;
 
-    public float force = 5f;
+    private readonly float force = 200f;
     private int numberofPelletsMax = 3;
     private int numberofPelletsCurrent = 0;
     private bool abilityActive = false;
@@ -25,15 +25,11 @@ public class BossAbilityRapidPellets : BossAbility
     }
     public override void UseAbility()
     {
-        if (!isServer)
-            return;
         abilityActive = true;
     }
 
     private void Start()
     {
-        if (!isServer)
-            return;
         this.cooldownTimer = this.COOLDOWN;
     }
     private void Update()
@@ -73,8 +69,7 @@ public class BossAbilityRapidPellets : BossAbility
     private void CreatePellet()
     {
         GameObject projectile = Instantiate(projectilePrefab, gameObject.transform.position, transform.rotation);
-        projectile.GetComponent<BossAbilityRapidPelletsMovement>().velocity = directionToPlayer * force;
-        NetworkServer.Spawn(projectile);
+        projectile.GetComponent<BossAbilityRapidPelletsMovement>().AddForce(directionToPlayer);
         numberofPelletsCurrent++;
         pelletTimerCurrent = pelletTimerMax;
     }

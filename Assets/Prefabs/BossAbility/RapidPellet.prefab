@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5653452841909451425}
   - component: {fileID: 5916957645969391894}
   - component: {fileID: 5319142337998004783}
+  - component: {fileID: 3242414067108218866}
   m_Layer: 8
   m_Name: RapidPellet
   m_TagString: Projectile
@@ -178,4 +179,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec5fea14218cd44cafb99d6aff63f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
+  rigidBody: {fileID: 3242414067108218866}
+--- !u!50 &3242414067108218866
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031161750691160417}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
