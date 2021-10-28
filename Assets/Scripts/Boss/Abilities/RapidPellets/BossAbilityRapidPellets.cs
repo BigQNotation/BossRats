@@ -10,7 +10,6 @@ public class BossAbilityRapidPellets : BossAbility
     private const int ID = 4;
     private const float cooldown = 10f;
 
-    private readonly float force = 200f;
     private int numberofPelletsMax = 3;
     private int numberofPelletsCurrent = 0;
     private bool abilityActive = false;

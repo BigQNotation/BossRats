@@ -59,6 +59,7 @@
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
+    <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletMovement.cs" />
