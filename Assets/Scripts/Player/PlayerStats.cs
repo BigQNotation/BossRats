@@ -6,8 +6,8 @@ using Mirror;
 public class PlayerStats : NetworkBehaviour
 {
     [SyncVar]
-    private int currentPlayerHealth = 30;
-    private int maxPlayerHealth = 100;
+    private float currentPlayerHealth = 30;
+    private float maxPlayerHealth = 100;
 
     [SyncVar]
     [SerializeField]
@@ -24,11 +24,11 @@ public class PlayerStats : NetworkBehaviour
         
     }
 
-    public int GetCurrentPlayerHealth()
+    public float GetCurrentPlayerHealth()
     {
         return currentPlayerHealth;
     }
-    public int GetMaxPlayerHealth()
+    public float GetMaxPlayerHealth()
     {
         return maxPlayerHealth;
     }
@@ -36,7 +36,7 @@ public class PlayerStats : NetworkBehaviour
     {
         return playerName;
     }
-    public void DecrementPlayerHealth(int healthDec)
+    public void DecrementPlayerHealth(float healthDec)
     {
         currentPlayerHealth -= healthDec;
     }

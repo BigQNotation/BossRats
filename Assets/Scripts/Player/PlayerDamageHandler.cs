@@ -9,16 +9,14 @@ using UnityEngine;
  */
 public class PlayerDamageHandler : MonoBehaviour
 {
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        int totalDamage = GetTotalDamage(damage);
-        gameObject.GetComponent<PlayerStats>().DecrementPlayerHealth(damage);
+        float totalDamage = GetTotalDamage(damage);
+        gameObject.GetComponent<PlayerStats>().DecrementPlayerHealth(totalDamage);
     }
 
-    private int GetTotalDamage(int rawPlayerDamage)
+    private float GetTotalDamage(float rawPlayerDamage)
     {
-        return ((GameObject.Find("Boss").GetComponent<BossModifications>().damageDealtModPercent / 100) * rawPlayerDamage);
+        return (((float)GameObject.Find("Boss").GetComponent<BossModifications>().damageDealtModPercent / 100) * (float)rawPlayerDamage);
     }
-
-
 }

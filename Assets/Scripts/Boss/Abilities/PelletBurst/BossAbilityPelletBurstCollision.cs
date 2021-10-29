@@ -5,7 +5,7 @@ using Mirror;
 
 public class BossAbilityPelletBurstCollision : NetworkBehaviour
 {
-    int DAMAGE = 5;
+    float DAMAGE = 5;
 
     void OnTriggerEnter2D(Collider2D playerCollider)
     {

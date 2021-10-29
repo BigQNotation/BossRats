@@ -5,7 +5,7 @@ using UnityEngine;
 public class AccumulationDamageOut : BossAccumulationStrategy
 {
     int STATES = 5;
-    int DAMAGEINCREASE = 20;
+    float DAMAGEINCREASE = 20;
 
     // Start is called before the first frame update
     void Start()
