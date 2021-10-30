@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Boss\Abilities\RapidPellets\BossAbilityRapidPelletsCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\RapidPellets\BossAbilityRapidPelletsMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationDamageOut.cs" />
+    <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbility.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityHandler.cs" />
