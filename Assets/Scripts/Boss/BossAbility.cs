@@ -47,5 +47,4 @@ public class BossAbility : NetworkBehaviour
     {
         cooldownTimer = Mathf.Max(cooldownTimer - Time.deltaTime, 0f);
     }
-
 }

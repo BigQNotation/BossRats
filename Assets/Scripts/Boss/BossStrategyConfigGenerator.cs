@@ -58,7 +58,7 @@ public class BossStrategyConfigGenerator : NetworkBehaviour
         BossChargeStrategy[] chargeList = { gameObject.GetComponent<ChargeMeter>() };
         allChargeStrats = chargeList;
 
-        BossDevastationStrategy[] devastationList = { gameObject.GetComponent<DevastationSpeed>() };
+        BossDevastationStrategy[] devastationList = { gameObject.GetComponent<DevastationSpeed>(), gameObject.GetComponent<DevastationCooldown>() };
         allDevastationStrats = devastationList;
 
         BossMetricStrategy[] metricList = { gameObject.GetComponent<MetricAbilityUsage>(), gameObject.GetComponent<MetricDistanceTraveled>() };

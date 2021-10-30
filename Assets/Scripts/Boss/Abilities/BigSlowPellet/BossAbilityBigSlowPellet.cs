@@ -9,7 +9,7 @@ public class BossAbilityBigSlowPellet : BossAbility
     public GameObject projectilePrefab;
 
     private const int ID = 3;
-    private const float cooldown = 3f;
+    private const float cooldown = 10f;
     
 
     public BossAbilityBigSlowPellet()

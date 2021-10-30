@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Boss\BossStrategyHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeter.cs" />
     <Compile Include="Assets\Scripts\Boss\ChargeStrategies\ChargeMeterUI.cs" />
+    <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationCooldown.cs" />
     <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationSpeed.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricAbilityUsage.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricDistanceTraveled.cs" />
