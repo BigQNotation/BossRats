@@ -60,6 +60,10 @@
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveExplosion.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveZone.cs" />
+    <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPellet.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\BigSlowPellet\BossAbilityBigSlowPelletMovement.cs" />
