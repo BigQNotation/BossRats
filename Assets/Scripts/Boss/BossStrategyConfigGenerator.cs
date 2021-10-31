@@ -52,7 +52,7 @@ public class BossStrategyConfigGenerator : NetworkBehaviour
 
     private void SetAllStrategyArrays()
     {
-        BossAccumulationStrategy[] accumList = { gameObject.GetComponent<AccumulationDamageOut>(), gameObject.GetComponent<AccumulationSpeedIncrease>() };
+        BossAccumulationStrategy[] accumList = { gameObject.GetComponent<AccumulationDamageOut>(), gameObject.GetComponent<AccumulationSpeedIncrease>(), gameObject.GetComponent<AccumulationHealing>() };
         allAccumulationStrats = accumList;
 
         BossChargeStrategy[] chargeList = { gameObject.GetComponent<ChargeMeter>() };

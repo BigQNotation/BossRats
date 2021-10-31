@@ -6,16 +6,17 @@ using Mirror;
 public class BossModifications : NetworkBehaviour
 {
     [SyncVar] public float damageDealtModPercent = 100; // ex: at 110 will do 10% more DMG
+    [SyncVar] public float healthRegeneration = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.AddComponent<ModificationHealthRegen>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+
 }

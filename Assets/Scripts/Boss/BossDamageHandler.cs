@@ -16,7 +16,7 @@ public class BossDamageHandler : MonoBehaviour
     {
         
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         gameObject.GetComponent<BossStats>().DecrementBossHealth(damage);
     }

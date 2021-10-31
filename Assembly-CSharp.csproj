@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Boss\Abilities\RapidPellets\BossAbilityRapidPelletsCollision.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\RapidPellets\BossAbilityRapidPelletsMovement.cs" />
     <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationDamageOut.cs" />
+    <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationHealing.cs" />
     <Compile Include="Assets\Scripts\Boss\AccumulationStrategies\AccumulationSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbility.cs" />
     <Compile Include="Assets\Scripts\Boss\BossAbilityConfigGenerator.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationSpeed.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricAbilityUsage.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricDistanceTraveled.cs" />
+    <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationHealthRegen.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />

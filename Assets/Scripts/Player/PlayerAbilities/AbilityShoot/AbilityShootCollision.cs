@@ -5,7 +5,7 @@ using Mirror;
 
 public class AbilityShootCollision : NetworkBehaviour
 {
-    int DAMAGE = 10;
+    float DAMAGE = 10;
 
     void OnTriggerEnter2D(Collider2D collider)
     {

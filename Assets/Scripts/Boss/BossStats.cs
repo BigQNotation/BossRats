@@ -6,8 +6,8 @@ using Mirror;
 public class BossStats : NetworkBehaviour
 {
     [SyncVar]
-    private int currentBossHealth = 1000;
-    private int maxBossHealth = 1000;
+    private float currentBossHealth = 1000;
+    private readonly float maxBossHealth = 1000;
     void Start()
     {
         
@@ -18,12 +18,20 @@ public class BossStats : NetworkBehaviour
     {
         
     }
-    public int GetBossHealth()
+    public float GetBossHealth()
     {
         return currentBossHealth;
     }
-    public void DecrementBossHealth(int healthDec)
+    public float GetMaxBossHealth()
+    {
+        return maxBossHealth;
+    }
+    public void DecrementBossHealth(float healthDec)
     {
         currentBossHealth -= healthDec;
+    }
+    public void IncrementBossHealth(float healthInc)
+    {
+        currentBossHealth += healthInc;
     }
 }
