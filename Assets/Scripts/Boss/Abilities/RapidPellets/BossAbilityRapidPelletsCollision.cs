@@ -12,7 +12,10 @@ public class BossAbilityRapidPelletsCollision : NetworkBehaviour
 
         if (playerCollider.CompareTag("Player"))
         {
-            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().TakeDamage(DAMAGE);
+            if (!playerCollider.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer)
+                return;
+
+            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().CmdTakeDamage(DAMAGE);
             Destroy(gameObject);
         }
 

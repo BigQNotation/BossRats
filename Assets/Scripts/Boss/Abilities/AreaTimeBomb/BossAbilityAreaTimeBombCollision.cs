@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BossAbilityAreaTimeBombCollision : MonoBehaviour
+using Mirror;
+public class BossAbilityAreaTimeBombCollision : NetworkBehaviour
 {
     float DAMAGE = 3;
 
     void OnTriggerEnter2D(Collider2D playerCollider)
     {
+        
 
         if (playerCollider.CompareTag("Player"))
         {
-            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().TakeDamage(DAMAGE);
+            if (!playerCollider.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer)
+                return;
+
+            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().CmdTakeDamage(DAMAGE);
             Destroy(gameObject);
         }
 

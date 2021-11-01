@@ -5,14 +5,17 @@ using Mirror;
 
 public class BossAbilityBigSlowPelletCollision : NetworkBehaviour
 {
-    float DAMAGE = 10;
+    float DAMAGE = 2;
 
     void OnTriggerEnter2D(Collider2D playerCollider)
     {
-        
+
         if (playerCollider.CompareTag("Player"))
         {
-            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().TakeDamage(DAMAGE);
+            if (!playerCollider.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer)
+                return;
+
+            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().CmdTakeDamage(DAMAGE);
             Destroy(gameObject);
         }
 
