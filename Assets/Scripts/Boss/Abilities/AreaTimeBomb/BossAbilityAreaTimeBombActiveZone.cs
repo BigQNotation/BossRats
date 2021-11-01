@@ -10,14 +10,13 @@ public class BossAbilityAreaTimeBombActiveZone : MonoBehaviour
     private float bombTimerMax = 5f;
     public Vector3 explosionLocation;
     public GameObject timeBombZone;
+    private bool bombCreated = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         bombTimerCurrent = bombTimerMax;
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateBombTimer();
@@ -29,10 +28,11 @@ public class BossAbilityAreaTimeBombActiveZone : MonoBehaviour
     }
     private void TryExplodeBomb()
     {
-        if (bombTimerCurrent <= 0)
+        if (bombTimerCurrent <= 0 && !bombCreated)
         {
             GameObject bombExplosion = Instantiate(bombExplosionPrefab, explosionLocation, transform.rotation);
             bombExplosion.GetComponent<BossAbilityAreaTimeBombActiveExplosion>().bombZone = gameObject;
+            bombCreated = true;
         }
     }
 }
