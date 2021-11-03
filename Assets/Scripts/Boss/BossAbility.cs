@@ -18,7 +18,7 @@ public class BossAbility : NetworkBehaviour
 
     void Update()
     {
-        
+
     }
 
     public virtual void UseAbility()
@@ -43,8 +43,8 @@ public class BossAbility : NetworkBehaviour
     {
         return abilityID;
     }
-    public void DecrementCooldown()
+    public void DecrementCooldown(float time)
     {
-        cooldownTimer = Mathf.Max(cooldownTimer - Time.deltaTime, 0f);
+        cooldownTimer = Mathf.Max(cooldownTimer - time, 0f);
     }
 }

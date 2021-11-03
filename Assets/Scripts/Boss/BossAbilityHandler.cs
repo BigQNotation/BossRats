@@ -7,11 +7,14 @@ public class BossAbilityHandler : NetworkBehaviour
 {
     private BossAbility[] abilityList;
     [SerializeField] GameObject playerLoadHandler;
+    private BossModifications bossModifications;
 
     private void Start()
     {
         if (!isServer)
             return;
+
+        bossModifications = gameObject.GetComponent<BossModifications>();
 
         GetAbilityConfiguration();
         Debug.Log("Ability selected: " + abilityList[0]);
@@ -31,7 +34,7 @@ public class BossAbilityHandler : NetworkBehaviour
     private void UpdateAbilityCooldowns()
     {
         for (int i = 0; i < abilityList.Length; i++)
-            abilityList[i].DecrementCooldown();
+            abilityList[i].DecrementCooldown(Time.deltaTime * bossModifications.cooldownMultiplier);
     }
     private void TryUseAbilities()
     {

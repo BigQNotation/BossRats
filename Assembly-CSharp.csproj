@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Boss\DevastationStrategies\DevastationSpeed.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricAbilityUsage.cs" />
     <Compile Include="Assets\Scripts\Boss\MetricStrategies\MetricDistanceTraveled.cs" />
+    <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationCooldownMultiplier.cs" />
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationHealthRegen.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />

@@ -17,11 +17,8 @@ public class BalanceHandler : MonoBehaviour
     private readonly float playerAbilitiesMissedPerMinute = 10;
     private readonly float bossAbilitiesMissedPerMinute = 10;
 
-    // Match dependent
-    private int numberOfPlayersThisMatch;
-
     [SerializeField] GameObject playerLoadHandler;
-    private bool alreadyUpdatedPlayerCount = false;
+    private bool alreadyDisplayedBossDamage = false;
 
     private void Start()
     {
@@ -37,10 +34,9 @@ public class BalanceHandler : MonoBehaviour
     }
     private void TryDisplayBossDamagePerAbility()
     {
-        if (playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded() && !alreadyUpdatedPlayerCount)
+        if (playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded() && !alreadyDisplayedBossDamage)
         {
-            numberOfPlayersThisMatch = GameObject.FindGameObjectsWithTag("Player").Length;
-            alreadyUpdatedPlayerCount = true;
+            alreadyDisplayedBossDamage = true;
             Debug.Log("BalanceHandler:" + GetBossDamagePerAbility() + " DMG / boss ability.");
         }
     }
@@ -62,7 +58,7 @@ public class BalanceHandler : MonoBehaviour
     }
     private float GetEffectiveBossDamagePerMinute()
     {
-        return (playerHealth / matchLength) * numberOfPlayersThisMatch;
+        return (playerHealth / matchLength);
     }
     private float GetBossAbilitiesUsedPerMinute()
     {
