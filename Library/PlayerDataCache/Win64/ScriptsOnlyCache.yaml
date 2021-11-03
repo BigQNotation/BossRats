@@ -129,7 +129,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14430}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,17 +258,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14636}
     - Class: 114
-      Script: {instanceID: 14826}
+      Script: {instanceID: 14828}
     - Class: 114
-      Script: {instanceID: 14874}
+      Script: {instanceID: 14876}
     - Class: 114
-      Script: {instanceID: 15044}
+      Script: {instanceID: 15046}
     - Class: 114
-      Script: {instanceID: 15050}
+      Script: {instanceID: 15052}
     - Class: 114
-      Script: {instanceID: 15070}
+      Script: {instanceID: 15072}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -387,15 +387,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14652}
     - Class: 114
-      Script: {instanceID: 14826}
+      Script: {instanceID: 14828}
     - Class: 114
-      Script: {instanceID: 15124}
+      Script: {instanceID: 15126}
     - Class: 114
-      Script: {instanceID: 15138}
+      Script: {instanceID: 15140}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15212}
     - Class: 114
-      Script: {instanceID: 15240}
+      Script: {instanceID: 15242}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -454,7 +454,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14534}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1592,6 +1592,12 @@ ScriptsOnlyBuild:
     className: NetworkDiscoveryHUD
   - hash:
       serializedVersion: 2
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ModificationCooldownMultiplier
+  - hash:
+      serializedVersion: 2
       Hash: 1d12411bfa32d734c4dad798554fe0fa
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1824,12 +1830,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
-  - hash:
-      serializedVersion: 2
-      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ModificationCooldownMultiplier
   platform: 19
   scenePathNames:
   - Assets/Scenes/OfflineScene.unity

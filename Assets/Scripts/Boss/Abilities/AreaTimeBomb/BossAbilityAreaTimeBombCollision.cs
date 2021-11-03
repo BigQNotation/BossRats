@@ -12,10 +12,8 @@ public class BossAbilityAreaTimeBombCollision : NetworkBehaviour
 
         if (playerCollider.CompareTag("Player"))
         {
-            if (!playerCollider.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer)
-                return;
-
-            playerCollider.gameObject.GetComponent<PlayerDamageHandler>().CmdTakeDamage(DAMAGE);
+            if (playerCollider.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer)
+                playerCollider.gameObject.GetComponent<PlayerDamageHandler>().CmdTakeDamage(DAMAGE);          
             Destroy(gameObject);
         }
 
