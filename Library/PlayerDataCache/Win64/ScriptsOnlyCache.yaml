@@ -33,10 +33,11 @@ ScriptsOnlyBuild:
     - BossAbilityRapidPellets
     - BossAbilityRapidPelletsCollision
     - BossAbilityRapidPelletsMovement
-    - BossAggroHandler
+    - BossAttackAggroHandler
     - BossDamageHandler
     - BossHealthUI
     - BossModifications
+    - BossMovementAggroHandler
     - BossStats
     - BossStrategyConfigGenerator
     - BossStrategyHandler
@@ -256,8 +257,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14560}
     - Class: 114
-      Script: {instanceID: 14636}
-    - Class: 114
       Script: {instanceID: 14828}
     - Class: 114
       Script: {instanceID: 14876}
@@ -269,6 +268,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15072}
     - Class: 114
       Script: {instanceID: 15212}
+    - Class: 114
+      Script: {instanceID: 24738}
+    - Class: 114
+      Script: {instanceID: 24746}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1574,12 +1577,6 @@ ScriptsOnlyBuild:
     className: PhysicsSimulator
   - hash:
       serializedVersion: 2
-      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossAggroHandler
-  - hash:
-      serializedVersion: 2
       Hash: 9b5a106d716e10dbf0635b1180cc5e67
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1830,6 +1827,18 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: kcp2k
     className: KcpTransport
+  - hash:
+      serializedVersion: 2
+      Hash: e0fb06dc09cd955f217ec505a1c7d5b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossMovementAggroHandler
+  - hash:
+      serializedVersion: 2
+      Hash: e1f978de203bc00ce810c4e16b77f4b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossAttackAggroHandler
   platform: 19
   scenePathNames:
   - Assets/Scenes/OfflineScene.unity

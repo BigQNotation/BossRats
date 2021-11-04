@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class BossAggroHandler : NetworkBehaviour
+public class BossMovementAggroHandler : NetworkBehaviour
 {
     [SerializeField] GameObject playerLoadHandler;
     [SyncVar] private Transform playerWithAggro;

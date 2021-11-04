@@ -36,7 +36,7 @@ public class BossAbilityAreaTimeBomb : BossAbility
     
     private Vector3 FindPlayerLocation()
     {
-        return gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro().position;
+        return gameObject.GetComponent<BossAttackAggroHandler>().GetRandomPlayerTransform().position;
     }
     private void CreateAreaTimeBombZone()
     {

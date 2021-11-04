@@ -52,7 +52,7 @@ public class SimpleAiMovement : NetworkBehaviour
         if (!isServer)
             return;
 
-        target = gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
+        target = gameObject.GetComponent<BossMovementAggroHandler>().GetPlayerWithAggro();
     }
     private void UpdateTargetTimer()
     {

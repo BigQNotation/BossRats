@@ -88,7 +88,7 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
         {
             abil.ResetCooldown();
             gameObject.GetComponent<RecordAbilitiesUsed>().UpdateRecordedMetric();
-            GameObject.Find("Boss").GetComponent<BossAggroHandler>().AddPlayerAggro(gameObject, 1);
+            GameObject.Find("Boss").GetComponent<BossMovementAggroHandler>().AddPlayerAggro(gameObject, 1);
         }
     }
     private void ClientUseAbility(Ability abil, float[] userMouseInputs)

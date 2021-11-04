@@ -56,7 +56,7 @@ public class BossAbilityRapidPellets : BossAbility
     }
     private Transform FindPlayer()
     {
-        return gameObject.GetComponent<BossAggroHandler>().GetPlayerWithAggro();
+        return gameObject.GetComponent<BossAttackAggroHandler>().GetRandomPlayerTransform();
     }
     private Vector2 GetVectorToPlayer(Transform target)
     {
