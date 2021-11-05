@@ -11,9 +11,12 @@ public class SimpleAiMovement : NetworkBehaviour
     bool swapper = true;
     [SerializeField] GameObject playerLoadHandler;
 
-    private float targetTimerCurrent = 1;
-    private float targetTimerMax = 1;
+    private float targetTimerCurrent = 5f;
+    private readonly float targetTimerMax = 5f;
 
+    private readonly float distanceToBeginMovingTowardPlayer = 3f;
+    private readonly float distanceToStopMovingTowardPlayer = 3f;
+    private Vector3 stoppingDistance;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -28,9 +31,30 @@ public class SimpleAiMovement : NetworkBehaviour
             return;
         UpdateTargetTimer();
         TryUpdateTarget();
-        UpdateDestination();    
+        UpdateStoppingDistance();
+        if (IsPlayerFarEnoughAwayToAdvance())
+            MoveToPlayer();
+        else
+            StrafeNearPlayer();
     }
-    private void UpdateDestination()
+    private void UpdateStoppingDistance()
+    {
+        stoppingDistance = 
+            Vector3.MoveTowards(gameObject.transform.position, 
+                                target.position, 
+                                Vector3.Distance(gameObject.transform.position, target.position) - distanceToStopMovingTowardPlayer);
+    }
+    private void StrafeNearPlayer()
+    {
+
+    }
+    private bool IsPlayerFarEnoughAwayToAdvance()
+    {
+        if (Vector3.Distance(gameObject.transform.position, target.position) < distanceToBeginMovingTowardPlayer)
+            return false;
+        return true;
+    }
+    private void MoveToPlayer()
     {
         if (target == null) 
             return; // targetting a DC'd player before aggro is updated
@@ -39,12 +63,12 @@ public class SimpleAiMovement : NetworkBehaviour
         if (swapper)
         {
             swapper = !swapper;
-            agent.SetDestination(target.position + add);
+            agent.SetDestination(stoppingDistance + add);
         }
         else
         {
             swapper = !swapper;
-            agent.SetDestination(target.position - add);
+            agent.SetDestination(stoppingDistance - add);
         }
     }
     private void FindPlayer()
@@ -68,5 +92,9 @@ public class SimpleAiMovement : NetworkBehaviour
 
         FindPlayer();
         targetTimerCurrent = targetTimerMax;
+    }
+    private Vector3 GetDistanceToPlayer()
+    {
+        return (gameObject.transform.position - target.position);
     }
 }

@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  runSpeed: 6
+  runSpeed: 4
   cam: {fileID: 0}
 --- !u!50 &7273302353346970356
 Rigidbody2D:
@@ -378,6 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc4d450f1f06c94aa7f3b3d8315e253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &6967872487230955548
 GameObject:
   m_ObjectHideFlags: 0
