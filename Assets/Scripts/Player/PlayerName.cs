@@ -22,8 +22,11 @@ public class PlayerName : NetworkBehaviour
             return;
         if (playerLoadHandler.ArePlayersLoaded() && !alreadySentUsername)
         {
-            CmdSetUsername(PlayerPrefs.GetString("Username"));
             alreadySentUsername = true;
+            Debug.Log("sent that username chief");
+
+            CmdSetUsername(PlayerPrefs.GetString("Username"));
+
         }
     }
     [Command]

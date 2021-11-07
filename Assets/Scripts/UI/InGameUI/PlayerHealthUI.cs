@@ -28,6 +28,7 @@ public class PlayerHealthUI : MonoBehaviour
         UpdatePlayerList();
         TryCreateUI();
         UpdateUIPlayerHealth();
+        UpdateUIPlayerNames();
     }
     private void UpdatePlayerList()
     {
@@ -95,6 +96,14 @@ public class PlayerHealthUI : MonoBehaviour
         for (int i = 0; i < healthTextObjects.Length; i++)
         {
             healthTextObjects[i].GetComponent<Text>().text = GetPlayerHealth(i); 
+        }
+    }
+    private void UpdateUIPlayerNames()
+    {
+        GameObject[] nameTextObjects = GameObject.FindGameObjectsWithTag("PlayerNameText");
+        for (int i = 0; i < nameTextObjects.Length; i++)
+        {
+            nameTextObjects[i].GetComponent<Text>().text = GetPlayerName(i);
         }
     }
     private string GetPlayerHealth(int playersIndex)
