@@ -15,12 +15,16 @@ public class PlayerHealthUI : MonoBehaviour
     GameObject[] players;
     int updatedUIAtPlayerCount = 0;
 
+    [SerializeField] PlayerLoadHandler playerLoadHandler;
+
     void Start()
     {
-
     }
     void Update()
     {
+        if (!playerLoadHandler.ArePlayersLoaded())
+            return;
+
         UpdatePlayerList();
         TryCreateUI();
         UpdateUIPlayerHealth();
@@ -78,6 +82,7 @@ public class PlayerHealthUI : MonoBehaviour
         for (int i = 0; i < nameTextObjects.Length; i++)
         {
             nameTextObjects[i].GetComponent<Text>().text = GetPlayerName(i);
+            Debug.Log(GetPlayerName(i));
         }
     }
     private string GetPlayerName(int playersIndex)

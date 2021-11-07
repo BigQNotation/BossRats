@@ -10,8 +10,7 @@ public class PlayerStats : NetworkBehaviour
     private float maxPlayerHealth = 100;
 
     [SyncVar]
-    [SerializeField]
-    private string playerName = "Player";
+    public string playerName;
     // Start is called before the first frame update
     void Start()
     {

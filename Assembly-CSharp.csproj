@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerDamageHandler.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerName.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Scripts\UI\InGameUI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\OfflineButtonStates.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsToggle.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsUsername.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />
   </ItemGroup>
   <ItemGroup>

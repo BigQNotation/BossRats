@@ -29,6 +29,9 @@ public class SimpleAiMovement : NetworkBehaviour
     {
         if (!isServer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
             return;
+        if (target == null)
+            return; // targetting a DC'd player before aggro is updated
+
         UpdateTargetTimer();
         TryUpdateTarget();
         UpdateStoppingDistance();
@@ -39,6 +42,9 @@ public class SimpleAiMovement : NetworkBehaviour
     }
     private void UpdateStoppingDistance()
     {
+        if (target == null)
+            return; // targetting a DC'd player before aggro is updated
+
         stoppingDistance = 
             Vector3.MoveTowards(gameObject.transform.position, 
                                 target.position, 
@@ -50,6 +56,8 @@ public class SimpleAiMovement : NetworkBehaviour
     }
     private bool IsPlayerFarEnoughAwayToAdvance()
     {
+        
+
         if (Vector3.Distance(gameObject.transform.position, target.position) < distanceToBeginMovingTowardPlayer)
             return false;
         return true;

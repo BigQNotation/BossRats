@@ -237,6 +237,7 @@ MonoBehaviour:
     type: 3}
   playerNameText: {fileID: 387727667265127081, guid: b740d031226aae84b9efbb061505e095,
     type: 3}
+  playerLoadHandler: {fileID: 1810153704}
 --- !u!1 &163077916
 GameObject:
   m_ObjectHideFlags: 0
