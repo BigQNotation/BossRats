@@ -5,7 +5,7 @@ using UnityEngine;
 public class SettingsToggle : MonoBehaviour
 {
     [SerializeField] GameObject settingsPrefab;
-    GameObject settings;
+    static GameObject settings;
     public static bool isSettingActive = false;
 
     public void ToggleSettings()
