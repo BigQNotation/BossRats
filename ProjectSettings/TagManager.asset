@@ -8,6 +8,7 @@ TagManager:
   - PlayerHealthText
   - PlayerNameText
   - Boss
+  - InterfaceHandler
   layers:
   - Default
   - TransparentFX

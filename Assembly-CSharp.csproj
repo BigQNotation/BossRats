@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\OfflineScreenInterface.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\AbilitySelectUI.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationHealthRegen.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
+    <Compile Include="Assets\Scripts\KeyboardGUIHandler.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerNew.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
@@ -128,7 +130,7 @@
     <Compile Include="Assets\Scripts\UI\GameOverUi\GameOverUIHandler.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\BossHealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\PlayerHealthUI.cs" />
-    <Compile Include="Assets\Scripts\UI\SettingsUI\OfflineButtonStates.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingsUI\InterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsToggle.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsUsername.cs" />
     <Compile Include="Assets\Scripts\UIUpdate.cs" />

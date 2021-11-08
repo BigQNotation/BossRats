@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class SettingsToggle : MonoBehaviour
 {
+    [SerializeField] GameObject interfaceHandler;
     [SerializeField] GameObject settingsPrefab;
-    static GameObject settings;
     public static bool isSettingActive = false;
+    static  GameObject settings;
+
+    private void Start()
+    {
+        interfaceHandler = GameObject.FindGameObjectWithTag("InterfaceHandler");
+    }
 
     public void ToggleSettings()
     {
@@ -18,11 +24,14 @@ public class SettingsToggle : MonoBehaviour
     }
     private void CreateSettingsInterface()
     {
-        settings = Instantiate(settingsPrefab);
+        settings = interfaceHandler.GetComponent<InterfaceHandler>().AddInterfaceByPrefab(settingsPrefab);
         settings.GetComponentInChildren<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
     private void DestroySettingsInterface()
     {
         Destroy(settings);
+        interfaceHandler.GetComponent<InterfaceHandler>().RemoveActiveInterface();
     }
+
+
 }

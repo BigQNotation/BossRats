@@ -18,16 +18,11 @@ public class PlayerName : NetworkBehaviour
     }
     private void TrySetUsername()
     {
-        if (!isLocalPlayer)
+        if (!isLocalPlayer || !playerLoadHandler.ArePlayersLoaded() || alreadySentUsername)
             return;
-        if (playerLoadHandler.ArePlayersLoaded() && !alreadySentUsername)
-        {
-            alreadySentUsername = true;
-            Debug.Log("sent that username chief");
 
-            CmdSetUsername(PlayerPrefs.GetString("Username"));
-
-        }
+        alreadySentUsername = true;
+        CmdSetUsername(PlayerPrefs.GetString("Username"));
     }
     [Command]
     private void CmdSetUsername(string username)
