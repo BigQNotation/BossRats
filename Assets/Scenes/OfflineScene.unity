@@ -353,6 +353,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1271926143487881208, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143487881208, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1303857169}
+    - target: {fileID: 1271926143487881208, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleAbilityInterface
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143487881208, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143487881214, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -814
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143487881214, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143773074816, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1231953798}
+    - target: {fileID: 1271926144679336798, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -814
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926144679336798, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -237
+      objectReference: {fileID: 0}
     - target: {fileID: 5407834922327119336, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
       propertyPath: m_Name
@@ -498,6 +543,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1303857167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1271926143487881213, guid: 3a8d75a11f44d0e43bdb033868910752,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058644100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1303857169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303857167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39b7fc1468500f4caf87f55701bd507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceHandler: {fileID: 0}
+  interfacePrefab: {fileID: 9083002478891919853, guid: 091a7bbebb03d424080a9c507876a7a4,
+    type: 3}
 --- !u!1 &2026185398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5407834922327119336, guid: 3a8d75a11f44d0e43bdb033868910752,

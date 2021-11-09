@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1271926143487881210}
   - component: {fileID: 1271926143487881209}
   - component: {fileID: 1271926143487881208}
-  - component: {fileID: 1271926143487881215}
   m_Layer: 5
   m_Name: AbilitySceneButton
   m_TagString: Untagged
@@ -120,7 +119,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1271926143487881215}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadAbilityScene
         m_Mode: 1
         m_Arguments:
@@ -131,18 +130,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1271926143487881215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271926143487881213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be98632897d6724cbe5b011737e0248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1271926143586216544
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463ef44a78ccc074a824b245b7085ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interfaceHandler: {fileID: 0}
   settingsPrefab: {fileID: 2802596043092257824, guid: 484074ffb91d09a49914426634993e2f,
     type: 3}
 --- !u!1 &1271926144801340009
