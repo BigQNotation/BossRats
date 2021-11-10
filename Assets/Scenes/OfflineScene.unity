@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799647794}
   - component: {fileID: 799647793}
+  - component: {fileID: 799647795}
   m_Layer: 0
   m_Name: HANDLERS
   m_TagString: InterfaceHandler
@@ -280,6 +281,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &799647795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799647792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb37dc01cbfd37b489ae39f2fa2c1b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfaceHandler: {fileID: 799647793}
+  escapeInterfacePrefab: {fileID: 8373514528073967229, guid: 52cdc2ef5ba45544680a651726e28b03,
+    type: 3}
 --- !u!1 &1001286505
 GameObject:
   m_ObjectHideFlags: 0

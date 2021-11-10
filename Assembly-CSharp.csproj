@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectInterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectToggle.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectUI.cs" />
+    <Compile Include="Assets\Scripts\UI\EscapeUI\EscapeUIToggle.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverUi\GameOverUIHandler.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\BossHealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\PlayerHealthUI.cs" />
