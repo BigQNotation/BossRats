@@ -6,21 +6,20 @@ public class SettingsToggle : MonoBehaviour
 {
     [SerializeField] GameObject interfaceHandler;
     [SerializeField] GameObject settingsPrefab;
-    public static bool isSettingActive = false;
-    static  GameObject settings;
+    GameObject settings;
 
     private void Start()
     {
         interfaceHandler = GameObject.FindGameObjectWithTag("InterfaceHandler");
     }
 
-    public void ToggleSettings()
+    public void ToggleSettingsOn()
     {
-        if (!isSettingActive)
-            CreateSettingsInterface();
-        else
-            DestroySettingsInterface();
-        isSettingActive = !isSettingActive;
+        CreateSettingsInterface();
+    }
+    public void ToggleSettingsOff()
+    {
+        DestroySettingsInterface();
     }
     private void CreateSettingsInterface()
     {
@@ -29,7 +28,6 @@ public class SettingsToggle : MonoBehaviour
     }
     private void DestroySettingsInterface()
     {
-        Destroy(settings);
         interfaceHandler.GetComponent<InterfaceHandler>().RemoveActiveInterface();
     }
 

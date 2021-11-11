@@ -21,10 +21,20 @@ public class InterfaceHandler : MonoBehaviour
     }
     public void RemoveActiveInterface()
     {
+        GameObject removedInterface = openInterfaces[openInterfaces.Count - 1];
         openInterfaces.RemoveAt(openInterfaces.Count - 1);
         EnablePreviousInterfaceInteraction();
+        Destroy(removedInterface);
     }
 
+    public bool IsInterfaceActive(GameObject thisInterface)
+    {
+        return GameObject.Equals(thisInterface, openInterfaces[openInterfaces.Count - 1]);
+    }
+    public int GetNumberOfActiveInterfaces()
+    {
+        return openInterfaces.Count;
+    }
     private void DisablePreviousInterfaceInteraction()
     {
         if (openInterfaces.Count == 1)

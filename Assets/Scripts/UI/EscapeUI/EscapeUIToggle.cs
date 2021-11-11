@@ -15,11 +15,15 @@ public class EscapeUIToggle : MonoBehaviour
     }
     private void TryToggleEscapeUI()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isInterfaceActive)
-            EnableEscapeUI();
+        if (!Input.GetKeyDown(KeyCode.Escape))
+            return;
 
-        else if (Input.GetKeyDown(KeyCode.Escape) && isInterfaceActive)
+        if (interfaceHandler.IsInterfaceActive(escapeInterface))
             DisableEscapeUI();
+        else if (interfaceHandler.GetNumberOfActiveInterfaces() == 1)
+            EnableEscapeUI();
+        else 
+            interfaceHandler.RemoveActiveInterface();
     }
     private void EnableEscapeUI()
     {
@@ -28,8 +32,9 @@ public class EscapeUIToggle : MonoBehaviour
     }
     private void DisableEscapeUI()
     {
+        if (!interfaceHandler.IsInterfaceActive(escapeInterface))
+            return;
         interfaceHandler.RemoveActiveInterface();
-        Destroy(escapeInterface);
         isInterfaceActive = !isInterfaceActive;
     }
 }

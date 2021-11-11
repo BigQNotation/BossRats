@@ -8,21 +8,7 @@ public class AbilitySelectToggle : MonoBehaviour
     [SerializeField] GameObject interfacePrefab;
     public static bool isInterfaceActive = false;
     static GameObject abilityInterface;
-
-    private void Start()
-    {
-        interfaceHandler = GameObject.FindGameObjectWithTag("InterfaceHandler");
-    }
-
-    public void ToggleAbilityInterface()
-    {
-        if (!isInterfaceActive)
-            CreateAbilitySelectInterface();
-        else
-            DestroyAbilitySelectInterface();
-        isInterfaceActive = !isInterfaceActive;
-    }
-    private void CreateAbilitySelectInterface()
+    public void CreateAbilitySelectInterface()
     {
         abilityInterface = interfaceHandler.GetComponent<InterfaceHandler>().AddInterfaceByPrefab(interfacePrefab);
         Canvas[] canvi = abilityInterface.GetComponentsInChildren<Canvas>();
@@ -30,12 +16,15 @@ public class AbilitySelectToggle : MonoBehaviour
         {
             canvas.worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         }
-
-
     }
-    private void DestroyAbilitySelectInterface()
+    public void DestroyAbilitySelectInterface()
     {
-        Destroy(abilityInterface);
         interfaceHandler.GetComponent<InterfaceHandler>().RemoveActiveInterface();
     }
+
+    private void Start()
+    {
+        interfaceHandler = GameObject.FindGameObjectWithTag("InterfaceHandler");
+    }
+
 }

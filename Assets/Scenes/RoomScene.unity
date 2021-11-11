@@ -625,6 +625,11 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7976407092943776508, guid: 0929cb1ad99dc6d46b65a4a06e82182c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CreateAbilitySelectInterface
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0929cb1ad99dc6d46b65a4a06e82182c, type: 3}
 --- !u!1 &1939913909
