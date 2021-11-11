@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2300442512462908391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -540, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 0.6, y: -0.5, z: 0}
+  m_LocalScale: {x: 335.86725, y: 337.33084, z: 1}
   m_Children: []
   m_Father: {fileID: 5924141484562825783}
   m_RootOrder: 0
@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 7925866853846231224}
   - component: {fileID: 8963483171176595893}
   - component: {fileID: 4567223160957710328}
+  - component: {fileID: 6626053177317818261}
   m_Layer: 0
   m_Name: EscapeCanvas
   m_TagString: Untagged
@@ -576,7 +577,7 @@ Canvas:
   m_GameObject: {fileID: 6976064153521729289}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -627,6 +628,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6626053177317818261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976064153521729289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9d3339120f08b42bdf4673ec3a2ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8373514528073967229
 GameObject:
   m_ObjectHideFlags: 0
