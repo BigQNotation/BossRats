@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FindCamera.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
@@ -101,7 +100,9 @@
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationCooldownMultiplier.cs" />
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationHealthRegen.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
+    <Compile Include="Assets\Scripts\FindCamera.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
+    <Compile Include="Assets\Scripts\InGameInterface.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerNew.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />

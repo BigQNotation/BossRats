@@ -13,6 +13,7 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
     private KeyCode[] abilityKey = { KeyCode.Mouse0, KeyCode.Mouse1, KeyCode.LeftShift};
     private const int MAX_POSSIBLE_ABILITY_COUNT = 9999;
     [SerializeField] GameObject playerLoadHandler;
+    private InterfaceHandler interfaceHandler;
 
     private void Start()
     {
@@ -23,11 +24,12 @@ public class PlayerAbilityInputHandler : NetworkBehaviour
         playerLoadHandler = GameObject.Find("PlayerLoadHandler");
         if (playerLoadHandler == null)
             Debug.Log("ERROR: Could not find PlayerLoadHandler");
-        
+
+        interfaceHandler = GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>();
     }
     private void Update()
     {
-        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
+        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded() || interfaceHandler.GetNumberOfActiveInterfaces() != 1)
             return;
         Ability[] allAbilities = gameObject.GetComponent<AbilityManager>().GetAbilityList();
         if (NetworkClient.ready && DetectAbilityKeyCodePress() != -1)

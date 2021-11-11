@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8252865262893813117}
   - component: {fileID: 6657946862773878589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EscapeBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 412888869
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3792dff4f8fb6d941ad469f5c8f64671, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2012374412427022301}
   - component: {fileID: 8386744285314645213}
   - component: {fileID: 7832893407437725665}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 7317070250141512613}
   - component: {fileID: 2008889335913326435}
   - component: {fileID: 2467829875008536459}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 1344920137583858287}
   - component: {fileID: 1822609965779213023}
   - component: {fileID: 8114581184327660084}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 182541261805698030}
   - component: {fileID: 1354435619395119945}
   - component: {fileID: 5423174388610315794}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 8963483171176595893}
   - component: {fileID: 4567223160957710328}
   - component: {fileID: 6626053177317818261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EscapeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 412888869
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &8963483171176595893
@@ -649,7 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7838175016623678503}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EscapeInterface
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -20,7 +20,7 @@ TagManager:
   - 
   - Creature
   - Background
-  - 
+  - Interface
   - 
   - 
   - 
@@ -57,4 +57,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1542193005
+    locked: 0
+  - name: Interface
+    uniqueID: 412888869
     locked: 0

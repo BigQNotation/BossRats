@@ -25,6 +25,7 @@ public class SettingsToggle : MonoBehaviour
     {
         settings = interfaceHandler.GetComponent<InterfaceHandler>().AddInterfaceByPrefab(settingsPrefab);
         settings.GetComponentInChildren<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        settings.GetComponentInChildren<Canvas>().sortingLayerName = "Interface";
     }
     private void DestroySettingsInterface()
     {

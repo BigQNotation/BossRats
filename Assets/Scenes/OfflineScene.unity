@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1271926143487881213, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1271926143487881214, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -418,6 +423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -30.000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926143586216544, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1271926143586216546, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
@@ -444,6 +454,16 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1271926143773074821, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271926144679336797, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1271926144679336798, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -469,6 +489,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleSettingsOn
       objectReference: {fileID: 0}
+    - target: {fileID: 1271926144801340009, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1271926144801340011, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
       propertyPath: m_Text
@@ -483,6 +508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3137302309163479918, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3475346123156398049, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}
@@ -508,6 +538,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OfflineScreenInterface
+      objectReference: {fileID: 0}
+    - target: {fileID: 5407834922327119336, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543460395370700790, guid: 3a8d75a11f44d0e43bdb033868910752,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5970043260046330959, guid: 3a8d75a11f44d0e43bdb033868910752,
         type: 3}

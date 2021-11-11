@@ -13,6 +13,7 @@ public class PlayerMovement : NetworkBehaviour
     public Camera cam;
     Vector2 mousePos;
     GameObject playerLoadHandler;
+    InterfaceHandler interfaceHandler;
 
     void Start()
     {
@@ -26,10 +27,11 @@ public class PlayerMovement : NetworkBehaviour
         if (playerLoadHandler == null)
             Debug.Log("ERROR: Could not find PlayerLoadHandler");
 
+        interfaceHandler = GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>();
     }
     void Update()
     {
-        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded())
+        if (!isLocalPlayer || !playerLoadHandler.GetComponent<PlayerLoadHandler>().ArePlayersLoaded() || interfaceHandler.GetNumberOfActiveInterfaces() != 1)
             return;
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
