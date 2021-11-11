@@ -47,6 +47,7 @@ ScriptsOnlyBuild:
     - DevastationSpeed
     - EscapeUIToggle
     - ExitButton
+    - FindCamera
     - GameOverSceneSwapper
     - GameOverUIHandler
     - InterfaceHandler
@@ -84,8 +85,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -194,41 +193,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13628}
     - Class: 114
-      Script: {instanceID: 13968}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14136}
+      Script: {instanceID: 14138}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 14194}
     - Class: 114
-      Script: {instanceID: 14256}
+      Script: {instanceID: 14258}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 14308}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 14340}
     - Class: 114
-      Script: {instanceID: 14452}
+      Script: {instanceID: 14454}
     - Class: 114
-      Script: {instanceID: 14526}
+      Script: {instanceID: 14528}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14582}
+      Script: {instanceID: 14584}
     - Class: 114
-      Script: {instanceID: 14848}
+      Script: {instanceID: 14850}
     - Class: 114
-      Script: {instanceID: 14896}
+      Script: {instanceID: 14898}
     - Class: 114
-      Script: {instanceID: 15066}
+      Script: {instanceID: 15068}
     - Class: 114
-      Script: {instanceID: 15072}
+      Script: {instanceID: 15074}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 15094}
     - Class: 114
-      Script: {instanceID: 15232}
+      Script: {instanceID: 15234}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -335,45 +334,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13648}
     - Class: 114
       Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 13682}
+      Script: {instanceID: 13672}
     - Class: 114
-      Script: {instanceID: 13858}
+      Script: {instanceID: 13684}
     - Class: 114
-      Script: {instanceID: 13926}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 13928}
     - Class: 114
-      Script: {instanceID: 13964}
+      Script: {instanceID: 13958}
     - Class: 114
       Script: {instanceID: 13966}
     - Class: 114
       Script: {instanceID: 13968}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 13970}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 14152}
     - Class: 114
-      Script: {instanceID: 14452}
+      Script: {instanceID: 14204}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 14454}
     - Class: 114
-      Script: {instanceID: 14582}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 14672}
+      Script: {instanceID: 14584}
     - Class: 114
-      Script: {instanceID: 14848}
+      Script: {instanceID: 14674}
     - Class: 114
-      Script: {instanceID: 15146}
+      Script: {instanceID: 14850}
     - Class: 114
-      Script: {instanceID: 15160}
+      Script: {instanceID: 15148}
     - Class: 114
-      Script: {instanceID: 15232}
+      Script: {instanceID: 15162}
     - Class: 114
-      Script: {instanceID: 15262}
+      Script: {instanceID: 15234}
+    - Class: 114
+      Script: {instanceID: 15264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -430,11 +431,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13492}
     - Class: 114
-      Script: {instanceID: 14452}
+      Script: {instanceID: 14454}
     - Class: 114
-      Script: {instanceID: 14556}
+      Script: {instanceID: 14558}
     - Class: 114
-      Script: {instanceID: 15232}
+      Script: {instanceID: 15234}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1264,6 +1265,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.Chat
     className: ChatNetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindCamera
   - hash:
       serializedVersion: 2
       Hash: 26d5c4d3aa5e668e2a134fd27c936004
