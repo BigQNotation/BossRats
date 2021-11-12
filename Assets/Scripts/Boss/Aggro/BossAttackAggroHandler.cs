@@ -9,10 +9,13 @@ public class BossAttackAggroHandler : NetworkBehaviour
     private NetworkRoomManagerNew roomManager;
     private GameObject[] playerList;
 
+    [SyncVar] private Transform playerWithAggro;
+    private float currentTimerToAggroSwap = .2f;
+    private float maxTimerToAggroSwap = .2f;
 
     public Transform GetRandomPlayerTransform()
     {
-        return playerList[Random.Range(0, playerList.Length)].transform;
+        return playerWithAggro;
     }
 
     protected void Start()
@@ -21,13 +24,28 @@ public class BossAttackAggroHandler : NetworkBehaviour
     }
     protected void Update()
     {
+        if (!isServer || !playerLoadHandler.ArePlayersLoaded())
+            return;
+
         TrySetPlayerList();
+        DecrementAggroSwapTimer();
+        TryAggroSwap();
     }
+    private void DecrementAggroSwapTimer()
+    {
+        currentTimerToAggroSwap -= Time.deltaTime;
+    }
+    private void TryAggroSwap()
+    {
+        if (currentTimerToAggroSwap <= 0)
+        {
+            currentTimerToAggroSwap = maxTimerToAggroSwap;
+            playerWithAggro = playerList[Random.Range(0, playerList.Length)].transform;
+        }
+    }
+
     private void TrySetPlayerList()
     {
-        if (!playerLoadHandler.ArePlayersLoaded())
-            return;
-        
         if (playerList == null || playerList.Length != roomManager.roomSlots.Count)
             playerList = GameObject.FindGameObjectsWithTag("Player");
     }
