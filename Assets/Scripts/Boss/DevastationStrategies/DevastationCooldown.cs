@@ -58,8 +58,9 @@ public class DevastationCooldown : BossDevastationStrategy
     }
     private void DecreaseCooldown()
     {
-        BossAbility[] abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetRandomAbilityList();
 
+        BossAbility[] abilityList = gameObject.GetComponent<BossAbilityHandler>().GetAbilityList();
+        
         for (int i = 0; i < abilityList.Length; i++)
         {
             abilityList[i].cooldownTimer = abilityList[i].cooldownTimer / 2;

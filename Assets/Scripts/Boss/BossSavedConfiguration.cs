@@ -19,35 +19,41 @@ public class BossSavedConfiguration : MonoBehaviour
 		return bossStrategyIDs;
     }
 
-	public void SaveGame()
+	public void SaveBossAbilityIDs(int[] abilityIDs)
+    {
+		bossAbilityIDs = abilityIDs;
+		SaveAbilities();
+    }
+	public void SaveBossStrategyIDs(int[] strategyIDs)
+    {
+		bossStrategyIDs = strategyIDs;
+    }
+
+	private void SaveAbilities()
 	{
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath
-					 + "/MySaveData.dat");
-		SaveData data = new SaveData();
-
+					 + "/MySaveAbilityData.dat");
+		SaveAbilities data = new SaveAbilities();
 		data.bossAbilityIDs = bossAbilityIDs;
-		data.bossStrategyIDs = bossStrategyIDs;
 
 		bf.Serialize(file, data);
 		file.Close();
 		Debug.Log("Game data saved!");
 	}
 
-
-	public void LoadGame()
+	public void LoadAbilities()
 	{
 		if (File.Exists(Application.persistentDataPath
-					   + "/MySaveData.dat"))
+					   + "/MySaveAbilityData.dat"))
 		{
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file =
 					   File.Open(Application.persistentDataPath
-					   + "/MySaveData.dat", FileMode.Open);
-			SaveData data = (SaveData)bf.Deserialize(file);
+					   + "/MySaveAbilityData.dat", FileMode.Open);
+			SaveAbilities data = (SaveAbilities)bf.Deserialize(file);
 			file.Close();
-			data.bossAbilityIDs = bossAbilityIDs;
-			data.bossStrategyIDs = bossStrategyIDs;
+			bossAbilityIDs = data.bossAbilityIDs;
 			Debug.Log("Game data loaded!");
 		}
 		else
@@ -55,9 +61,14 @@ public class BossSavedConfiguration : MonoBehaviour
 	}
 }
 [Serializable]
-public class SaveData
+public class SaveStrategies
+{
+	public int[] bossStrategyIDs;
+
+}
+[Serializable]
+public class SaveAbilities
 {
 	public int[] bossAbilityIDs;
-	public int[] bossStrategyIDs;
 
 }

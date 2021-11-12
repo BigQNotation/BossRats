@@ -9,6 +9,11 @@ public class BossAbilityHandler : NetworkBehaviour
     [SerializeField] GameObject playerLoadHandler;
     private BossModifications bossModifications;
 
+    public BossAbility[] GetAbilityList()
+    {
+        return abilityList;
+    }
+
     private void Start()
     {
         if (!isServer)
@@ -17,6 +22,7 @@ public class BossAbilityHandler : NetworkBehaviour
         bossModifications = gameObject.GetComponent<BossModifications>();
 
         GetAbilityConfiguration();
+        SaveAbilityListConfiguration();
         Debug.Log("Ability selected: " + abilityList[0]);
     }
     private void Update()
@@ -28,18 +34,30 @@ public class BossAbilityHandler : NetworkBehaviour
     }
     private void GetAbilityConfiguration()
     {
-        if (PlayerPrefs.GetInt("PlayerDesiresNewBoss") != 1)
+        if (PlayerPrefs.GetInt("PlayerDesiresNewBoss", 0) != 1)
         {
             gameObject.GetComponent<BossAbilityConfigGenerator>().GenerateRandomAbilityList(3);
             abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetRandomAbilityList();
         }
         else
         {
-            gameObject.GetComponent<BossSavedConfiguration>().LoadGame();
+            gameObject.GetComponent<BossSavedConfiguration>().LoadAbilities();
             int[] abilityIDs = gameObject.GetComponent<BossSavedConfiguration>().GetBossAbilityIDs();
+            //while(abilityIDs == null){}
             abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetAbilityListByIDs(abilityIDs);
         }
+        
+    }
 
+    private void SaveAbilityListConfiguration() 
+    {
+        List<int> abilityIDs = new List<int>();
+        for (int i = 0; i < abilityList.Length; i++)
+        {
+            abilityIDs.Add(abilityList[i].GetAbilityID());
+        }
+
+        gameObject.GetComponent<BossSavedConfiguration>().SaveBossAbilityIDs(abilityIDs.ToArray());
     }
     private void UpdateAbilityCooldowns()
     {
