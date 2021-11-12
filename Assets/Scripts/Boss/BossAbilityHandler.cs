@@ -28,8 +28,18 @@ public class BossAbilityHandler : NetworkBehaviour
     }
     private void GetAbilityConfiguration()
     {
-        gameObject.GetComponent<BossAbilityConfigGenerator>().GenerateRandomAbilityList(3);
-        abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetRandomAbilityList();
+        if (PlayerPrefs.GetInt("PlayerDesiresNewBoss") != 1)
+        {
+            gameObject.GetComponent<BossAbilityConfigGenerator>().GenerateRandomAbilityList(3);
+            abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetRandomAbilityList();
+        }
+        else
+        {
+            gameObject.GetComponent<BossSavedConfiguration>().LoadGame();
+            int[] abilityIDs = gameObject.GetComponent<BossSavedConfiguration>().GetBossAbilityIDs();
+            abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetAbilityListByIDs(abilityIDs);
+        }
+
     }
     private void UpdateAbilityCooldowns()
     {

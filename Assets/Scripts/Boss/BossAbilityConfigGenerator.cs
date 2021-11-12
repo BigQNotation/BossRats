@@ -12,6 +12,20 @@ public class BossAbilityConfigGenerator : NetworkBehaviour
     {
         return randomAbilityList;
     }
+    public BossAbility[] GetAbilityListByIDs(int[] abilityIDs)
+    {
+        List<BossAbility> abilityList = new List<BossAbility>();
+        for (int i = 0; i < abilityIDs.Length; i++)
+        {
+            for (int j = 0; j < allAbilitiesList.Length; j++)
+            {
+                if (allAbilitiesList[j].GetAbilityID() == abilityIDs[i])
+                    abilityList.Add(allAbilitiesList[j]);
+            }
+        }
+        return abilityList.ToArray();
+
+    }
     public void GenerateRandomAbilityList(int numberOfAbilities)
     {
         if (numberOfAbilities > allAbilitiesList.Length || numberOfAbilities < 1)

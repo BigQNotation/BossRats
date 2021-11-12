@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Boss\BossDevastationStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossMetricStrategy.cs" />
     <Compile Include="Assets\Scripts\Boss\BossModifications.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossSavedConfiguration.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStats.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStrategyConfigGenerator.cs" />
     <Compile Include="Assets\Scripts\Boss\BossStrategyHandler.cs" />
