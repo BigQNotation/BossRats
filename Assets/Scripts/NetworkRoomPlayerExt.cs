@@ -102,11 +102,19 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
     
     public override void OnGUI()
     {
+        HandleRoomSceneGUI();
+        HandleGameplaySceneGUI();        
+    }
+
+
+    private void HandleRoomSceneGUI()
+    {
         NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
         if (room)
         {
-            if (NetworkManager.IsSceneActive(room.RoomScene))
-            {
+            if (!NetworkManager.IsSceneActive(room.RoomScene))
+                return;
+            
                 RoomSceneInterface roomSceneInterface = GameObject.Find("RoomSceneInterface").GetComponent<RoomSceneInterface>();
 
 
@@ -127,8 +135,13 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
                     roomSceneInterface.onlyReadyOnce = true;
                 }
             }
+    }
+    private void HandleGameplaySceneGUI()
+    {
+        NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
+        if (room)
+        {
 
-            
             if (NetworkServer.active && NetworkManager.IsSceneActive(room.GameplayScene))
             {
                 InGameInterface inGameInterface = GameObject.Find("UI").GetComponent<InGameInterface>();
@@ -137,21 +150,13 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
                     room.ServerChangeScene(room.RoomScene);
                     inGameInterface.onlyChangeOnce = false;
                 }
-                    
+
 
             }
 
 
 
         }
-
-
-        if (!GameOverUIHandler.isGameOverScene && !AbilitySelectInterfaceHandler.isAbilitySelectInterfaceOpen)
-            base.OnGUI();
-        
     }
-
-
-
     #endregion
 }
