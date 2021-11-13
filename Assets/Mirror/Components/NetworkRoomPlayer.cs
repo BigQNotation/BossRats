@@ -130,6 +130,7 @@ namespace Mirror
         /// </summary>
         public virtual void OnGUI()
         {
+            /*
             if (!showRoomGUI)
                 return;
 
@@ -144,7 +145,7 @@ namespace Mirror
 
                 DrawPlayerReadyState();
                 DrawPlayerReadyButton();
-            }
+            } */
         }
 
         void DrawPlayerReadyState()

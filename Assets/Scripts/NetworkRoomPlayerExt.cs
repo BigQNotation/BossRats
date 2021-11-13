@@ -105,26 +105,43 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
         NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
         if (room)
         {
-            if (!room.showRoomGUI)
-                return;
-
-            if (!NetworkManager.IsSceneActive(room.RoomScene))
-                return;
-
-            RoomSceneInterface roomSceneInterface = GameObject.Find("RoomSceneInterface").GetComponent<RoomSceneInterface>();
-            if (roomSceneInterface.readyToPlay && roomSceneInterface.onlyReadyOnce && isLocalPlayer)
+            if (NetworkManager.IsSceneActive(room.RoomScene))
             {
-                CmdChangeReadyState(true);
-                roomSceneInterface.onlyReadyOnce = false;
-                
+                RoomSceneInterface roomSceneInterface = GameObject.Find("RoomSceneInterface").GetComponent<RoomSceneInterface>();
+
+
+                if (room.allPlayersReady && NetworkServer.active && roomSceneInterface.startGame)
+                    room.ServerChangeScene(room.GameplayScene);
+
+
+                if (roomSceneInterface.readyToPlay && roomSceneInterface.onlyReadyOnce && isLocalPlayer)
+                {
+                    CmdChangeReadyState(true);
+                    roomSceneInterface.onlyReadyOnce = false;
+
+                }
+
+                else if (!roomSceneInterface.readyToPlay && isLocalPlayer)
+                {
+                    CmdChangeReadyState(false);
+                    roomSceneInterface.onlyReadyOnce = true;
+                }
             }
-                
-            else if (!roomSceneInterface.readyToPlay && isLocalPlayer)
+
+            
+            if (NetworkServer.active && NetworkManager.IsSceneActive(room.GameplayScene))
             {
-                CmdChangeReadyState(false);
-                roomSceneInterface.onlyReadyOnce = true;
+                InGameInterface inGameInterface = GameObject.Find("UI").GetComponent<InGameInterface>();
+                if (inGameInterface.backToRoom && inGameInterface.onlyChangeOnce)
+                {
+                    room.ServerChangeScene(room.RoomScene);
+                    inGameInterface.onlyChangeOnce = false;
+                }
+                    
+
             }
-                
+
+
 
         }
 

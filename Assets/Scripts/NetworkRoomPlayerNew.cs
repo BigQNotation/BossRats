@@ -99,6 +99,7 @@ public class NetworkRoomPlayerNew : NetworkRoomPlayer
     #region Optional UI
     public override void OnGUI()
     {
+        /*
         if (!showRoomGUI)
             return;
 
@@ -114,6 +115,7 @@ public class NetworkRoomPlayerNew : NetworkRoomPlayer
             DrawPlayerReadyState();
             DrawPlayerReadyButton();
         }
+        */
     }
 
     void DrawPlayerReadyState()

@@ -9,6 +9,7 @@ public class RoomSceneInterface : NetworkBehaviour
     NetworkManager manager;
     public bool readyToPlay = false;
     public bool onlyReadyOnce = true;
+    public bool startGame = false;
     private void Start()
     {
         GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>().AddInterfaceByObject(gameObject);
@@ -41,5 +42,9 @@ public class RoomSceneInterface : NetworkBehaviour
                 GameObject.Find("ReadyText").GetComponent<Text>().text = "NOT READY";
             }
 
+    }
+    public void ToggleStartGame()
+    {
+        startGame = true;
     }
 }

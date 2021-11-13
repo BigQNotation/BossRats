@@ -186,6 +186,7 @@ public class NetworkRoomManagerNew : NetworkRoomManager
 
     public override void OnGUI()
     {
+        /*
         if (!showRoomGUI)
             return;
 
@@ -210,7 +211,7 @@ public class NetworkRoomManagerNew : NetworkRoomManager
 
             ServerChangeScene(GameplayScene);
         }
-
+        */
     }
     public void ChangeScene()
     {

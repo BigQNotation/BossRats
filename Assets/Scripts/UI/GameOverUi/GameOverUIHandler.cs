@@ -27,12 +27,12 @@ public class GameOverUIHandler : NetworkBehaviour
     {
         if (isGameOverScene)
         {
-            GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = false;
+            //GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = false;
             gameOverCanvas.SetActive(true);
         }
         else
         {
-            GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = true;
+            //GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = true;
             gameOverCanvas.SetActive(false);
         }
 
