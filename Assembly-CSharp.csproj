@@ -56,8 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GameConfigurationUIToggle.cs" />
     <Compile Include="Assets\NewBossButton.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+    <Compile Include="Assets\RemoveCurrentInterface.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveExplosion.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="Assets\Scripts\UI\InterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\OfflineSceneUI\ExitButton.cs" />
     <Compile Include="Assets\Scripts\UI\OfflineSceneUI\OfflineScreenInterface.cs" />
+    <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\GameConfigurationInterface.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\RoomSceneInterface.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsToggle.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsUsername.cs" />

@@ -10,10 +10,6 @@ public class NewBossButton : NetworkBehaviour
     static bool wantsNewBoss = false;
     private void Start()
     {
-        if (!isServer)
-        {
-            button.SetActive(false);
-        }
         if (wantsNewBoss)
             PlayerPrefs.SetInt("PlayerDesiresNewBoss", 0);
         else
