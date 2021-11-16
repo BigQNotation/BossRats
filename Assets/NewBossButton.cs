@@ -7,9 +7,13 @@ using UnityEngine.UI;
 public class NewBossButton : NetworkBehaviour
 {
     [SerializeField] GameObject button;
+    LobbySettings lobbySettings;
     static bool wantsNewBoss = false;
     private void Start()
     {
+        lobbySettings = GameObject.Find("LobbySettings").GetComponent<LobbySettings>();
+        if (!lobbySettings.server)
+            return;
         if (wantsNewBoss)
             PlayerPrefs.SetInt("PlayerDesiresNewBoss", 0);
         else
@@ -18,6 +22,9 @@ public class NewBossButton : NetworkBehaviour
 
     private void Update()
     {
+        if (!lobbySettings.server)
+            return;
+
         if (wantsNewBoss)
             button.GetComponentInChildren<Text>().text = "NEW BOSS";
         else
@@ -26,6 +33,9 @@ public class NewBossButton : NetworkBehaviour
 
     public void SwapBoss()
     {
+        if (!lobbySettings.server)
+            return;
+
         wantsNewBoss = !wantsNewBoss;
         if (wantsNewBoss)
             PlayerPrefs.SetInt("PlayerDesiresNewBoss", 0);

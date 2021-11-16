@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameConfigurationUIToggle.cs" />
+    <Compile Include="Assets\LobbySettings.cs" />
     <Compile Include="Assets\NewBossButton.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\RemoveCurrentInterface.cs" />

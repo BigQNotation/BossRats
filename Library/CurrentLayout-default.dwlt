@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 98
+  controlID: 128
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1430
     height: 947
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 99
+  controlID: 83
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 100
+  controlID: 58
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 278
     height: 669
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -239,14 +239,14 @@ MonoBehaviour:
     y: 669
     width: 1430
     height: 278
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 490
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -397,7 +397,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8e5effffa25effff7c60ffff0061ffff0461ffffec7bfffffa7bffffa88bffffd08bffffdc8bffff048cffff8298ffff8e98ffff9298ffffe498ffff9a99ffff8c9effffd49fffff96a0ffffa2a0ffffcaa0ffff1ea1ffff82a3ffff2ca4ffff38a4ffff60a4ffff20a5ffff6ca5ffff26a6ffff2ca6ffff66a6ffff8ea6ffff4ca7ffff7aa8ffffc0a8ffffe8a8ffff68abffff6eabffffc0abffff7cacffff44adffff50adffff78adffffcaadffff0aaeffff14aeffff1aaeffff6aaeffff76aeffff9eaeffffb0afffffb6afffff74b0ffff80b0ffffa8b0ffffc6b0ffff62b1ffff00b2ffff0cb2ffff34b2ffff04b3ffff0ab3ffff5cb3ffffd0b6ffffd6b6ffff28b7ffffd8b7ffffe6b7ffff34b9ffff40b9ffff68b9ffffacb9ffff9abaffffdabbffff32beffff38beffff94beffffa0beffffc8beffffb2c1ffffbac1ffffc6c1ffff22c3ffff28c3ffffc4c3ffffc8c3ffff0ec4ffff14c4ffff6ec5ffff72c5ffffbcc5ffffc2c5ffff14c6ffffc4c6ffffd2c6ffff54ccffff60ccffff88ccffff0acdffff14cdffff1acdffff6ccdffffeacffffff4cffffffacfffff4cd0ffff0ad1ffff2ed2ffff14d3ffff7cd5ffff86d5ffff8cd5ffffded5ffffded6ffff30d7ffffded8ffffe8d8ffffeed8ffff40d9ffff52dbffff58dbffff88dbffff94dbffffbcdbffff5eddffff68ddffff6eddffffaaddffffd2ddffff02dfffff2cdfffff54dfffff12e0ffffc6e0ffffd2e0fffffae0ffff3ee1ffffa6e1ffffb2e1ffffdae1ffff96e2ffff2cf0ffff58f0ffff8af5ffffdcf7ffffe6f9ffff18faffff40faffff4cfaffff74faffff48fbffff6a410000be6a0000b26c00009c6e00005a720000ea7f0000168200009a820000188400001888000036880000428800008289000086890000288d0000fa8d0000428e00006a8e0000b48f0000b2900000e09000008098000094980000d29800001a9900004a9900004e990000669c0000aa9c000098b3000010bc0000
+      m_ExpandedIDs: e0eeffffe4eeffff36efffffaef2ffffd2f4ffff02f7ffff9cf8ffff96fafffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -627,20 +627,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/CustomAssets/Lobby Settings
+    - Assets/Prefabs/Interfaces
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/CustomAssets/Lobby Settings
+  - Assets/Prefabs/Interfaces
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\larso\Documents\Unity\Bosses\Bosses
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38c10000
-    m_LastClickedID: 49464
-    m_ExpandedIDs: 00000000bc400000be400000c0400000c2400000c4400000c6400000c8400000ca400000cc400000fc40000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 5e410000
+    m_LastClickedID: 16734
+    m_ExpandedIDs: 000000003441000036410000384100003a4100003c4100003e41000040410000424100004441000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,7 +668,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc400000be400000c0400000c2400000c4400000c6400000c8400000ca400000cc400000
+    m_ExpandedIDs: 000000003441000036410000384100003a4100003c4100003e410000404100004241000044410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
