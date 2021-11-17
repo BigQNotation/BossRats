@@ -7,35 +7,33 @@ using UnityEngine.SceneManagement;
 public class GameOverUIHandler : NetworkBehaviour
 {
     public static bool isGameOverScene = false;
-    [SerializeField] GameObject gameOverCanvas;
-
+    [SerializeField] GameObject lastGameInterface;
+    InterfaceHandler interfaceHandler;
+    private bool alreadyInstantiatedInterface = false;
     private void Start()
     {
-   
+        interfaceHandler = GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>();
     }
     private void Awake()
     {
-        ToggleGameOverInterface();
     }
-
-    public void BackToLobbyToggleInterfaceOff()
+    private void Update()
     {
-        isGameOverScene = false;
-        ToggleGameOverInterface();
+        TryToggleGameOverInterface();
+    }
+    private void TryToggleGameOverInterface()
+    {
+        if (isGameOverScene && !alreadyInstantiatedInterface)
+        {
+            ToggleGameOverInterface();
+            alreadyInstantiatedInterface = true;
+        }
     }
     public void ToggleGameOverInterface()
     {
         if (isGameOverScene)
         {
-            //GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = false;
-            gameOverCanvas.SetActive(true);
+            interfaceHandler.AddInterfaceByPrefab(lastGameInterface);
         }
-        else
-        {
-            //GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = true;
-            gameOverCanvas.SetActive(false);
-        }
-
-        
     } 
 }

@@ -139,8 +139,11 @@
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\GameConfigurationInterface.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\LobbySettings.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\NewBossButton.cs" />
+    <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\RoomSettingsHeaderButtons.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUIToggle.cs" />
+    <Compile Include="Assets\Scripts\UI\RoomSceneUI\LastGameUI\GameOverHeaderButtons.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\RemoveCurrentInterface.cs" />
+    <Compile Include="Assets\Scripts\UI\RoomSceneUI\RoomHeaderButtons.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\RoomSceneInterface.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsToggle.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsUI\SettingsUsername.cs" />

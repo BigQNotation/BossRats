@@ -10,6 +10,11 @@ public class GameOverSceneSwapper : NetworkBehaviour
     GameObject[] players;
     bool sceneAlreadySwapped = false;
 
+    private void Awake()
+    {
+        GameOverUIHandler.isGameOverScene = false;
+    }
+
     private void Update()
     {
         if (!isServer)

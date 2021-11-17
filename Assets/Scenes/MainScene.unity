@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backToRoom: 0
+  onlyChangeOnce: 1
 --- !u!1 &198386803
 GameObject:
   m_ObjectHideFlags: 0

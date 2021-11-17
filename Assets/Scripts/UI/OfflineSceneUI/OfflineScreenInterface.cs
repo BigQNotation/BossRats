@@ -11,6 +11,7 @@ public class OfflineScreenInterface : MonoBehaviour
     {
         GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>().AddInterfaceByObject(gameObject);
         manager = GameObject.Find("RoomManager").GetComponent<NetworkRoomManagerNew>();
+        GameOverUIHandler.isGameOverScene = false;
     }
     public void StartHost()
     {
