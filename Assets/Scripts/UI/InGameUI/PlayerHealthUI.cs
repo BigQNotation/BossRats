@@ -83,7 +83,6 @@ public class PlayerHealthUI : MonoBehaviour
         for (int i = 0; i < nameTextObjects.Length; i++)
         {
             nameTextObjects[i].GetComponent<Text>().text = GetPlayerName(i);
-            Debug.Log(GetPlayerName(i));
         }
     }
     private string GetPlayerName(int playersIndex)

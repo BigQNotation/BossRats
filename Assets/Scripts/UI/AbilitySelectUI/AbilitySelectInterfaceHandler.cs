@@ -27,13 +27,11 @@ public class AbilitySelectInterfaceHandler : MonoBehaviour
         {
             abilitySelectCanvas.SetActive(true);
             isAbilitySelectInterfaceOpen = true;
-            GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = false;
         }
         else
         {
             isAbilitySelectInterfaceOpen = false;
             abilitySelectCanvas.SetActive(false);
-            GameObject.Find("RoomManager").GetComponent<NetworkManagerHUD>().showGUI = true;
         }
             
     }

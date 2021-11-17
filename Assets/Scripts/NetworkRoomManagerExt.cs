@@ -19,8 +19,6 @@ using Mirror;
 public class NetworkRoomManagerExt : NetworkRoomManager
 {
 
-    bool showStartButton = false;
-
     #region Server Callbacks
 
     /// <summary>
@@ -117,7 +115,7 @@ public class NetworkRoomManagerExt : NetworkRoomManager
 #if UNITY_SERVER
             base.OnRoomServerPlayersReady();
 #else
-        showStartButton = true;
+        
 #endif
     }
 
@@ -127,7 +125,7 @@ public class NetworkRoomManagerExt : NetworkRoomManager
     /// </summary>
     public override void OnRoomServerPlayersNotReady() {
 
-        showStartButton = false;
+        
     }
 
     #endregion
