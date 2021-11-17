@@ -43,7 +43,6 @@ public class BossAbilityHandler : NetworkBehaviour
         {
             gameObject.GetComponent<BossSavedConfiguration>().LoadAbilities();
             int[] abilityIDs = gameObject.GetComponent<BossSavedConfiguration>().GetBossAbilityIDs();
-            //while(abilityIDs == null){}
             abilityList = gameObject.GetComponent<BossAbilityConfigGenerator>().GetAbilityListByIDs(abilityIDs);
         }
         
