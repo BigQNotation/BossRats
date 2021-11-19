@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class RoomSceneInterface : NetworkBehaviour
 {
-    NetworkManager manager;
+    NetworkRoomManager manager;
+    GameObject startGameButton;
     public bool readyToPlay = false;
     public bool onlyReadyOnce = true;
     public bool startGame = false;
@@ -14,8 +15,13 @@ public class RoomSceneInterface : NetworkBehaviour
     {
         GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>().AddInterfaceByObject(gameObject);
         manager = GameObject.Find("RoomManager").GetComponent<NetworkRoomManagerNew>();
+        startGameButton = GameObject.Find("StartGameButton");
+        TryDisableStartButtonOnClient();
     }
-
+    private void Update()
+    {
+        TryDisplayStartGameButton();
+    }
     public void ExitRoom()
     {
         // stop host if host mode
@@ -46,5 +52,17 @@ public class RoomSceneInterface : NetworkBehaviour
     public void ToggleStartGame()
     {
         startGame = true;
+    }
+    private void TryDisplayStartGameButton()
+    {
+        if (isServer && manager.allPlayersReady)
+            startGameButton.SetActive(true);
+        else
+            startGameButton.SetActive(false);
+    }
+    private void TryDisableStartButtonOnClient()
+    {
+        if (!isServer)
+            startGameButton.SetActive(false);
     }
 }
