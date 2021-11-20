@@ -11,17 +11,6 @@ public class RoomSceneInterface : NetworkBehaviour
     public bool readyToPlay = false;
     public bool onlyReadyOnce = true;
     public bool startGame = false;
-    private void Start()
-    {
-        GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>().AddInterfaceByObject(gameObject);
-        manager = GameObject.Find("RoomManager").GetComponent<NetworkRoomManagerNew>();
-        startGameButton = GameObject.Find("StartGameButton");
-        TryDisableStartButtonOnClient();
-    }
-    private void Update()
-    {
-        TryDisplayStartGameButton();
-    }
     public void ExitRoom()
     {
         // stop host if host mode
@@ -37,21 +26,41 @@ public class RoomSceneInterface : NetworkBehaviour
     }
     public void ToggleReadyStatus()
     {
-            if (!readyToPlay)
-            {
-                readyToPlay = true;
-                GameObject.Find("ReadyText").GetComponent<Text>().text = "READY";
-            }
-            else
-            {
-                readyToPlay = false;
-                GameObject.Find("ReadyText").GetComponent<Text>().text = "NOT READY";
-            }
+        if (!readyToPlay)
+        {
+            readyToPlay = true;
+            GameObject.Find("ReadyText").GetComponent<Text>().text = "READY";
+        }
+        else
+        {
+            readyToPlay = false;
+            GameObject.Find("ReadyText").GetComponent<Text>().text = "NOT READY";
+        }
 
     }
     public void ToggleStartGame()
     {
         startGame = true;
+    }
+
+    private void Start()
+    {
+        AddRoomInterfaceToHandler();
+        GetGameObjectsInScene();
+        TryDisplayStartGameButton();
+    }
+    private void Update()
+    {
+        TryDisplayStartGameButton();
+    }
+    private void AddRoomInterfaceToHandler()
+    {
+        GameObject.Find("HANDLERS").GetComponent<InterfaceHandler>().AddInterfaceByObject(gameObject);
+    }
+    private void GetGameObjectsInScene()
+    {   
+        manager = GameObject.Find("RoomManager").GetComponent<NetworkRoomManagerNew>();
+        startGameButton = GameObject.Find("StartGameButton");
     }
     private void TryDisplayStartGameButton()
     {
@@ -59,10 +68,5 @@ public class RoomSceneInterface : NetworkBehaviour
             startGameButton.SetActive(true);
         else
             startGameButton.SetActive(false);
-    }
-    private void TryDisableStartButtonOnClient()
-    {
-        if (!isServer)
-            startGameButton.SetActive(false);
-    }
+    } 
 }
