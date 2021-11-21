@@ -102,13 +102,14 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
     
     public override void OnGUI()
     {
-        HandleRoomSceneGUI();
+        //HandleRoomSceneGUI();
         HandleGameplaySceneGUI();        
     }
 
 
     private void HandleRoomSceneGUI()
     {
+
         NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
         if (room)
         {

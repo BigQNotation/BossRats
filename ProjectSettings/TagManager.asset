@@ -9,6 +9,7 @@ TagManager:
   - PlayerNameText
   - Boss
   - InterfaceHandler
+  - RoomPlayer
   layers:
   - Default
   - TransparentFX

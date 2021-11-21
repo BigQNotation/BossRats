@@ -36,7 +36,7 @@ public class RoomSceneInterface : NetworkBehaviour
             readyToPlay = false;
             GameObject.Find("ReadyText").GetComponent<Text>().text = "NOT READY";
         }
-
+        Debug.Log("ready: " + readyToPlay + onlyReadyOnce);
     }
     public void ToggleStartGame()
     {
@@ -52,6 +52,7 @@ public class RoomSceneInterface : NetworkBehaviour
     private void Update()
     {
         TryDisplayStartGameButton();
+        HandleRoomSceneGUI();
     }
     private void AddRoomInterfaceToHandler()
     {
@@ -68,5 +69,43 @@ public class RoomSceneInterface : NetworkBehaviour
             startGameButton.SetActive(true);
         else
             startGameButton.SetActive(false);
-    } 
+    }
+    private void HandleRoomSceneGUI()
+    {
+        NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
+        if (room)
+        {
+            if (!NetworkManager.IsSceneActive(room.RoomScene))
+                return;
+
+            GameObject[] roomPlayers = GameObject.FindGameObjectsWithTag("RoomPlayer");
+            NetworkRoomPlayer roomPlayer = null;
+            foreach (GameObject player in roomPlayers)
+            {
+                if (player.GetComponent<NetworkRoomPlayerExt>().isLocalPlayer)
+                    roomPlayer = player.GetComponent<NetworkRoomPlayerExt>();
+            }
+
+            //NetworkRoomPlayer roomPlayer = GameObject.FindGameObjectWithTag("RoomPlayer").GetComponent<NetworkRoomPlayerExt>();
+            
+            if (room.allPlayersReady && NetworkServer.active && startGame)
+                room.ServerChangeScene(room.GameplayScene);
+            
+            
+            if (readyToPlay && onlyReadyOnce && isClient)
+            {
+                Debug.Log("calling1");
+                roomPlayer.CmdChangeReadyState(true);
+                onlyReadyOnce = false;
+                Debug.Log("called2");
+
+            }
+
+            else if (!readyToPlay  && isClient && roomPlayer.readyToBegin == true)
+            {
+                roomPlayer.CmdChangeReadyState(false);
+                onlyReadyOnce = true;
+            }
+        }
+    }
 }

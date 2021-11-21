@@ -80,6 +80,7 @@ namespace Mirror
         [Command]
         public void CmdChangeReadyState(bool readyState)
         {
+            Debug.Log("readied");
             readyToBegin = readyState;
             NetworkRoomManager room = NetworkManager.singleton as NetworkRoomManager;
             if (room != null)
