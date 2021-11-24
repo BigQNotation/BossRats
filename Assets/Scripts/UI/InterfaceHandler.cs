@@ -19,12 +19,13 @@ public class InterfaceHandler : MonoBehaviour
         openInterfaces.Add(interfaceObject);
         DisablePreviousInterfaceInteraction();
     }
-    public void RemoveActiveInterface()
+    public GameObject RemoveActiveInterface()
     {
         GameObject removedInterface = openInterfaces[openInterfaces.Count - 1];
         openInterfaces.RemoveAt(openInterfaces.Count - 1);
         EnablePreviousInterfaceInteraction();
         Destroy(removedInterface);
+        return removedInterface;
     }
 
     public bool IsInterfaceActive(GameObject thisInterface)
@@ -35,6 +36,19 @@ public class InterfaceHandler : MonoBehaviour
     {
         return openInterfaces.Count;
     }
+    public void SwapInterfaces(int index1, int index2)
+    {
+        openInterfaces[index1].GetComponentInChildren<GraphicRaycaster>().enabled = false;
+        openInterfaces[index2].GetComponentInChildren<GraphicRaycaster>().enabled = false;
+
+        GameObject obj1 = openInterfaces[index1];
+        GameObject obj2 = openInterfaces[index2];
+
+        openInterfaces[index1] = obj2;
+        openInterfaces[index2] = obj1;
+
+        EnablePreviousInterfaceInteraction();
+    }
     private void DisablePreviousInterfaceInteraction()
     {
         if (openInterfaces.Count == 1)
@@ -44,6 +58,8 @@ public class InterfaceHandler : MonoBehaviour
     }
     private void EnablePreviousInterfaceInteraction()
     {
-        openInterfaces[openInterfaces.Count - 1].GetComponentInChildren<GraphicRaycaster>().enabled = true;
+        if (openInterfaces.Count > 0)
+            openInterfaces[openInterfaces.Count - 1].GetComponentInChildren<GraphicRaycaster>().enabled = true;
     }
+    
 }

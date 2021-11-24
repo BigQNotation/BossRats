@@ -1514,6 +1514,18 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 0929cb1ad99dc6d46b65a4a06e82182c
   hasSpawned: 0
+--- !u!114 &1781709979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781709976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36346e2a9669344bbd3862e8913f51e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1834576501
 GameObject:
   m_ObjectHideFlags: 0
