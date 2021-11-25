@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Mirror;
 using UnityEngine;
-using Mirror;
 
 public abstract class BossDevastationStrategy : NetworkBehaviour
 {
@@ -10,20 +8,32 @@ public abstract class BossDevastationStrategy : NetworkBehaviour
 
     protected float cooldownMax;
     protected float cooldownRemainder = 0;
-    protected bool readyToReset = false;
+    protected bool devastationActive = false;
 
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+    protected float timeSpentInThreshold = 0;
+    protected float timeSpentInThresholdBeforeDevastation = 5;
 
     public abstract void UseDevastation();
-    protected abstract void EndDevastation();
+    public void UpdateTimeInDevastationThreshold()
+    {
+        timeSpentInThreshold += Time.deltaTime;
+    }
+    public void ResetTimeInDevastationThreshold()
+    {
+        timeSpentInThreshold = 0;
+    }
+    public bool HaveUsersSpentEnoughTimeInDevastationThresholdToTriggerDevastation()
+    {
+        if (timeSpentInThreshold >= timeSpentInThresholdBeforeDevastation)
+            return true;
+        else
+            return false;
+    }
 
+    void Start() { }
+    void Update() { }
+
+    protected abstract void EndDevastation();
     protected void StartDevastationTimer()
     {
         cooldownRemainder = cooldownMax;

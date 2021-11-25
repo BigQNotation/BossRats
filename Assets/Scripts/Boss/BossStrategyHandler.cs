@@ -27,6 +27,7 @@ public class BossStrategyHandler : NetworkBehaviour
         UpdatePlayerMetric();
         AddBossCharge(GetPlayerMetric());
         TryUseAccumulationStrategy();
+        TryUpdateDurationDevastationIsStrategyActive();
         TryUseDevastationStrategy();
     }
     private void UpdatePlayerMetric()
@@ -72,11 +73,16 @@ public class BossStrategyHandler : NetworkBehaviour
             strategySet.accumulationStrategy.UseStrategy();
         }
     }
-    private void TryUseDevastationStrategy()
+    private void TryUpdateDurationDevastationIsStrategyActive()
     {
         if (!strategySet.chargeStrategy.isAboveThresholdState())
-        {
+            strategySet.devastationStrategy.UpdateTimeInDevastationThreshold();
+        else
+            strategySet.devastationStrategy.ResetTimeInDevastationThreshold();
+    }
+    private void TryUseDevastationStrategy()
+    {
+        if (strategySet.devastationStrategy.HaveUsersSpentEnoughTimeInDevastationThresholdToTriggerDevastation())
             strategySet.devastationStrategy.UseDevastation();
-        }
     }
 }

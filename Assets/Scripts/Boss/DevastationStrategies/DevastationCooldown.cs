@@ -10,15 +10,14 @@ public class DevastationCooldown : BossDevastationStrategy
 
     public override void UseDevastation()
     {
-        if (readyToReset) // only allow UseDevastion while it isn't already in progress
+        if (devastationActive) // only allow UseDevastion while it isn't already in progress
             return;
         StartDevastationTimer();
-        readyToReset = true;
+        devastationActive = true;
 
         cooldownDecreaseTimerCurrent = cooldownDecreaseTimerMax;
 
     }
-
     void Start()
     {
         cooldownMax = 15;
@@ -30,9 +29,9 @@ public class DevastationCooldown : BossDevastationStrategy
             return;
 
         UpdateDevastationTimer();
-        if (IsDevastationTimerEnd() && readyToReset)
+        if (IsDevastationTimerEnd() && devastationActive)
             EndDevastation();
-        else if (readyToReset)
+        else if (devastationActive)
         {
             UpdateCooldownDecreaseTimer();
             TryDecreaseCooldowns();
@@ -41,7 +40,7 @@ public class DevastationCooldown : BossDevastationStrategy
     }
     protected override void EndDevastation()
     {
-        readyToReset = false;
+        devastationActive = false;
     }
 
     private void UpdateCooldownDecreaseTimer()
