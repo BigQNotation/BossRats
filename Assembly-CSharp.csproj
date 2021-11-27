@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerRecords.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordAbilitiesUsed.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSpectate.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PlayerLoadHandler.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectInterfaceHandler.cs" />
