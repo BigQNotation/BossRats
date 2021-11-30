@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class NewBossButton : NetworkBehaviour
 {
-    [SerializeField] GameObject button;
     LobbySettings lobbySettings;
 
     public void SwapBoss()
@@ -14,17 +13,18 @@ public class NewBossButton : NetworkBehaviour
         if (!lobbySettings.server)
             return;
 
-        lobbySettings.newBoss = !lobbySettings.newBoss;
-        if (lobbySettings.newBoss)
-            PlayerPrefs.SetInt("PlayerDesiresNewBoss", 0);
+        if (gameObject.GetComponent<Toggle>().isOn)
+            PlayerPrefs.SetInt("PlayerDesiresNewBoss", 1); // KEEP OLD BOSS
         else
-            PlayerPrefs.SetInt("PlayerDesiresNewBoss", 1);
+            PlayerPrefs.SetInt("PlayerDesiresNewBoss", 0); // NEW BOSS
+
+        lobbySettings.newBoss = !gameObject.GetComponent<Toggle>().isOn;     
     }
 
     private void Start()
     {
         lobbySettings = GameObject.Find("LobbySettings").GetComponent<LobbySettings>();
-
+        UpdateBossButtonText();
     }
     private void Update()
     {
@@ -33,8 +33,8 @@ public class NewBossButton : NetworkBehaviour
     private void UpdateBossButtonText()
     {
         if (lobbySettings.newBoss)
-            button.GetComponentInChildren<Text>().text = "NEW BOSS";
+            gameObject.GetComponent<Toggle>().isOn = false;
         else
-            button.GetComponentInChildren<Text>().text = "PERSEVERE";
+            gameObject.GetComponent<Toggle>().isOn = true;
     }
 }
