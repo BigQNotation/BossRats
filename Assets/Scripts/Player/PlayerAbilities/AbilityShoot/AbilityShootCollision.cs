@@ -12,21 +12,7 @@ public class AbilityShootCollision : NetworkBehaviour
         if (collider.CompareTag("Boss"))
         {
             GameObject.Find("Boss").GetComponent<BossDamageHandler>().TakeDamage(DAMAGE);
-            
-            PlayerStatTracker playerStatTracker = GameObject.Find("PlayerStatTracker").GetComponent<PlayerStatTracker>();
-
-            //Debug.Log(PlayerStatTracker.playerStats[0].playerID);
-
-            foreach (PlayerStatTracker.PlayerStat playerStat in PlayerStatTracker.playerStats)
-            {
-                if (playerStat.playerID == gameObject.GetComponent<PlayerProjectileOrigin>().playerID)
-                {
-                    Debug.Log("nice! found a match.");
-                }
-            }
-
-            Debug.Log("User " + gameObject.GetComponent<PlayerProjectileOrigin>().playerID + " " + DAMAGE);
-            
+            PlayerStatTracker.UpdatePlayerStatTrackerDamage(gameObject.GetComponent<PlayerProjectileOrigin>().playerID, DAMAGE);        
             Destroy(gameObject);
         }
     }

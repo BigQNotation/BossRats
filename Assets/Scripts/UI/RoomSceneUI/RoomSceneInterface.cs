@@ -85,8 +85,6 @@ public class RoomSceneInterface : NetworkBehaviour
                     roomPlayer = player.GetComponent<NetworkRoomPlayerExt>();
             }
 
-            //NetworkRoomPlayer roomPlayer = GameObject.FindGameObjectWithTag("RoomPlayer").GetComponent<NetworkRoomPlayerExt>();
-            
             if (room.allPlayersReady && NetworkServer.active && startGame)
                 room.ServerChangeScene(room.GameplayScene);
             
