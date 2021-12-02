@@ -36,7 +36,6 @@ public class RoomSceneInterface : NetworkBehaviour
             readyToPlay = false;
             GameObject.Find("ReadyText").GetComponent<Text>().text = "NOT READY";
         }
-        Debug.Log("ready: " + readyToPlay + onlyReadyOnce);
     }
     public void ToggleStartGame()
     {
@@ -94,11 +93,8 @@ public class RoomSceneInterface : NetworkBehaviour
             
             if (readyToPlay && onlyReadyOnce && isClient)
             {
-                Debug.Log("calling1");
                 roomPlayer.CmdChangeReadyState(true);
                 onlyReadyOnce = false;
-                Debug.Log("called2");
-
             }
 
             else if (!readyToPlay  && isClient && roomPlayer.readyToBegin == true)

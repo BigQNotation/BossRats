@@ -21,19 +21,12 @@ public class PlayerStatTracker : NetworkBehaviour
 
         if (playerStats.Count == 0)
         {
-            Debug.Log("Creating player stats! (one time only fosho)");
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
             for (int i = 0; i < players.Length; i++)
             {
-                Debug.Log(players[i].GetComponent<NetworkIdentity>().netId);
                 playerStats.Add(new PlayerStat((int)players[i].GetComponent<NetworkIdentity>().netId));
-                
-                //playerStats[i].playerID = (int)players[i].GetComponent<NetworkIdentity>().netId;
-                //Debug.Log("player stats set to: " + playerStats[i].playerID);
-            }
-
-           
+            }       
         }
     }
 
