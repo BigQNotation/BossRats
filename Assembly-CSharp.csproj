@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\InterfaceOrderDelay.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+    <Compile Include="Assets\PlayerProjectileOrigin.cs" />
+    <Compile Include="Assets\PlayerStatTracker.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveExplosion.cs" />

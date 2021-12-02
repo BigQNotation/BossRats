@@ -20,6 +20,8 @@ public class AbilityShoot : Ability
     public override void UseAbility(float clientXMousePos, float clientyMousePos)
     {
         GameObject projectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
+        projectile.GetComponent<PlayerProjectileOrigin>().playerID = (int)gameObject.GetComponent<NetworkIdentity>().netId;
+        Debug.Log("playerID upon creation" + projectile.GetComponent<PlayerProjectileOrigin>().playerID);
     }
 
     void Start()
