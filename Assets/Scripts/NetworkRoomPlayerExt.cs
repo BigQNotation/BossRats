@@ -14,8 +14,8 @@ using Mirror;
 /// </summary>
 public class NetworkRoomPlayerExt : NetworkRoomPlayer
 {
-    
 
+    static bool swapOnce = true;
     #region Start & Stop Callbacks
 
     /// <summary>
@@ -119,8 +119,13 @@ public class NetworkRoomPlayerExt : NetworkRoomPlayer
                 RoomSceneInterface roomSceneInterface = GameObject.Find("RoomSceneInterface").GetComponent<RoomSceneInterface>();
 
 
-                if (room.allPlayersReady && NetworkServer.active && roomSceneInterface.startGame)
+                if (room.allPlayersReady && NetworkServer.active && roomSceneInterface.startGame && swapOnce)
+                {
                     room.ServerChangeScene(room.GameplayScene);
+                    swapOnce = false;
+
+                }
+                    
 
 
                 if (roomSceneInterface.readyToPlay && roomSceneInterface.onlyReadyOnce && isLocalPlayer)
