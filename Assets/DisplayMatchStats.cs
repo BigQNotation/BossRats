@@ -9,7 +9,7 @@ public class DisplayMatchStats : MonoBehaviour
     {
         foreach (PlayerStatTracker.PlayerStat playerStat in PlayerStatTracker.playerStats)
         {
-            gameObject.GetComponent<Text>().text += ("Player " + playerStat.playerID.ToString() + '\n' + playerStat.playerDamageDealt.ToString() + " DMG \n\n");
+            gameObject.GetComponent<Text>().text += ("Player " + playerStat.playerName.ToString() + '\n' + playerStat.playerDamageDealt.ToString() + " DMG \n\n");
         }
     }
 

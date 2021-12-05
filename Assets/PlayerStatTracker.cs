@@ -14,6 +14,7 @@ public class PlayerStatTracker : NetworkBehaviour
             playerID = id;
         }
         public int playerID;
+        public string playerName;
         public float playerDamageDealt = 0;
     }
     public static void UpdatePlayerStatTrackerDamage(int playerID, float damage)
@@ -41,7 +42,7 @@ public class PlayerStatTracker : NetworkBehaviour
             return;
 
         GeneratePlayerStats(); // one time
-
+        SetPlayerStatsName(); // one time
     }
     private void TryGetPlayerLoadHandler()
     {
@@ -58,6 +59,16 @@ public class PlayerStatTracker : NetworkBehaviour
             {
                 playerStats.Add(new PlayerStat((int)players[i].GetComponent<NetworkIdentity>().netId));
             }
+        }
+    }
+    private void SetPlayerStatsName()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (!players[i].GetComponent<PlayerStats>().playerName.Equals("Player"))
+                playerStats[i].playerName = players[i].GetComponent<PlayerStats>().playerName;        
         }
     }
 }
