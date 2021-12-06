@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\DisplayMatchStats.cs" />
     <Compile Include="Assets\InterfaceOrderDelay.cs" />
+    <Compile Include="Assets\LastGameButton.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\PlayerProjectileOrigin.cs" />
     <Compile Include="Assets\PlayerStatTracker.cs" />
