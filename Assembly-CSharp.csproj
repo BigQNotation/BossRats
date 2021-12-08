@@ -56,12 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DisplayMatchStats.cs" />
-    <Compile Include="Assets\InterfaceOrderDelay.cs" />
-    <Compile Include="Assets\LastGameButton.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
-    <Compile Include="Assets\PlayerProjectileOrigin.cs" />
-    <Compile Include="Assets\PlayerStatTracker.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveExplosion.cs" />
@@ -106,9 +101,12 @@
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationCooldownMultiplier.cs" />
     <Compile Include="Assets\Scripts\Boss\ModificationHandlers\ModificationHealthRegen.cs" />
     <Compile Include="Assets\Scripts\Boss\SimpleAiMovement.cs" />
+    <Compile Include="Assets\Scripts\DisplayMatchStats.cs" />
     <Compile Include="Assets\Scripts\FindCamera.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
     <Compile Include="Assets\Scripts\InGameInterface.cs" />
+    <Compile Include="Assets\Scripts\InterfaceOrderDelay.cs" />
+    <Compile Include="Assets\Scripts\LastGameButton.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerNew.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomPlayerExt.cs" />
@@ -131,6 +129,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerSpectate.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PlayerLoadHandler.cs" />
+    <Compile Include="Assets\Scripts\PlayerProjectileOrigin.cs" />
+    <Compile Include="Assets\Scripts\PlayerStatTracker.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectInterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectToggle.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectUI.cs" />
