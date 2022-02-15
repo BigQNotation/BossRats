@@ -6,7 +6,7 @@ using Mirror;
 public class PlayerStats : NetworkBehaviour
 {
     [SyncVar]
-    private float currentPlayerHealth = 30;
+    private float currentPlayerHealth = 3000;
     private float maxPlayerHealth = 100;
 
     [SyncVar]

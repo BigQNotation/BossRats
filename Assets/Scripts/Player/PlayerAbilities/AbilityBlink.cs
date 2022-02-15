@@ -11,6 +11,12 @@ public class AbilityBlink : Ability
     [SyncVar]
     public GameObject playerObject;
 
+    [SerializeField] GameObject blinkCollisionCheckPrefab;
+    GameObject collisionCheckObject;
+    private bool collisionCheckStepActive = false;
+    private float mouseX, mouseY;
+    private int frameDelay = 0; 
+
     public AbilityBlink()
     {
         this.abilityID = ID;
@@ -19,7 +25,19 @@ public class AbilityBlink : Ability
     public override void UseAbility(float clientXMousePos, float clientYMousePos)
     {
         if (hasAuthority)
-            CmdTeleport(clientXMousePos, clientYMousePos);
+        {
+            mouseX = clientXMousePos;
+            mouseY = clientYMousePos;
+            CreateCollisionCheckObject( clientXMousePos,  clientYMousePos);
+            collisionCheckStepActive = true;
+        }
+           
+    }
+    private void CreateCollisionCheckObject(float clientXMousePos, float clientYMousePos)
+    {
+        // Create temp object at planned player teleport location
+        collisionCheckObject = Instantiate(blinkCollisionCheckPrefab);
+        collisionCheckObject.transform.position = (new Vector2(clientXMousePos, clientYMousePos));
     }
 
     [Command]
@@ -27,12 +45,38 @@ public class AbilityBlink : Ability
     {
         playerObject.GetComponent<NetworkTransform>().ServerTeleport(new Vector2(clientXMousePos, clientYMousePos));
     }
+    private bool IsTeleportLocationOnWalkableTerrain()
+    {
+        if (GameObject.Find("Walls").GetComponent<UnityEngine.Tilemaps.TilemapCollider2D>().IsTouching(collisionCheckObject.GetComponent<BoxCollider2D>()))
+        {
+            cooldownRemainder = 0;
+            return false;
+        }
+        return true;
+    }
+    private void TryFinishTeleport()
+    {
+        // wait 10 frames for collisionCheckObject to spawn and be able to collide.
+        if (collisionCheckStepActive)
+        {
+            frameDelay++;
+            if (frameDelay == 10)
+            {
+                if (IsTeleportLocationOnWalkableTerrain())
+                    CmdTeleport(mouseX, mouseY);
+                collisionCheckStepActive = false;
+                frameDelay = 0;
+            }
+        }
+    }
     private void Start()
     {
         
     }
-    private void Update()
+    private void LateUpdate()
     {
+        TryFinishTeleport();
         DecrementCooldown();
     }
+   
 }
