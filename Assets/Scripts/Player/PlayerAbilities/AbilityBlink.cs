@@ -45,11 +45,16 @@ public class AbilityBlink : Ability
     {
         playerObject.GetComponent<NetworkTransform>().ServerTeleport(new Vector2(clientXMousePos, clientYMousePos));
     }
+    [Command]
+    private void CmdResetCooldown()
+    {
+        cooldownRemainder = 0;
+    }
     private bool IsTeleportLocationOnWalkableTerrain()
     {
         if (GameObject.Find("Walls").GetComponent<UnityEngine.Tilemaps.TilemapCollider2D>().IsTouching(collisionCheckObject.GetComponent<BoxCollider2D>()))
         {
-            cooldownRemainder = 0;
+            
             return false;
         }
         return true;
@@ -64,6 +69,9 @@ public class AbilityBlink : Ability
             {
                 if (IsTeleportLocationOnWalkableTerrain())
                     CmdTeleport(mouseX, mouseY);
+                else
+                    CmdResetCooldown();
+                    
                 collisionCheckStepActive = false;
                 frameDelay = 0;
             }
@@ -75,8 +83,11 @@ public class AbilityBlink : Ability
     }
     private void LateUpdate()
     {
-        TryFinishTeleport();
         DecrementCooldown();
+        if (!isLocalPlayer)
+            return;
+        TryFinishTeleport();
+        
     }
    
 }

@@ -457,9 +457,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.47099134, y: 0.09448379, z: -64.39907}
+    m_Target: {x: 0.48252347, y: 0.055031825, z: -64.43712}
     speed: 2
-    m_Value: {x: 0.47099134, y: 0.09448379, z: -64.39907}
+    m_Value: {x: 0.48252347, y: 0.055031825, z: -64.43712}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -509,9 +509,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.45689
+    m_Target: 8.83745
     speed: 2
-    m_Value: 8.45689
+    m_Value: 8.83745
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -627,19 +627,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/PlayerAbility
+    - Assets/Scripts/Player/PlayerAbilities
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Prefabs/PlayerAbility
+  - Assets/Scripts/Player/PlayerAbilities
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\larso\Documents\Unity\Bosses\Bosses
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 677}
-    m_SelectedIDs: 2a410000
-    m_LastClickedID: 16682
+    scrollPos: {x: 0, y: 197}
+    m_SelectedIDs: fe680000
+    m_LastClickedID: 26878
     m_ExpandedIDs: 0000000000410000024100000441000006410000084100000a4100000c4100000e41000010410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
