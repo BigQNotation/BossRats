@@ -9,9 +9,9 @@ public class BossHealthUI : NetworkBehaviour
     [SerializeField]
     GameObject boss;
     [SerializeField]
-    GameObject healthTextObject;
+    GameObject healthBar;
     [SyncVar]
-    string bossHealthText;
+    float bossHealth;
 
     void Start()
     {        
@@ -19,17 +19,17 @@ public class BossHealthUI : NetworkBehaviour
     void Update()
     {
         if (isServer)
-            bossHealthText = GetBossHealth();
+            bossHealth = GetBossHealth();
         
-        SetBossHealthUI(bossHealthText);
+        SetBossHealthUI(bossHealth);
     }
 
-    private string GetBossHealth()
+    private float GetBossHealth()
     {
-        return boss.GetComponent<BossStats>().GetBossHealth().ToString();
+        return boss.GetComponent<BossStats>().GetBossHealth();
     }
-    private void SetBossHealthUI(string healthText)
+    private void SetBossHealthUI(float health)
     {
-        healthTextObject.GetComponent<Text>().text = healthText;
+        healthBar.GetComponent<Healthbar>().SetHealth((int)health);
     }
 }
