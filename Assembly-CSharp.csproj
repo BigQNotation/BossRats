@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Healthbar.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
@@ -105,6 +104,7 @@
     <Compile Include="Assets\Scripts\DisplayMatchStats.cs" />
     <Compile Include="Assets\Scripts\FindCamera.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
+    <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\InGameInterface.cs" />
     <Compile Include="Assets\Scripts\InterfaceOrderDelay.cs" />
     <Compile Include="Assets\Scripts\LastGameButton.cs" />
@@ -129,6 +129,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerRecords\RecordDistanceTraveled.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerSpectate.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealthbarUI.cs" />
     <Compile Include="Assets\Scripts\PlayerLoadHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerProjectileOrigin.cs" />
     <Compile Include="Assets\Scripts\PlayerStatTracker.cs" />
