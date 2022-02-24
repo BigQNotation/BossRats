@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
-    <Compile Include="Assets\Scripts\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBomb.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveExplosion.cs" />
     <Compile Include="Assets\Scripts\Boss\Abilities\AreaTimeBomb\BossAbilityAreaTimeBombActiveZone.cs" />
@@ -104,8 +103,8 @@
     <Compile Include="Assets\Scripts\DisplayMatchStats.cs" />
     <Compile Include="Assets\Scripts\FindCamera.cs" />
     <Compile Include="Assets\Scripts\GameOverSceneSwapper.cs" />
-    <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\InGameInterface.cs" />
+    <Compile Include="Assets\Scripts\InterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\InterfaceOrderDelay.cs" />
     <Compile Include="Assets\Scripts\LastGameButton.cs" />
     <Compile Include="Assets\Scripts\NetworkRoomManagerExt.cs" />
@@ -136,12 +135,13 @@
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectInterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectToggle.cs" />
     <Compile Include="Assets\Scripts\UI\AbilitySelectUI\AbilitySelectUI.cs" />
+    <Compile Include="Assets\Scripts\UI\BalanceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\EscapeUI\EscapeUIToggle.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverUi\GameOverUIHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\Healthbar.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\BossHealthUI.cs" />
+    <Compile Include="Assets\Scripts\UI\InGameUI\PlayerAbilityCooldownUI.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI\PlayerHealthUI.cs" />
-    <Compile Include="Assets\Scripts\UI\InGameUI\UIUpdate.cs" />
-    <Compile Include="Assets\Scripts\UI\InterfaceHandler.cs" />
     <Compile Include="Assets\Scripts\UI\OfflineSceneUI\ExitButton.cs" />
     <Compile Include="Assets\Scripts\UI\OfflineSceneUI\OfflineScreenInterface.cs" />
     <Compile Include="Assets\Scripts\UI\RoomSceneUI\GameConfigurationUI\GameConfigurationInterface.cs" />

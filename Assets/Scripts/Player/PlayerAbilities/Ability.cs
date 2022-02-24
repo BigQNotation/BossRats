@@ -6,7 +6,7 @@ using Mirror;
 public class Ability : NetworkBehaviour
 {
     protected int abilityID { get; set; }
-    protected float cooldownCap { get; set; }
+    public float cooldownCap { get; protected set; }
     [SyncVar]
     public float cooldownRemainder;
     //public float cooldownRemainder { get; protected set; }
